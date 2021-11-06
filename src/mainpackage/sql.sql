@@ -38,6 +38,17 @@ CREATE TABLE Bet (
 /*returning bet objects of finished bets for specific user */
 SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'your userid' OR betTargetUserID = 'your userid';
 
+//old
+SELECT * FROM UserFriends JOIN Bet ON UserFriends.friendUserID = Bet.betTargetUserID OR UserFriends.friendUserID = Bet.betSenderUserID;
+//old
+
+//query for getting Bet objects that involved a friend.
+SELECT * FROM UserFriends JOIN Bet ON UserFriends.friendUserID = Bet.betTargetUserID OR UserFriends.friendUserID = Bet.betSenderUserID WHERE UserFriends.userID = 'bruh' OR UserFriends.userID = 'bruh';
+
+//query for getting bet objects for a specific userID
+SELECT * FROM Bet WHERE Bet.betTargetUserID = 'bruh' OR Bet.betSenderUserID = 'bruh';
+
+
 
 
 /*WORKING SQL TO CREATE TABLES END*/
