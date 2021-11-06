@@ -16,7 +16,7 @@
             <children>
                 <ImageView fx:id="imageImageView" fitHeight="254.0" fitWidth="255.0" layoutX="353.0" layoutY="22.0">
                     <image>
-                        <Image url="@../../out/production/BetMe/mainpackage/rocket.jpg" />
+                        <Image url="rocket.jpg" />
                     </image>
                 </ImageView>
                 <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." />

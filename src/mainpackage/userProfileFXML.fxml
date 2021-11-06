@@ -33,7 +33,7 @@
                 </Text>
             <ImageView fx:id="userPicImageView" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/usericon.png" />
+                  <Image url="userIcon.png" />
                </image>
             </ImageView>
             <ListView fx:id="friendsListListView" layoutX="13.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
