@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.newBetController">
    <children>
       <Label layoutX="392.0" layoutY="14.0" prefHeight="59.0" prefWidth="177.0" text="Create New Bet" textAlignment="CENTER">
          <font>
@@ -31,6 +30,5 @@
       <Label layoutX="499.0" layoutY="123.0" text="Select a friend to bet:" />
       <ChoiceBox fx:id="verificationTypeChoiceBox" layoutX="15.0" layoutY="338.0" prefWidth="150.0" />
       <Label layoutX="15.0" layoutY="312.0" text="Select bet varification type:" />
-      <Button fx:id="placeBetButton" layoutX="392.0" layoutY="335.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="79.0" text="Place Bet" />
    </children>
 </AnchorPane>
