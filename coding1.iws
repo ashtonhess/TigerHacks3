@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Added screen controller to switch screens.">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them.">
+      <change afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -114,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636169160598</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them.">
+      <created>1636192190455</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636192190455</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +141,8 @@
     <MESSAGE value="Renamed to BetMe" />
     <MESSAGE value="Renamed all files." />
     <MESSAGE value="Added screen controller to switch screens." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added screen controller to switch screens." />
+    <MESSAGE value="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
