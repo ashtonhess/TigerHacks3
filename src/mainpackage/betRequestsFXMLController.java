@@ -3,60 +3,38 @@ package mainpackage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 /**
  * Author: Jacob
  */
-public class userProfileFXMLController implements Initializable, PropertyChangeListener {
+public class betRequestsFXMLController implements Initializable, PropertyChangeListener {
 
     @FXML
-    private Text accountBalText;
+    private Text betRequestsText;
 
     @FXML
-    private Button friendRequestsButton;
+    private ListView<?> betRequestsListView;
 
     @FXML
-    private ListView<?> friendsListListView;
+    private Button backButton;
 
     @FXML
-    private ImageView userPicImageView;
+    private CheckBox noCheckBox;
 
     @FXML
-    private Text friendsListText;
+    private CheckBox yesCheckBox;
 
     @FXML
-    private Text totalMoneyText;
-
-    @FXML
-    private Text closedBetsText;
-
-    @FXML
-    private Circle userPicBorderCircle;
-
-    @FXML
-    private Text usernameText;
-
-    @FXML
-    private Button betRequestsButton;
-
-    @FXML
-    private Text activeBetsText;
-
-    @FXML
-    private ListView<?> activeBetsListView;
-
-    @FXML
-    private ListView<?> closedBetsListView;
+    private Text betRequestsDescriptionText;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

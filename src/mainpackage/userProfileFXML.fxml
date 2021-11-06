@@ -13,44 +13,47 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <TableView layoutX="12.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
-                    <columns>
-                        <TableColumn prefWidth="300.0" text="Friends" />
-                    </columns>
-                </TableView>
-                <Button fx:id="friendRequestsButton" layoutX="63.0" layoutY="147.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Friend Requests" />
-                <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Balance: $" wrappingWidth="281.205078125">
+                <Button fx:id="friendRequestsButton" layoutX="64.0" layoutY="95.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Friend Requests" />
+                <Text fx:id="accountBalText" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Balance: $" wrappingWidth="281.205078125">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <Circle fill="WHITE" layoutX="480.0" layoutY="95.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
-                <ImageView fx:id="userPicImageView" fitHeight="150.0" fitWidth="200.0" layoutX="405.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../../../Downloads/usericon.png" />
-                    </image>
-                </ImageView>
-                <Text layoutX="766.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: $" wrappingWidth="99.205078125">
+                <Circle fx:id="userPicBorderCircle" fill="WHITE" layoutX="480.0" layoutY="95.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
+                <Text fx:id="totalMoneyText" layoutX="766.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: $" wrappingWidth="99.205078125">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <Button fx:id="betRequestsButton" layoutX="697.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Bet Requests" />
-                <Text layoutX="424.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="112.205078125">
+                <Button fx:id="betRequestsButton" layoutX="698.0" layoutY="95.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Bet Requests" />
+                <Text fx:id="usernameText" layoutX="424.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="112.205078125">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <TableView layoutX="330.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
-                    <columns>
-                        <TableColumn prefWidth="300.0" text="Active Bets" />
-                    </columns>
-                </TableView>
-                <TableView layoutX="646.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
-                    <columns>
-                        <TableColumn prefWidth="300.0" text="Closed Bets" />
-                    </columns>
-                </TableView>
+            <ImageView fx:id="userPicImageView" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@userIcon.png" />
+               </image>
+            </ImageView>
+            <ListView fx:id="friendsListListView" layoutX="13.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
+            <ListView fx:id="activeBetsListView" layoutX="330.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
+            <ListView fx:id="closedBetsListView" layoutX="647.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
+            <Text fx:id="friendsListText" layoutX="92.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends List" wrappingWidth="124.205078125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="closedBetsText" layoutX="733.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closed Bets" wrappingWidth="130.205078125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="activeBetsText" layoutX="419.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Bets" wrappingWidth="124.205078125">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
             </children>
         </AnchorPane>
     </children>
