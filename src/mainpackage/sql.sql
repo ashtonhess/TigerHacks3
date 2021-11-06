@@ -35,15 +35,21 @@ CREATE TABLE Bet (
                      betIsPaidOut BOOLEAN NOT NULL
 );
 /*WORKING SQL TO CREATE TABLES END*/
+/*Bet
+betID	betStatus	betDateTime	betDescription	betTitle	betAmount	betWinner	betSenderUserID	betTargetUserID	betSenderResult	betTargetResult	betSenderStatus	betTargetStatus	betIsPrivate	betIsPaidOut
+
+Portfolio
+userID	portfolioBalance	portfolioTotalReturns
+
+UserFriends
+userID	friendUserID
+
+UserTable
+userID	userPassword	userDateCreated
 
 
-
-
-
-
-
-
-
+INSERT INTO UserTable (UserID, User_Name, Password)
+VALUES (1, 'UserBob', 'bobpassword'),(2, 'UserSarah', 'sarahpassword'),(3, 'UserBilly', 'billypassword'),(4, 'UserAlex', 'alexpassword');
 
 
 
