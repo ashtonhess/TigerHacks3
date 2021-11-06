@@ -2,6 +2,7 @@ package mainpackage;
 
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,6 +13,9 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Menu;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Pair;
 
@@ -55,12 +59,44 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     private AnchorPane mainPane;
+    @FXML
+    private ImageView coinImage;
+
+    @FXML
+    private Label coinBalLabel;
+
+    @FXML
+    private Label userNameLabel;
+
+    @FXML
+    void logoutPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("loginFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginFXML.fxml"))));
+        ScreenController.activate("loginFXML");
+
+    }
+
+    @FXML
+    void profilePressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("userProfileFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("userProfileFXML.fxml"))));
+        ScreenController.activate("userProfileFXML");
+
+    }
+
+    @FXML
+    void friendsPressed(ActionEvent event) {
+
+    }
+    @FXML
+    void addCoinsPressed(ActionEvent event) {
+
+    }
 
     @FXML
     void newBetPressed(ActionEvent event) throws IOException {
             ScreenController.addScreen("newBetFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newBetFXML.fxml"))));
             ScreenController.activate("newBetFXML");
     }
+
 
     private XYChart.Series<String,Number> graphSeries;
     public ArrayList<Bet> userBets = new ArrayList<>();
@@ -80,6 +116,9 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     public void initialize(URL location, ResourceBundle resources) {
 
         lineGraph.setCreateSymbols(true);
+
+
+
         //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
 /*
         for(int i= 0; i<10; i++){

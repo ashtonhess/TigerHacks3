@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -13,25 +15,6 @@
 
 <AnchorPane fx:id="mainPane" prefHeight="660.0" prefWidth="960" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.mainPageController">
    <children>
-      <MenuBar prefHeight="29.0" prefWidth="960.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
       <LineChart fx:id="lineGraph" animated="false" createSymbols="false" layoutX="50.0" layoutY="35.0" legendVisible="false" prefHeight="290.0" prefWidth="841.0" style="-fx-background-color: white;">
         <xAxis>
           <CategoryAxis endMargin="10.0" side="BOTTOM" startMargin="0.0" tickLabelGap="1.0" tickLength="5.0" tickMarkVisible="false" fx:id="xAxis" />
@@ -69,5 +52,43 @@
             <Font name="Arial" size="16.0" />
          </font>
       </Label>
+      <AnchorPane layoutX="216.0" layoutY="13.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Logout" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="47.0" layoutY="1.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Profile" textFill="#eb7908" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="111.0" layoutY="6.0" mnemonicParsing="false" onAction="#friendsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Friends" textFill="#acd62b" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Label fx:id="userNameLabel" alignment="CENTER" layoutX="374.0" layoutY="1.0" prefHeight="27.0" prefWidth="200.0" textFill="#46abc7" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="1.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="coinImage" fitHeight="27.0" fitWidth="27.0" layoutX="871.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.5" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="1.5">
+               <image>
+                  <Image url="@btc.png" />
+               </image></ImageView>
+            <Label fx:id="coinBalLabel" layoutX="838.0" layoutY="2.0" prefHeight="27.0" prefWidth="73.0" text="0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="System Font" size="12.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="CENTER" layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#addCoinsPressed" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Add Coins" textFill="#21d72d" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
