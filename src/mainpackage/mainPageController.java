@@ -3,6 +3,7 @@ package mainpackage;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -15,6 +16,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
@@ -57,6 +59,13 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     private AnchorPane mainPane;
+
+    @FXML
+    void newBetPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("newBetFXML", FXMLLoader.load(getClass().getResource("newBetFXML.fxml")));
+        ScreenController.activate("newBetFXML");
+
+    }
 
     private XYChart.Series<String,Number> graphSeries;
 
