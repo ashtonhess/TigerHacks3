@@ -1,6 +1,6 @@
 package mainpackage;
 
-import javafx.application.Platform;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,23 +13,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Pair;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.Random;
+import java.util.Objects;
 import java.util.ResourceBundle;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
+
 
 public class mainPageController  implements Initializable, PropertyChangeListener {
-
-    public ArrayList<Bet> userBets = new ArrayList<>();
-
     @FXML
     private NumberAxis yAxis;
 
@@ -62,16 +58,18 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     void newBetPressed(ActionEvent event) throws IOException {
-        ScreenController.addScreen("newBetFXML", FXMLLoader.load(getClass().getResource("newBetFXML.fxml")));
-        ScreenController.activate("newBetFXML");
-
+            ScreenController.addScreen("newBetFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newBetFXML.fxml"))));
+            ScreenController.activate("newBetFXML");
     }
 
     private XYChart.Series<String,Number> graphSeries;
+    public ArrayList<Bet> userBets = new ArrayList<>();
+    public daDatabase databaseObj = new daDatabase();
 
-    int maxAccountValue = 0 ;
-    int minAccountValue = 0;
-    int overallGains = 0 ;
+    public Pair<Boolean, Pair<Integer, ResultSet>> finshedBets = databaseObj.executeQuery("SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'your userid' OR betTargetUserID = 'your userid';");
+    public int maxAccountValue = 0 ;
+    public int minAccountValue = 0;
+    public int overallGains = 0 ;
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
@@ -82,6 +80,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     public void initialize(URL location, ResourceBundle resources) {
 
         lineGraph.setCreateSymbols(true);
+        System.out.println(Integer.toString(finshedBets.getValue().getKey()));
 /*
         for(int i= 0; i<10; i++){
             userBets.add(ranBet());
@@ -95,7 +94,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     {
         yAxis = new NumberAxis();
         xAxis = new CategoryAxis();
-        graphSeries=new XYChart.Series();
+        graphSeries = new XYChart.Series();
         lineGraph.getData().add(graphSeries);
         int i=1;
 
@@ -113,8 +112,8 @@ public class mainPageController  implements Initializable, PropertyChangeListene
             graphData(i);
             i++;
         }
-        yAxis.setLowerBound(minAccountValue-((int)minAccountValue*0.1));
-        yAxis.setUpperBound((maxAccountValue+((int)maxAccountValue*0.1)));
+        yAxis.setLowerBound(minAccountValue-(minAccountValue *0.1));
+        yAxis.setUpperBound((maxAccountValue+(maxAccountValue *0.1)));
 
     }
 
