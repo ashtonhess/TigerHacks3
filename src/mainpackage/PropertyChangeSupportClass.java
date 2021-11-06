@@ -3,7 +3,7 @@ package mainpackage;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-public class PropertyChangeSupportClass {
+public abstract class PropertyChangeSupportClass {
     protected java.beans.PropertyChangeSupport propertyChangeSupport;
 
     //    public OrderFlowScreen2Model(){

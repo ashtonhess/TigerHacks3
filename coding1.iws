@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Renamed to BetMe">
-      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Renamed all files.">
+      <change afterPath="$PROJECT_DIR$/src/mainpackage/ScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coding1package/coding1FXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/homeFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coding1package/coding1FXMLAbstractPropChangeSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/PropertyChangeSupportClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coding1package/coding1FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/homeFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coding1package/coding1FXMLModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/homeFXMLModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/coding1package/coding1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/PropertyChangeSupportClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/PropertyChangeSupportClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/homeFXMLModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/homeFXMLModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <workItem from="1635885464086" duration="1576000" />
       <workItem from="1636158020097" duration="888000" />
       <workItem from="1636159501669" duration="21000" />
-      <workItem from="1636160061310" duration="539000" />
+      <workItem from="1636160061310" duration="3353000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
@@ -103,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636160236049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Renamed all files.">
+      <created>1636160622180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636160622180</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +128,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Renamed to BetMe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed to BetMe" />
+    <MESSAGE value="Renamed all files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed all files." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

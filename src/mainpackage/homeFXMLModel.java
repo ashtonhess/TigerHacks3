@@ -5,6 +5,7 @@ package mainpackage;
  */
 
 public class homeFXMLModel extends PropertyChangeSupportClass {
+
     public String someString = "Jakob, this is being passed as the NEW VALUE below";
     public String anotherString = "dont really need this string, firePropertyChange"
             +" just requires a new and old value, so you have to put in 2 strings."
