@@ -9,29 +9,44 @@ package mainpackage;
         import javafx.fxml.Initializable;
         import javafx.scene.control.Button;
         import javafx.scene.control.Label;
+        import javafx.scene.control.TextArea;
+        import javafx.scene.image.ImageView;
+        import javafx.scene.text.Text;
 
 /**
  *
  * @author ashtonhess
  */
-public class homeFXMLController implements Initializable, PropertyChangeListener {
+public class loginFXMLController implements Initializable, PropertyChangeListener {
 
 
     @FXML
-    private Label textToChange;
+    private Button createAccountButton;
 
-    public homeFXMLModel daModel;
     @FXML
-    private Label label;
+    private ImageView image;
+
     @FXML
-    private Button daButton;
+    private Button submitButton;
+
+    @FXML
+    private Text passwordText;
+
+    @FXML
+    private TextArea usernameTextArea;
+
+    @FXML
+    private Text usernameText;
+
+    @FXML
+    private TextArea passwordTextArea;
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        daModel = new homeFXMLModel();
-        daModel.addPropertyChangeListener(this);
+//        daModel = new loginFXMLModel();
+//        daModel.addPropertyChangeListener(this);
     }
 
 
@@ -40,13 +55,13 @@ public class homeFXMLController implements Initializable, PropertyChangeListener
 
         if (evt.getPropertyName().equals("textToChangePropertyChangeID")) {
             //System.out.println("Some shit");
-            textToChange.setText((String)evt.getNewValue());
+//            textToChange.setText((String)evt.getNewValue());
         }
 
     }
 
-    @FXML
-    private void handleDaButton(ActionEvent event) {
-        daModel.changeDaText();
-    }
+//    @FXML
+//    private void handleDaButton(ActionEvent event) {
+//        daModel.changeDaText();
+//    }
 }

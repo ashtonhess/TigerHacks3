@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+            <children>
+                <TableView layoutX="12.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
+                    <columns>
+                        <TableColumn prefWidth="300.0" text="Friends" />
+                    </columns>
+                </TableView>
+                <Button fx:id="friendRequestsButton" layoutX="63.0" layoutY="147.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Friend Requests" />
+                <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Balance: $" wrappingWidth="281.205078125">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Circle fill="WHITE" layoutX="480.0" layoutY="95.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
+                <ImageView fx:id="userPicImageView" fitHeight="150.0" fitWidth="200.0" layoutX="405.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../Downloads/usericon.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="766.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: $" wrappingWidth="99.205078125">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Button fx:id="betRequestsButton" layoutX="697.0" layoutY="145.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Bet Requests" />
+                <Text layoutX="424.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="112.205078125">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <TableView layoutX="330.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
+                    <columns>
+                        <TableColumn prefWidth="300.0" text="Active Bets" />
+                    </columns>
+                </TableView>
+                <TableView layoutX="646.0" layoutY="211.0" prefHeight="438.0" prefWidth="301.0">
+                    <columns>
+                        <TableColumn prefWidth="300.0" text="Closed Bets" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

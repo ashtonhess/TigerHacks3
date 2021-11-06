@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Added screen controller to switch screens.">
-      <change afterPath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXML.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/homeFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/homeFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/homeFXMLModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,19 +64,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BetMe" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BetMe" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.betmeMain" />
@@ -90,6 +83,7 @@
       <workItem from="1636158020097" duration="888000" />
       <workItem from="1636159501669" duration="21000" />
       <workItem from="1636160061310" duration="7111000" />
+      <workItem from="1636189638549" duration="1191000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
