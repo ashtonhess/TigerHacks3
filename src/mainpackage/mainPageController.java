@@ -70,14 +70,12 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     void logoutPressed(ActionEvent event) throws IOException {
-        ScreenController.addScreen("loginFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("loginFXML.fxml"))));
         ScreenController.activate("loginFXML");
 
     }
 
     @FXML
     void profilePressed(ActionEvent event) throws IOException {
-        ScreenController.addScreen("userProfileFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("userProfileFXML.fxml"))));
         ScreenController.activate("userProfileFXML");
 
     }
@@ -85,7 +83,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     @FXML
     void friendsPressed(ActionEvent event) throws IOException {
 
-        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("friendsListFXML.fxml"))));
         ScreenController.activate("friendsListFXML");
 
     }
@@ -96,7 +93,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     void newBetPressed(ActionEvent event) throws IOException {
-            ScreenController.addScreen("newBetFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newBetFXML.fxml"))));
             ScreenController.activate("newBetFXML");
     }
 

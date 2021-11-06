@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database connecting. There is a test happening on mainPageController.">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="added menu bar with navigation support">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendsListFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendsListFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="databaseSupport" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +90,7 @@
       <workItem from="1636158020097" duration="888000" />
       <workItem from="1636159501669" duration="21000" />
       <workItem from="1636160061310" duration="7111000" />
-      <workItem from="1636220028483" duration="288000" />
+      <workItem from="1636214297763" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
@@ -175,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636209791856</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added menu bar with navigation support">
+      <created>1636212005563</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636212005563</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +211,8 @@
     <MESSAGE value="Adding examples and such to help make test values." />
     <MESSAGE value="Adding more sql examples" />
     <MESSAGE value="Database connecting. There is a test happening on mainPageController." />
-    <option name="LAST_COMMIT_MESSAGE" value="Database connecting. There is a test happening on mainPageController." />
+    <MESSAGE value="added menu bar with navigation support" />
+    <option name="LAST_COMMIT_MESSAGE" value="added menu bar with navigation support" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
