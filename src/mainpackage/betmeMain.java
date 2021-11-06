@@ -17,13 +17,13 @@ public class betmeMain extends Application {
 
             ScreenController.main = scene;
 
-            ScreenController.addScreen("homeFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
+            ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
 
-    // USE THESE METHODS TO ADD MORE SCREENS TO SWITCH TO
+            // USE THESE METHODS TO ADD MORE SCREENS TO SWITCH TO
             //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));
             //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));
 
-            ScreenController.activate("homeFXML");
+            ScreenController.activate("loginFXML");
 
             stage.setScene(scene);
             stage.show();
