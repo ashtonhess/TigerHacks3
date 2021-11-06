@@ -83,7 +83,10 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     }
 
     @FXML
-    void friendsPressed(ActionEvent event) {
+    void friendsPressed(ActionEvent event) throws IOException {
+
+        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(Objects.requireNonNull(getClass().getResource("friendsListFXML.fxml"))));
+        ScreenController.activate("friendsListFXML");
 
     }
     @FXML
