@@ -35,7 +35,7 @@ CREATE TABLE Bet (
                      betIsPaidOut BOOLEAN NOT NULL
 );
 /*WORKING SQL TO CREATE TABLES END*/
-Bet
+/*Bet
 betID	betStatus	betDateTime	betDescription	betTitle	betAmount	betWinner	betSenderUserID	betTargetUserID	betSenderResult	betTargetResult	betSenderStatus	betTargetStatus	betIsPrivate	betIsPaidOut
 
 Portfolio
