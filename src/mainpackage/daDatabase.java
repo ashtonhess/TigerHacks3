@@ -21,6 +21,11 @@ public class daDatabase {
 
     private Connection conn;
 
+    //executeQuery function.
+    //INPUTS: String: a query written exactly as it should be.
+    //OUTPUTS: Boolean: if the query was successfully executed or not.
+    //         Integer: the number of rows in the resulting set.
+    //         ResultSet: the set that the query returned.
     public Pair<Boolean,Pair<Integer,ResultSet>> executeQuery(String queryString){
         Connection executeQueryConn = null;
 //        Pair<Boolean,ResultSet> resultPair = new Pair(false,null);

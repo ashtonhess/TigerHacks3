@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them.">
-      <change afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database connecting. There is a test happening on mainPageController.">
+      <change beforePath="$PROJECT_DIR$/BetMe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetMe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="databaseSupport" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
@@ -29,12 +42,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.space" />
@@ -119,7 +133,63 @@
       <option name="project" value="LOCAL" />
       <updated>1636192190455</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding in database support in the form of daDatabase.java object.">
+      <created>1636193184370</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193184370</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding sql.sql file. Right now, this has the sql for creating the database.">
+      <created>1636193975116</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636193975116</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding examples and such to help make test values.">
+      <created>1636194959306</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636194959306</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Adding examples and such to help make test values.">
+      <created>1636195042552</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1636195042552</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Adding more sql examples">
+      <created>1636195725125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1636195725125</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adding more sql examples">
+      <created>1636199131325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1636199131325</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adding more sql examples">
+      <created>1636201617049</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636201617049</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Database connecting. There is a test happening on mainPageController.">
+      <created>1636209791856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1636209791856</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +212,12 @@
     <MESSAGE value="Renamed all files." />
     <MESSAGE value="Added screen controller to switch screens." />
     <MESSAGE value="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing screens to work. Also adding screens to the ScreenController so it can switch between them." />
+    <MESSAGE value="Adding in database support in the form of daDatabase.java object." />
+    <MESSAGE value="Adding sql.sql file. Right now, this has the sql for creating the database." />
+    <MESSAGE value="Adding examples and such to help make test values." />
+    <MESSAGE value="Adding more sql examples" />
+    <MESSAGE value="Database connecting. There is a test happening on mainPageController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Database connecting. There is a test happening on mainPageController." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
