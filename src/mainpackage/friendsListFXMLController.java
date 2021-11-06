@@ -47,6 +47,21 @@ public class friendsListFXMLController implements Initializable, PropertyChangeL
     private Label userNameLabel;
 
     @FXML
+    private Label resultNumberLabel;
+
+    @FXML
+    private ListView<?> searchResultList;
+
+    @FXML
+    private TextField usernameTextField;
+
+    @FXML
+    void searchPressed(ActionEvent event) {
+
+    }
+
+
+    @FXML
     void backPressed(ActionEvent event) throws IOException {
         ScreenController.activate("mainPage");
 

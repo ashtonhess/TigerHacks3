@@ -11,13 +11,19 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
+
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 
@@ -34,14 +40,9 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     @FXML
     private LineChart<String,Number> lineGraph;
 
-    @FXML
-    private Button activeBets;
 
     @FXML
-    private Button betRequests;
-
-    @FXML
-    private ListView<?> friendBetsList;
+    private ListView<Pane> friendBetsList;
 
     @FXML
     private Label totalBets;
@@ -50,15 +51,18 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     private Label totalGains;
 
     @FXML
-    private Button newBet;
-
-    @FXML
     private AnchorPane mainPane;
     @FXML
     private ImageView coinImage;
 
     @FXML
     private Label coinBalLabel;
+    @FXML
+    private Button myBetsButton;
+    @FXML
+    private Button requestsButton;
+    @FXML
+    private Button newBetButton;
 
     @FXML
     private Label userNameLabel;
@@ -104,6 +108,8 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     private XYChart.Series<String,Number> graphSeries;
     public ArrayList<Bet> userBets = new ArrayList<>();
     public daDatabase databaseObj = new daDatabase();
+    private Image arrowUp = new Image(getClass().getResourceAsStream("up.png"));
+    private Image arrowDown = new Image(getClass().getResourceAsStream("down.png"));
 
     //public Pair<Boolean, Pair<Integer, ResultSet>> finshedBets = databaseObj.executeQuery("SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'your userid' OR betTargetUserID = 'your userid';");
     public int maxAccountValue = 0 ;
@@ -122,6 +128,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
 
 
+
         //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
 /*
         for(int i= 0; i<10; i++){
@@ -129,7 +136,62 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         }
 
  */
+
         setUpChart();
+        setUpData();
+        //setUpListView();
+    }
+
+    public void setUpListView() {
+
+
+            for (Bet x : userBets) {
+                Pane pane = new Pane();
+                pane.setPrefSize(friendBetsList.getPrefWidth() * (0.85), (friendBetsList.getPrefHeight() / 4));
+                Label label = new Label("test" + x.betAmount);
+                Line line = new Line();
+                line.setStartX(0);
+                line.setStartY(0);
+                line.setEndX(pane.getPrefWidth() * 1.15);
+                line.setEndY(0);
+                line.setStyle("-fx-stroke: lightgray");
+
+
+                pane.getChildren().addAll(label, line);
+                friendBetsList.getItems().add(pane);
+            }
+
+        }
+
+    public void setUpData(){
+        totalBets.setText(Integer.toString(userBets.size()));
+        if(overallGains>=0){
+            arrowImage.setImage(arrowUp);
+            totalGains.setText("$"+Integer.toString(overallGains));
+            totalGains.setTextFill(Color.GREEN);
+            totalBets.setTextFill(Color.GREEN);
+            requestsButton.setStyle("-fx-background-radius: 10px");
+            myBetsButton.setStyle("-fx-background-radius: 10px");
+            newBetButton.setStyle("-fx-background-radius: 10px");
+            requestsButton.setStyle("-fx-background-color: #90EE90");
+            myBetsButton.setStyle("-fx-background-color: #90EE90");
+            newBetButton.setStyle("-fx-background-color: #90EE90");
+        }
+        else{
+            arrowImage.setImage(arrowDown);
+            totalGains.setText(Integer.toString(overallGains));
+            totalGains.setTextFill(Color.RED);
+            totalBets.setTextFill(Color.RED);
+
+            requestsButton.setStyle("-fx-background-radius: 10px");
+            myBetsButton.setStyle("-fx-background-radius: 10px");
+            newBetButton.setStyle("-fx-background-radius: 10px");
+            requestsButton.setStyle("-fx-background-color: #ee2645");
+            myBetsButton.setStyle("-fx-background-color: #EE2645FF");
+            newBetButton.setStyle("-fx-background-color: #EE2645FF");
+
+        }
+
     }
 
     public void setUpChart()
@@ -196,9 +258,11 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         int ran = rand.nextInt()/10000000;
         System.out.println(ran);
 
-        Bet randBet = new Bet("","",ran,"","",false);
+        Bet randBet = new Bet("",ran,"","",false);
         return randBet;
     }
 
  */
+
+
 }

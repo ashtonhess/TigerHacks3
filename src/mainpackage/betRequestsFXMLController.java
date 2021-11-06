@@ -64,6 +64,28 @@ public class betRequestsFXMLController implements Initializable, PropertyChangeL
 
     }
 
+
+    @FXML
+    void acceptAllFriends(ActionEvent event) {
+
+    }
+
+    @FXML
+    void declineAllFriends(ActionEvent event) {
+
+    }
+
+
+    @FXML
+    void acceptAllBets(ActionEvent event) {
+
+    }
+
+    @FXML
+    void declineAllBets(ActionEvent event) {
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

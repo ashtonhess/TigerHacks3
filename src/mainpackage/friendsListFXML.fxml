@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -10,31 +11,10 @@
 
 <VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.friendsListFXMLController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <Text fx:id="friendsListText" layoutX="153.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;userID&quot; Friends">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <ListView fx:id="friendsListListView" layoutX="14.0" layoutY="100.0" prefHeight="546.0" prefWidth="502.0" />
-            <ListView fx:id="addFriendsListView" layoutX="543.0" layoutY="300.0" prefHeight="245.0" prefWidth="401.0" />
-            <Button fx:id="betButton" layoutX="653.0" layoutY="65.0" mnemonicParsing="false" prefHeight="180.0" prefWidth="180.0" text="Bet" textAlignment="CENTER">
-               <font>
-                  <Font size="44.0" />
-               </font>
-            </Button>
-            <Text fx:id="addFriendsText" layoutX="664.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Friends">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <Text fx:id="inviteLinkTextarr" layoutX="677.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invite Link">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Text>
-            <ListView fx:id="inviteLinkListView" layoutX="543.0" layoutY="605.0" prefHeight="40.0" prefWidth="401.0" />
+            <ListView fx:id="friendsListListView" layoutX="14.0" layoutY="100.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="498.0" prefWidth="447.0" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="459.0" />
+            <ListView fx:id="searchResultList" layoutX="550.0" layoutY="228.0" prefHeight="258.0" prefWidth="357.0" AnchorPane.bottomAnchor="174.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="228.0" />
             <AnchorPane layoutY="7.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
@@ -74,6 +54,34 @@
                   </Button>
                </children>
             </AnchorPane>
+            <Line endX="225.0" layoutX="520.0" layoutY="190.0" startX="-235.0" stroke="#b5afaf" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="142.5" />
+            <Label layoutX="252.0" layoutY="49.0" text="Friends" textFill="#398994" AnchorPane.leftAnchor="252.0" AnchorPane.topAnchor="49.0">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <Line endX="225.0" layoutX="530.0" layoutY="200.0" startX="-235.0" stroke="#b5afaf" AnchorPane.bottomAnchor="458.5" AnchorPane.rightAnchor="0.0" />
+            <TextField fx:id="usernameTextField" layoutX="584.0" layoutY="149.0" prefHeight="40.0" prefWidth="254.0" promptText="Enter Username" style="-fx-background-color: white;" AnchorPane.rightAnchor="186.0" AnchorPane.topAnchor="153.0">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </TextField>
+            <Line endX="225.0" layoutX="245.0" layoutY="524.0" startX="-235.0" stroke="#b5afaf" AnchorPane.bottomAnchor="145.5" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="25.0" layoutY="528.0" mnemonicParsing="false" onAction="#searchPressed" prefHeight="55.0" prefWidth="434.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Search" AnchorPane.bottomAnchor="87.0" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Button>
+            <Label layoutX="627.0" layoutY="71.0" prefHeight="59.0" prefWidth="163.0" text="Find Someone" textAlignment="CENTER" textFill="#398994" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="71.0">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultNumberLabel" layoutX="786.0" layoutY="164.0" text="Results: " textFill="#398994">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>

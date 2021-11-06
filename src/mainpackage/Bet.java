@@ -30,13 +30,13 @@ public class Bet {
     public int betSenderStatus = 0;
     public int betTargetStatus = 0;
 
-    public Bet(String description, String title, int betAmount, String senderId, String targetID, boolean isPrivate){
+    public Bet(String description, int betAmount, String senderId, String targetID, boolean isPrivate){
         this.betIsPrivate = isPrivate;
         this.betDateTime = new Date();
         this.betIsPaidOut = false;
+        this.betTitle= senderId +"made a $"+betAmount+" with "+ targetID;
         // add this this.BetId =
         this.betDescription = description;
-        this.betTitle = title;
         this.betAmount = betAmount;
         this.betSenderUserID = senderId;
         this.betTargetUserID = targetID;
