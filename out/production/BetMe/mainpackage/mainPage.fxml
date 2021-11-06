@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="660.0" prefWidth="960" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.mainPageController">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="960.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <LineChart fx:id="lineGraph" animated="false" createSymbols="false" layoutX="50.0" layoutY="35.0" legendVisible="false" prefHeight="290.0" prefWidth="841.0" style="-fx-background-color: white;">
+        <xAxis>
+          <CategoryAxis endMargin="10.0" side="BOTTOM" startMargin="0.0" tickLabelGap="1.0" tickLength="5.0" tickMarkVisible="false" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxis" lowerBound="-100.0" side="LEFT" tickLength="4.0" tickMarkVisible="false" />
+        </yAxis>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </LineChart>
+      <ListView fx:id="friendBetsList" layoutX="82.0" layoutY="344.0" prefHeight="296.0" prefWidth="309.0" />
+      <Label fx:id="totalBets" layoutX="412.0" layoutY="356.0" prefHeight="45.0" prefWidth="241.0" text="Total Bets:">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="betRequests" layoutX="441.0" layoutY="421.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Bet Requests">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="newBet" layoutX="441.0" layoutY="494.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="New Bet">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="activeBets" layoutX="441.0" layoutY="567.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Active Bets">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Label fx:id="totalGains" layoutX="699.0" layoutY="355.0" prefHeight="45.0" prefWidth="241.0" text="Net Gains:">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
