@@ -41,14 +41,35 @@ SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'yo
 
 
 /*WORKING SQL TO CREATE TABLES END*/
+
+/*WORKING SQL TO POPULATE TABLES START*/
+/*
+INSERT INTO Bet (betID, betStatus, betDateTime, betDescription, betTitle, betAmount, betWinner, betSenderUserID, betTargetUserID, betSenderResult, betTargetResult, betSenderStatus, betTargetStatus, betIsPrivate, betIsPaidOut)
+VALUES (1, 3, '03/16/2001 08:42:09', 'I bet Jacob that it will rain tomorrow', 'Rain Bet', 5, 'Ashton', 'Ashton', 'Jacob', 1, 0, 2, 2, False, True), (2, 2, '11/17/2000 08:42:09', 'I bet Chase I have a better computer', 'Better Computer', 10, null, 'Jacob', 'Chase', 2, 2, 2, 2, False, False), (3, 1, '06/28/2021 08:42:09', 'I bet Bruh I have more formal education', 'Bruh is Dumb', 15, 'Chase', 'Chase', 'Bruh', 1, 0, 2, 2, True, True), (4, 0, '12/25/2020 08:42:09', 'I bet Ashton that I will go on a 4 day bender', '4-Days of Parties', 20, 'Ashton', 'Bruh', 'Ashton', 0, 1, 2, 2, True, True);
+
+
+SELECT * FROM Bet WHERE betStatus = 1 AND betIsPaidOut = 1 AND (betSenderUserID = 'ashton' OR betTargetUserID = 'jacob');
+*/
+/*WORKING SQL TO POPULATE TABLES END*/
+
+
+
+
+
+
+
+
+
+
+
 /*
 Bet
 betID	betStatus	betDateTime	betDescription	betTitle	betAmount	betWinner	betSenderUserID	betTargetUserID	betSenderResult	betTargetResult	betSenderStatus	betTargetStatus	betIsPrivate	betIsPaidOut
 INSERT INTO Portfolio (betID, betStatus, betDateTime, betDescription, betTitle, betAmount, betWinner, betSenderUserID, betTargetUserID, betSenderResult, betTargetResult, betSenderStatus, betTargetStatus, betIsPrivate, betIsPaidOut)
-VALUES (Ashton, 3, '03/16/2001 08:42:09', 'I bet Jacob that it will rain tomorrow', 'Rain Bet', 5, Ashton, Ashton, Jacob, 1, 0, 2, 2, False, True);
-VALUES (Jacob, 2, '11/17/2000 08:42:09', 'I bet Chase I have a better computer', 'Better Computer', 10, null, Jacob, Chase, 2, 2, 2, 2, False, False);
-VALUES (Chase, 1, '06/28/2021 08:42:09', 'I bet Bruh I have more formal education', 'Bruh is Dumb', 15, Chase, Chase, Bruh, 1, 0, 2, 2, True, True);
-VALUES (Bruh, 0, '12/25/2020 08:42:09', 'I bet Ashton that I will go on a 4 day bender', '4-Days of Parties', 20, Ashton, Bruh, Ashton, 0, 1, 2, 2, True, True);
+VALUES (1, 3, '03/16/2001 08:42:09', 'I bet Jacob that it will rain tomorrow', 'Rain Bet', 5, Ashton, Ashton, Jacob, 1, 0, 2, 2, False, True);
+VALUES (2, 2, '11/17/2000 08:42:09', 'I bet Chase I have a better computer', 'Better Computer', 10, null, Jacob, Chase, 2, 2, 2, 2, False, False);
+VALUES (3, 1, '06/28/2021 08:42:09', 'I bet Bruh I have more formal education', 'Bruh is Dumb', 15, Chase, Chase, Bruh, 1, 0, 2, 2, True, True);
+VALUES (4, 0, '12/25/2020 08:42:09', 'I bet Ashton that I will go on a 4 day bender', '4-Days of Parties', 20, Ashton, Bruh, Ashton, 0, 1, 2, 2, True, True);
 
 Portfolio
 userID	portfolioBalance	portfolioTotalReturns
