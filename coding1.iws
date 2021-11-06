@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="added menu bar with navigation support">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetFXML.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +90,7 @@
       <workItem from="1636158020097" duration="888000" />
       <workItem from="1636159501669" duration="21000" />
       <workItem from="1636160061310" duration="7111000" />
+      <workItem from="1636214297763" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
