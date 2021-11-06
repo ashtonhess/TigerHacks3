@@ -25,6 +25,7 @@ public class betmeMain extends Application {
             ScreenController.addScreen("createAccountFXML", FXMLLoader.load(getClass().getResource("createAccountFXML.fxml")));
             ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
             ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
+            ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
 
 
 

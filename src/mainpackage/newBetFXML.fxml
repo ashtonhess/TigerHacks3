@@ -28,7 +28,7 @@
       <AnchorPane layoutX="40.0" layoutY="20.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
 
-            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Back" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Back" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
                <font>
                   <Font name="Arial Bold" size="8.0" />
                </font>
@@ -59,6 +59,11 @@
                </font>
             </Label>
             <Button contentDisplay="CENTER" layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#addCoinsPressed" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Add Coins" textFill="#21d72d" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="176.0" layoutY="2.0" mnemonicParsing="false" onAction="#requestsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Requests" textFill="#09abeb" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="1.5">
                <font>
                   <Font name="Arial Bold" size="8.0" />
                </font>

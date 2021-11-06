@@ -1,15 +1,14 @@
 package mainpackage;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,6 +34,35 @@ public class betRequestsFXMLController implements Initializable, PropertyChangeL
 
     @FXML
     private Text betRequestsDescriptionText;
+
+    @FXML
+    private Label coinBalLabel;
+
+    @FXML
+    private Label userNameLabel;
+
+    @FXML
+    void backPressed(ActionEvent event) throws IOException {
+        ScreenController.activate("mainPage");
+
+    }
+
+    @FXML
+    void profilePressed(ActionEvent event) throws IOException {
+        ScreenController.activate("userProfileFXML");
+
+    }
+
+    @FXML
+    void friendsPressed(ActionEvent event) throws IOException {
+
+        ScreenController.activate("friendsListFXML");
+
+    }
+    @FXML
+    void addCoinsPressed(ActionEvent event) {
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

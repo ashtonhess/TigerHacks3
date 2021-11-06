@@ -32,17 +32,17 @@
             <Font name="Arial" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="betRequests" layoutX="441.0" layoutY="421.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Bet Requests" AnchorPane.leftAnchor="441.0" AnchorPane.rightAnchor="66.0">
+      <Button layoutX="441.0" layoutY="421.0" mnemonicParsing="false" onAction="#requestsPressed" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Requests" AnchorPane.leftAnchor="441.0" AnchorPane.rightAnchor="66.0">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="newBet" layoutX="441.0" layoutY="494.0" mnemonicParsing="false" onAction="#newBetPressed" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="New Bet">
+      <Button layoutX="441.0" layoutY="494.0" mnemonicParsing="false" onAction="#newBetPressed" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="New Bet">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="activeBets" layoutX="441.0" layoutY="567.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Active Bets">
+      <Button layoutX="441.0" layoutY="567.0" mnemonicParsing="false" onAction="#myBetsPressed" prefHeight="55.0" prefWidth="453.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="My Bets">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
@@ -54,7 +54,7 @@
       </Label>
       <AnchorPane layoutX="216.0" layoutY="13.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Logout" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#logoutPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Logout" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
                <font>
                   <Font name="Arial Bold" size="8.0" />
                </font>
@@ -101,5 +101,10 @@
          </font>
       </Label>
       <ImageView fx:id="arrowImage" fitHeight="25.0" fitWidth="25.0" layoutX="732.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="725.0" />
+      <Button contentDisplay="CENTER" layoutX="130.0" layoutY="7.0" mnemonicParsing="false" onAction="#requestsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Requests" textFill="#09abeb" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="1.5">
+         <font>
+            <Font name="Arial Bold" size="8.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

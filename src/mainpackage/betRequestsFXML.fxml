@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.control.*?>
@@ -7,20 +8,58 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.betRequestsFXMLController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <Text fx:id="betRequestsText" layoutX="377.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Requests">
+            <Text fx:id="betRequestsText" layoutX="372.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Requests">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button fx:id="backButton" layoutX="840.0" layoutY="14.0" mnemonicParsing="false" text="Back ----&gt;" />
             <ListView fx:id="betRequestsListView" layoutX="274.0" layoutY="98.0" prefHeight="519.0" prefWidth="412.0" />
             <CheckBox fx:id="yesCheckBox" layoutX="544.0" layoutY="116.0" mnemonicParsing="false" text="Yes" />
             <CheckBox fx:id="noCheckBox" layoutX="614.0" layoutY="116.0" mnemonicParsing="false" text="No" />
             <Text fx:id="betRequestsDescriptionText" layoutX="281.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jacob bet you $5 he gets to class on time today" wrappingWidth="256.5595703125" />
+            <AnchorPane prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="47.0" layoutY="1.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Profile" textFill="#eb7908" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="111.0" layoutY="6.0" mnemonicParsing="false" onAction="#friendsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Friends" textFill="#acd62b" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="userNameLabel" alignment="CENTER" layoutX="374.0" layoutY="1.0" prefHeight="27.0" prefWidth="200.0" textFill="#46abc7" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="coinImage" fitHeight="27.0" fitWidth="27.0" layoutX="871.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.5" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="1.5">
+                     <image>
+                        <Image url="@btc.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="coinBalLabel" layoutX="838.0" layoutY="2.0" prefHeight="27.0" prefWidth="73.0" text="0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="2.0">
+                     <font>
+                        <Font name="System Font" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="CENTER" layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#addCoinsPressed" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Add Coins" textFill="#21d72d" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
          </children>
     </AnchorPane>
   </children>

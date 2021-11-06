@@ -85,6 +85,15 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     void addCoinsPressed(ActionEvent event) {
 
     }
+    @FXML
+    void myBetsPressed(ActionEvent event) {
+
+    }
+    @FXML
+    void requestsPressed(ActionEvent event) throws IOException {
+        ScreenController.activate("betRequestsFXML");
+
+    }
 
     @FXML
     void newBetPressed(ActionEvent event) throws IOException {

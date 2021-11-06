@@ -12,16 +12,16 @@
 
 <VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.loginFXMLController">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
             <children>
 
-                <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." />
-                <Text fx:id="usernameText" fill="#398994" layoutX="381.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+                <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." AnchorPane.leftAnchor="380.0" />
+                <Text fx:id="usernameText" fill="#398994" layoutX="381.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" AnchorPane.leftAnchor="380.0">
                <font>
                   <Font name="Arial" size="13.0" />
                </font></Text>
-                <TextArea fx:id="passwordTextArea" layoutX="380.0" layoutY="411.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter password..." />
-                <Text fx:id="passwordText" fill="#398994" layoutX="380.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+                <TextArea fx:id="passwordTextArea" layoutX="380.0" layoutY="411.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter password..." AnchorPane.leftAnchor="380.0" />
+                <Text fx:id="passwordText" fill="#398994" layoutX="380.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" AnchorPane.leftAnchor="380.0">
                <font>
                   <Font name="Arial" size="13.0" />
                </font></Text>
@@ -30,17 +30,17 @@
                         <Font size="24.0" />
                     </font>
                 </Text>
-            <ImageView fitHeight="284.0" fitWidth="215.0" layoutX="386.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="284.0" fitWidth="220.0" layoutX="385.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="385.5" AnchorPane.rightAnchor="385.5">
                <image>
                   <Image url="@rocket.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="386.0" layoutY="451.0" mnemonicParsing="false" onAction="#submitPress" prefHeight="28.0" prefWidth="189.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Login" AnchorPane.leftAnchor="386.0">
+            <Button layoutX="385.0" layoutY="458.0" mnemonicParsing="false" onAction="#submitPress" prefHeight="28.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Login" AnchorPane.leftAnchor="385.0">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
             </Button>
-            <Button layoutX="386.0" layoutY="496.0" mnemonicParsing="false" onAction="#createAccountPressed" prefHeight="21.0" prefWidth="189.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Create New Account" AnchorPane.leftAnchor="386.0">
+            <Button layoutX="386.0" layoutY="506.0" mnemonicParsing="false" onAction="#createAccountPressed" prefHeight="21.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Create New Account" AnchorPane.leftAnchor="385.0">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>

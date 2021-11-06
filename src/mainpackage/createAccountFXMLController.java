@@ -61,14 +61,14 @@ public class createAccountFXMLController implements Initializable, PropertyChang
     void donePressed(ActionEvent event) throws IOException {
 
         //code
-
-        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
         ScreenController.activate("loginFXML");
 
 
     }
-//    @FXML
-//    private void handleDaButton(ActionEvent event) {
-//        daModel.changeDaText();
-//    }
+
+    @FXML
+    void cancelPressed(ActionEvent event) {
+        ScreenController.activate("loginFXML");
+
+    }
 }
