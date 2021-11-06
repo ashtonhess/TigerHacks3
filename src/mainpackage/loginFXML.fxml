@@ -14,11 +14,7 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <ImageView fx:id="image" fitHeight="163.0" fitWidth="255.0" layoutX="353.0" layoutY="22.0">
-                    <image>
-                        <Image url="@rocketlaunch.jpg" />
-                    </image>
-                </ImageView>
+                
                 <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." />
                 <Text fx:id="usernameText" layoutX="381.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
                 <TextArea fx:id="passwordTextArea" layoutX="380.0" layoutY="411.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter password..." />
