@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database connecting. There is a test happening on mainPageController.">
-      <change beforePath="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_6_21__4_31_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_6_21__4_31_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="none">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,15 +40,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/mainpackage" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.space" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jlram\OneDrive\Desktop\TigerHacks NEW\Repo\TigerHacksActive\src\mainpackage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/coding1package" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mainpackage" />
     </key>
   </component>
   <component name="RunManager">
@@ -170,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636209791856</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="none">
+      <created>1636214370955</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1636214370955</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +210,8 @@
     <MESSAGE value="Adding examples and such to help make test values." />
     <MESSAGE value="Adding more sql examples" />
     <MESSAGE value="Database connecting. There is a test happening on mainPageController." />
-    <option name="LAST_COMMIT_MESSAGE" value="Database connecting. There is a test happening on mainPageController." />
+    <MESSAGE value="none" />
+    <option name="LAST_COMMIT_MESSAGE" value="none" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
