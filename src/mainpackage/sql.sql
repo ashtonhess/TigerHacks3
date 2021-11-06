@@ -35,7 +35,11 @@ CREATE TABLE Bet (
                      betIsPaidOut BOOLEAN NOT NULL
 );
 
-SELECT * FROM
+/*returning bet objects of finished bets for specific user */
+SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'your userid' OR betTargetUserID = 'your userid';
+
+
+
 /*WORKING SQL TO CREATE TABLES END*/
 /*Bet
 betID	betStatus	betDateTime	betDescription	betTitle	betAmount	betWinner	betSenderUserID	betTargetUserID	betSenderResult	betTargetResult	betSenderStatus	betTargetStatus	betIsPrivate	betIsPaidOut
