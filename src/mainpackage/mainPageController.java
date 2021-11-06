@@ -66,7 +66,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     public ArrayList<Bet> userBets = new ArrayList<>();
     public daDatabase databaseObj = new daDatabase();
 
-    //public Pair<Boolean, Pair<Integer, ResultSet>> finshedBets = databaseObj.executeQuery("SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'your userid' OR betTargetUserID = 'your userid';");
+    public Pair<Boolean, Pair<Integer, ResultSet>> finshedBets = databaseObj.executeQuery("SELECT * FROM Bet WHERE betStatus = 1 AND betIsPaidOut = 1 AND betSenderUserID = 'ashton' OR betTargetUserID = 'jacob';");
     public int maxAccountValue = 0 ;
     public int minAccountValue = 0;
     public int overallGains = 0 ;
@@ -80,7 +80,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     public void initialize(URL location, ResourceBundle resources) {
 
         lineGraph.setCreateSymbols(true);
-        //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
+        System.out.println(Integer.toString(finshedBets.getValue().getKey()));
 /*
         for(int i= 0; i<10; i++){
             userBets.add(ranBet());

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Adding more sql examples">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database connecting. There is a test happening on mainPageController.">
+      <change beforePath="$PROJECT_DIR$/BetMe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetMe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +42,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.space" />
@@ -165,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636199131325</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding more sql examples">
+      <created>1636201617049</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1636201617049</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Database connecting. There is a test happening on mainPageController.">
+      <created>1636209791856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1636209791856</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +216,8 @@
     <MESSAGE value="Adding sql.sql file. Right now, this has the sql for creating the database." />
     <MESSAGE value="Adding examples and such to help make test values." />
     <MESSAGE value="Adding more sql examples" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding more sql examples" />
+    <MESSAGE value="Database connecting. There is a test happening on mainPageController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Database connecting. There is a test happening on mainPageController." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
