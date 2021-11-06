@@ -4,14 +4,14 @@ package mainpackage;
  * @author ashtonhess
  */
 
-public class homeFXMLModel extends PropertyChangeSupportClass {
+public class loginFXMLModel extends PropertyChangeSupportClass {
 
     public String someString = "Jakob, this is being passed as the NEW VALUE below";
     public String anotherString = "dont really need this string, firePropertyChange"
             +" just requires a new and old value, so you have to put in 2 strings."
             +" can be useful sometimes though to have that, this is being passed as the OLD VALUE below";
 
-    homeFXMLModel(){
+    loginFXMLModel(){
         propertyChangeSupport = new java.beans.PropertyChangeSupport(this);
     }
 

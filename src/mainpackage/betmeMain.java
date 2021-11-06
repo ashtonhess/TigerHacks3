@@ -11,19 +11,18 @@ public class betmeMain extends Application {
 
         @Override
         public void start(Stage stage) throws Exception {
-            Parent root = FXMLLoader.load(getClass().getResource("homeFXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("loginFXML.fxml"));
 
             Scene scene = new Scene(root);
 
             ScreenController.main = scene;
-
-            ScreenController.addScreen("homeFXML", FXMLLoader.load(getClass().getResource("homeFXML.fxml")));
-
     // USE THESE METHODS TO ADD MORE SCREENS TO SWITCH TO
-            //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));
-            //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));
+            ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
+            ScreenController.addScreen("newBetFXML", FXMLLoader.load(getClass().getResource("newBetFXML.fxml")));
+            ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
 
-            ScreenController.activate("homeFXML");
+    //Activating the login screen.
+            ScreenController.activate("loginFXML");
 
             stage.setScene(scene);
             stage.show();
