@@ -3,6 +3,7 @@ package mainpackage;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -15,28 +16,31 @@ import java.util.ResourceBundle;
 /**
  * Author: Jacob
  */
-public class createAccountFXMLController implements Initializable, PropertyChangeListener {
+public class friendsListFXMLController implements Initializable, PropertyChangeListener {
 
     @FXML
-    private TextField passwordTextField;
+    private Button betButton;
 
     @FXML
-    private Text passwordText;
+    private Text addFriendsText;
 
     @FXML
-    private TextField emailTextField;
+    private ListView<?> addFriendsListView;
 
     @FXML
-    private Text usernameText;
+    private ListView<?> inviteLinkListView;
 
     @FXML
-    private Text emailText;
+    private ListView<?> friendsListListView;
 
     @FXML
-    private Button doneButton;
+    private Text friendsListText;
 
     @FXML
-    private TextField usernameTextField;
+    private Text inviteLinkTextarr;
+
+    @FXML
+    private Button backButton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
