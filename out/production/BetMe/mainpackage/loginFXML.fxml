@@ -26,6 +26,11 @@
                     </font>
                 </Text>
                 <Button fx:id="createAccountButton" layoutX="31.0" layoutY="528.0" mnemonicParsing="false" onAction="#createAccountPressed" prefHeight="99.0" prefWidth="161.0" text="Create Account" />
+            <ImageView fitHeight="284.0" fitWidth="215.0" layoutX="386.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@rocket.jpg" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </children>
