@@ -14,7 +14,7 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                
+
                 <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." />
                 <Text fx:id="usernameText" layoutX="381.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
                 <TextArea fx:id="passwordTextArea" layoutX="380.0" layoutY="411.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter password..." />
