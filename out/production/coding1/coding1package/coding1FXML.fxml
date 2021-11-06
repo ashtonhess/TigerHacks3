@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coding1package.coding1FXMLController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <Label fx:id="textToChange" alignment="CENTER" layoutX="4.0" layoutY="93.0" prefHeight="88.0" prefWidth="312.0" text="Starting text" />
+        <Button fx:id="daButton" layoutX="133.0" layoutY="53.0" mnemonicParsing="false" onAction="#handleDaButton" text="Button" />
+    </children>
+</AnchorPane>
