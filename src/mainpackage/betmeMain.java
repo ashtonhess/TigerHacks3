@@ -27,6 +27,7 @@ public class betmeMain extends Application {
             ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
 
 
+
             // USE THESE METHODS TO ADD MORE SCREENS TO SWITCH TO
             //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));
             //ScreenController.addScreen("", FXMLLoader.load(getClass().getResource("")));

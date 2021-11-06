@@ -63,7 +63,7 @@ public class newBetController implements Initializable, PropertyChangeListener {
     }
 
     @FXML
-    void betConfirmPressed(ActionEvent event) {
+    void betConfirmPressed(ActionEvent event) throws IOException{
         ScreenController.activate("mainPage");
 
     }

@@ -26,6 +26,9 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     private NumberAxis yAxis;
 
     @FXML
+    private ImageView arrowImage;
+
+    @FXML
     private CategoryAxis xAxis;
 
     @FXML
