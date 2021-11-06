@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="added menu bar with navigation support">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database connecting. There is a test happening on mainPageController.">
+      <change beforePath="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_6_21__4_31_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_6_21__4_31_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,14 +22,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="databaseSupport" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -170,14 +170,7 @@
       <option name="project" value="LOCAL" />
       <updated>1636209791856</updated>
     </task>
-    <task id="LOCAL-00013" summary="added menu bar with navigation support">
-      <created>1636212005563</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1636212005563</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,8 +198,7 @@
     <MESSAGE value="Adding examples and such to help make test values." />
     <MESSAGE value="Adding more sql examples" />
     <MESSAGE value="Database connecting. There is a test happening on mainPageController." />
-    <MESSAGE value="added menu bar with navigation support" />
-    <option name="LAST_COMMIT_MESSAGE" value="added menu bar with navigation support" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database connecting. There is a test happening on mainPageController." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
