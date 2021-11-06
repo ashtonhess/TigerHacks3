@@ -1,19 +1,17 @@
-package coding1package;
+package mainpackage;
 /**
  *
  * @author ashtonhess
  */
 
-import java.beans.PropertyChangeSupport;
-
-public class coding1FXMLModel extends coding1FXMLAbstractPropChangeSupport {
+public class homeFXMLModel extends PropertyChangeSupportClass {
     public String someString = "Jakob, this is being passed as the NEW VALUE below";
     public String anotherString = "dont really need this string, firePropertyChange"
             +" just requires a new and old value, so you have to put in 2 strings."
             +" can be useful sometimes though to have that, this is being passed as the OLD VALUE below";
 
-    coding1FXMLModel(){
-        propertyChangeSupport = new PropertyChangeSupport(this);
+    homeFXMLModel(){
+        propertyChangeSupport = new java.beans.PropertyChangeSupport(this);
     }
 
     public void changeDaText(){

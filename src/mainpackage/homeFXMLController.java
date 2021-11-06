@@ -1,8 +1,7 @@
-package coding1package;
+package mainpackage;
 
         import java.beans.PropertyChangeEvent;
         import java.beans.PropertyChangeListener;
-        import java.beans.PropertyChangeSupport;
         import java.net.URL;
         import java.util.ResourceBundle;
         import javafx.event.ActionEvent;
@@ -15,13 +14,13 @@ package coding1package;
  *
  * @author ashtonhess
  */
-public class coding1FXMLController implements Initializable, PropertyChangeListener {
+public class homeFXMLController implements Initializable, PropertyChangeListener {
 
 
     @FXML
     private Label textToChange;
 
-    public coding1FXMLModel daModel;
+    public homeFXMLModel daModel;
     @FXML
     private Label label;
     @FXML
@@ -31,7 +30,7 @@ public class coding1FXMLController implements Initializable, PropertyChangeListe
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        daModel = new coding1FXMLModel();
+        daModel = new homeFXMLModel();
         daModel.addPropertyChangeListener(this);
     }
 

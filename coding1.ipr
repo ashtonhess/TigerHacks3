@@ -330,7 +330,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/coding1.iml" filepath="$PROJECT_DIR$/coding1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BetMe.iml" filepath="$PROJECT_DIR$/BetMe.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

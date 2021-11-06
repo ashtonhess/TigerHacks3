@@ -1,4 +1,4 @@
-package coding1package;
+package mainpackage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,12 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class coding1Main extends Application{
+public class betmeMain extends Application{
 
 
         @Override
         public void start(Stage stage) throws Exception {
-            Parent root = FXMLLoader.load(getClass().getResource("coding1FXML.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("homeFXML.fxml"));
 
             Scene scene = new Scene(root);
 

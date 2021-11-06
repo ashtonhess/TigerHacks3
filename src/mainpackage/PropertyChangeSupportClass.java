@@ -1,10 +1,10 @@
-package coding1package;
+package mainpackage;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-public class coding1FXMLAbstractPropChangeSupport {
-    protected PropertyChangeSupport propertyChangeSupport;
+public class PropertyChangeSupportClass {
+    protected java.beans.PropertyChangeSupport propertyChangeSupport;
 
     //    public OrderFlowScreen2Model(){
 //        propertyChangeSupport = new PropertyChangeSupport(this);
