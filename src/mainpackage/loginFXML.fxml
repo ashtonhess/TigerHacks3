@@ -14,9 +14,9 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <ImageView fx:id="image" fitHeight="163.0" fitWidth="255.0" layoutX="353.0" layoutY="22.0">
+                <ImageView fx:id="imageImageView" fitHeight="254.0" fitWidth="255.0" layoutX="353.0" layoutY="22.0">
                     <image>
-                        <Image url="@rocketlaunch.jpg" />
+                        <Image url="@../../out/production/BetMe/mainpackage/rocket.jpg" />
                     </image>
                 </ImageView>
                 <TextArea fx:id="usernameTextArea" layoutX="381.0" layoutY="350.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter username..." />
@@ -24,9 +24,9 @@
                 <TextArea fx:id="passwordTextArea" layoutX="380.0" layoutY="411.0" prefHeight="34.0" prefWidth="200.0" promptText="Enter password..." />
                 <Text fx:id="passwordText" layoutX="380.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
                 <Button fx:id="submitButton" layoutX="438.0" layoutY="463.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="84.0" text="Submit" />
-                <Text layoutX="435.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="90.205078125">
+                <Text fx:id="loginText" layoutX="435.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" wrappingWidth="90.205078125">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="30.0" />
                     </font>
                 </Text>
                 <Button fx:id="createAccountButton" layoutX="31.0" layoutY="528.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="161.0" text="Create Account" />
