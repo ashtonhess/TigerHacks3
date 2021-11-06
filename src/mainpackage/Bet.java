@@ -1,5 +1,6 @@
 package mainpackage;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Bet {
@@ -9,8 +10,8 @@ public class Bet {
     //2 = invalid
     //3 = finished
     public int betStatus = 0;
-    public boolean isPrivate = false;
-    public boolean paidOut = false;
+    public boolean betIsPrivate = false;
+    public boolean betIsPaidOut = false;
     public Date betDateTime;
     public String betDescription;
     public String betTitle;
@@ -30,16 +31,43 @@ public class Bet {
     public int betTargetStatus = 0;
 
     public Bet(String description, String title, int betAmount, String senderId, String targetID, boolean isPrivate){
-        this.isPrivate = isPrivate;
+        this.betIsPrivate = isPrivate;
         this.betDateTime = new Date();
+        this.betIsPaidOut = false;
         // add this this.BetId =
         this.betDescription = description;
         this.betTitle = title;
         this.betAmount = betAmount;
         this.betSenderUserID = senderId;
         this.betTargetUserID = targetID;
-        this.betWinner = null;
+        this.betWinner = "";
     }
+
+
+    public String convertBetToString(){
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        String dateString = formatter.format(this.betDateTime);
+        return(Integer.toString(this.betAmount)+","+
+                Integer.toString(this.betStatus)+","+
+                dateString+","+
+                this.betDescription+","+
+                this.betTitle+","+
+                Integer.toString(this.betAmount)+","+
+                this.betWinner+","+
+                this.betSenderUserID+","+
+                this.betTargetUserID+","+
+                Integer.toString(this.betSenderResult)+","+
+                Integer.toString(this.betTargetResult)+","+
+                Integer.toString(this.betSenderStatus)+","+
+                Integer.toString(this.betTargetStatus)+","+
+                Boolean.toString(this.betIsPrivate))+","+
+                Boolean.toString(this.betIsPaidOut);
+    }
+    public Bet convertStringToBet(String bet){
+
+        return null;
+    }
+
 
 
 

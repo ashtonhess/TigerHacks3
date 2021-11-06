@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.createAccountFXMLController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -22,7 +22,7 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button fx:id="doneButton" layoutX="407.0" layoutY="376.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="146.0" text="Done" />
+            <Button fx:id="doneButton" layoutX="407.0" layoutY="376.0" mnemonicParsing="false" onAction="#donePressed" prefHeight="55.0" prefWidth="146.0" text="Done" />
          </children>
     </AnchorPane>
   </children>
