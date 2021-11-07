@@ -91,6 +91,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     }
     @FXML
     void myBetsPressed(ActionEvent event) {
+        ScreenController.activate("betsFXML");
 
     }
     @FXML
@@ -130,16 +131,16 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
 
         //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
-/*
+
         for(int i= 0; i<10; i++){
             userBets.add(ranBet());
         }
 
- */
+
 
         setUpChart();
         setUpData();
-        //setUpListView();
+        setUpListView();
     }
 
     public void setUpListView() {
@@ -250,7 +251,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
 
     }
-/*
+
     public Bet ranBet(){
         Random rand = new Random(); //instance of random class
 
@@ -262,7 +263,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         return randBet;
     }
 
- */
+
 
 
 }
