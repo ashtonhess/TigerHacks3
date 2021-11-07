@@ -65,7 +65,7 @@ public class userProfileFXMLController implements Initializable, PropertyChangeL
 
     @FXML
     void backPressed(ActionEvent event) throws IOException {
-        ScreenController.activate("loginFXML");
+        ScreenController.activate("mainPage");
 
     }
 
