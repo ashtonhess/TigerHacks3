@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="The closedBetsListView and activeBetsListView list views work">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="betRequestsFXMLController.java">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendProfileFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendProfileFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendProfileFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +26,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -98,7 +93,7 @@
       <workItem from="1636160061310" duration="7111000" />
       <workItem from="1636214297763" duration="2819000" />
       <workItem from="1636230284863" duration="9904000" />
-      <workItem from="1636254253907" duration="868000" />
+      <workItem from="1636254253907" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
@@ -233,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636248417847</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="betRequestsFXMLController.java">
+      <created>1636255468027</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636255468027</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +270,8 @@
     <MESSAGE value="Updated UI" />
     <MESSAGE value="full navigation support and more updated UI" />
     <MESSAGE value="bets and betme screen method moved to main start page" />
-    <option name="LAST_COMMIT_MESSAGE" value="bets and betme screen method moved to main start page" />
+    <MESSAGE value="betRequestsFXMLController.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="betRequestsFXMLController.java" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
