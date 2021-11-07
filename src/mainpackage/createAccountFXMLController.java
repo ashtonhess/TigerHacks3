@@ -56,11 +56,8 @@ public class createAccountFXMLController implements Initializable, PropertyChang
     @FXML
     void handleCreateButton(ActionEvent event) throws IOException {
 
-
-
-
-        Pair<Boolean, Pair<Integer,ResultSet>> databaseResult = new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null));
-
+        Pair<Boolean, Pair<Integer,ResultSet>> databaseResult;
+//= new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null))
         Boolean databaseBoolResult;
         Integer databaseRowsResult;
         ResultSet databaseResultSet;
@@ -74,7 +71,9 @@ public class createAccountFXMLController implements Initializable, PropertyChang
                 emptyInputAlert.showAndWait();
                 holderBool = false;
             }else{
+                System.out.println("1");
                 databaseResult = databaseObj.executeQuery(constructCheckUserIDExistsQuery(usernameInput));
+                System.out.println("2");
                 databaseBoolResult = databaseResult.getKey();
                 databaseRowsResult = databaseResult.getValue().getKey();
                 databaseResultSet = databaseResult.getValue().getValue();
@@ -91,8 +90,9 @@ public class createAccountFXMLController implements Initializable, PropertyChang
 
                             //left off
                             //committing these now...
-
+                            System.out.println("3");
                             databaseResult = databaseObj.executeQuery(constructNewUserQuery(usernameInput, passwordInput));
+                            System.out.println("4");
                             System.out.println("New user: "+usernameInput+" has been added to the UserTable.");
                             Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);
                             emptyInputAlert.setContentText("New user: "+usernameInput+" has been added to the UserTable.");

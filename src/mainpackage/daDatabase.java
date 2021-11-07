@@ -21,19 +21,34 @@ public class daDatabase {
 
     private Connection conn;
 
+    Connection executeQueryConn;
     //executeQuery function.
     //INPUTS: String: a query written exactly as it should be.
     //OUTPUTS: Boolean: if the query was successfully executed or not.
     //         Integer: the number of rows in the resulting set.
     //         ResultSet: the set that the query returned.
     public Pair<Boolean,Pair<Integer,ResultSet>> executeQuery(String queryString){
-        Connection executeQueryConn = null;
+
+
+        try{
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("Error loading the driver.");
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            System.out.println("Error loading the driver.");
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            System.out.println("Error loading the driver.");
+        }
 //        Pair<Boolean,ResultSet> resultPair = new Pair(false,null);
         ResultSet executeQueryResult;
         Integer numRows;
         try{
             executeQueryConn = getConnection();
-            if (this.connectionStatus(executeQueryConn)==true) {
+
+            if (this.connectionStatus(executeQueryConn) == true) {
                 Statement stmt = executeQueryConn.createStatement();
                 numRows= stmt.executeUpdate(queryString);
                 executeQueryResult =  stmt.executeQuery(queryString);
@@ -48,6 +63,16 @@ public class daDatabase {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
     public Connection getConnection() throws SQLException {
         Properties connProperties = new Properties();
         connProperties.put("user", this.databaseUser);
@@ -56,6 +81,7 @@ public class daDatabase {
         try(Connection connTry = DriverManager.getConnection(databaseURL, connProperties);){
             conn = connTry;
             System.out.println("Connected to database successfully.");
+
         } catch (SQLException e){
             System.out.println("Error connecting to database.");
             e.printStackTrace();
