@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="full navigation support and more updated UI">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="update screens on navigation added as well as list obj">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Lists.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Lists.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXMLModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendProfileFXMLModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/Lists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Lists.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLModel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +34,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -243,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636231648704</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="update screens on navigation added as well as list obj">
+      <created>1636271500927</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1636271500927</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update screens on navigation added as well as list obj">
+      <created>1636271559266</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636271559266</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +274,8 @@
     <MESSAGE value="added UI elements for new bet" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="full navigation support and more updated UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="full navigation support and more updated UI" />
+    <MESSAGE value="update screens on navigation added as well as list obj" />
+    <option name="LAST_COMMIT_MESSAGE" value="update screens on navigation added as well as list obj" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

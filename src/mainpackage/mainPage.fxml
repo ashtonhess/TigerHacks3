@@ -110,5 +110,15 @@
             <Font name="Arial Bold" size="8.0" />
          </font>
       </Button>
+      <Button fx:id="totalGraph" layoutX="885.0" layoutY="130.0" mnemonicParsing="false" onAction="#totalGraphPressed" prefHeight="13.0" prefWidth="60.0" style="-fx-background-color: #90EE90;" text="Total" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="recentGraph" layoutX="885.0" layoutY="208.0" mnemonicParsing="false" onAction="#recentGraphPressed" prefHeight="13.0" prefWidth="60.0" style="-fx-background-color: #a9a9a9;" text="Recent" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

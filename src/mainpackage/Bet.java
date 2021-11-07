@@ -62,7 +62,7 @@ public class Bet {
         this.betIsPrivate = isPrivate;
         this.betDateTime = new Date();
         this.betIsPaidOut = false;
-        this.betTitle= senderId +"made a $"+betAmount+" with "+ targetID;
+        this.betTitle= senderId +" made a $"+betAmount+" bet with "+ targetID;
         // add this this.BetId =
         this.betDescription = description;
         this.betAmount = betAmount;
@@ -96,6 +96,22 @@ public class Bet {
     public Bet convertStringToBet(String bet){
 
         return null;
+    }
+    public String makeTitle(){
+        String title;
+        if(this.betWinner != ""){
+            String betloser;
+            if(this.betWinner.equals(this.betSenderUserID)){
+                betloser = this.betTargetUserID;
+            }
+            else{
+                betloser=this.betSenderUserID;
+            }
+            title = this.betWinner+" won the bet against "+betloser+" for $"+this.betAmount;
+            return title;
+
+        }
+        return this.betTitle;
     }
 
 
