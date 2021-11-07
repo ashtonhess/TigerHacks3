@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="none">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="2 new fxml files">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXML.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636245149184</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="2 new fxml files">
+      <created>1636245267017</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1636245267017</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +261,8 @@
     <MESSAGE value="added UI elements for new bet" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="none" />
-    <option name="LAST_COMMIT_MESSAGE" value="none" />
+    <MESSAGE value="2 new fxml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 new fxml files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

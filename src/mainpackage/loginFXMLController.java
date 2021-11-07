@@ -16,11 +16,9 @@ package mainpackage;
         import javafx.scene.text.Text;
 
 /**
- *
  * @author ashtonhess
  */
 public class loginFXMLController implements Initializable, PropertyChangeListener {
-
 
     @FXML
     private Button createAccountButton;
@@ -51,7 +49,6 @@ public class loginFXMLController implements Initializable, PropertyChangeListene
 //        daModel.addPropertyChangeListener(this);
     }
 
-
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
 
@@ -65,15 +62,12 @@ public class loginFXMLController implements Initializable, PropertyChangeListene
     void submitPress(ActionEvent event) throws IOException {
             ScreenController.activate("mainPage");
 
-
-
     }
     @FXML
     void createAccountPressed(ActionEvent event) throws IOException {
         ScreenController.activate("createAccountFXML");
 
     }
-
 
 //    @FXML
 //    private void handleDaButton(ActionEvent event) {
