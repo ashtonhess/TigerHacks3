@@ -134,7 +134,7 @@ public class userProfileFXMLController implements Initializable, PropertyChangeL
         for (Bet x : userBets) {
             Pane pane = new Pane();
             pane.setPrefSize(activeBetsListView.getPrefWidth() * (0.85), (activeBetsListView.getPrefHeight() / 4));
-            Label label = new Label("test" + x.betAmount);
+            Label label = new Label(x.betSenderUserID + " bet " + x.betTargetUserID + " $" + x.betAmount);
             Line line = new Line();
             line.setStartX(0);
             line.setStartY(0);
@@ -172,7 +172,7 @@ public class userProfileFXMLController implements Initializable, PropertyChangeL
         int ran = rand.nextInt()/10000000;
         System.out.println(ran);
 
-        Bet randBet = new Bet("",ran,"","",false);
+        Bet randBet = new Bet("I'm ",ran,"","",false);
         return randBet;
     }
 //    @FXML

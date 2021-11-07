@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
-      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Bet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -290,6 +291,17 @@
     <MESSAGE value="betRequestsFXMLController.java" />
     <MESSAGE value="newBetController.java" />
     <option name="LAST_COMMIT_MESSAGE" value="newBetController.java" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/mainpackage/Bet.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
