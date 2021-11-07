@@ -328,7 +328,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
             //generate random values from 0-24
             int ranb = ranBet.nextInt(50);
-            int rano = ranOutcome.nextInt(3);
+            int rano = ranOutcome.nextInt(10);
             //System.out.println(rano);
 
 
@@ -340,7 +340,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
             nameList.add("joe mama");
 
             Bet randBet = new Bet("", ranb, "chase", nameList.get(ranBet.nextInt(nameList.size())), false);
-            if(rano==1){
+            if(rano >= 4){
                 randBet.betWinner=randBet.betSenderUserID;
             }
             else{

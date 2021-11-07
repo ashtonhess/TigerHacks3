@@ -16,7 +16,7 @@
 
 <AnchorPane fx:id="mainPane" prefHeight="660.0" prefWidth="960" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.mainPageController">
    <children>
-      <LineChart fx:id="lineGraph" animated="false" createSymbols="false" layoutX="50.0" layoutY="35.0" legendVisible="false" prefHeight="290.0" prefWidth="841.0" style="-fx-background-color: white;">
+      <LineChart fx:id="lineGraph" alternativeRowFillVisible="false" animated="false" createSymbols="false" horizontalGridLinesVisible="false" layoutX="50.0" layoutY="35.0" legendVisible="false" prefHeight="290.0" prefWidth="841.0" style="-fx-background-color: white;" verticalGridLinesVisible="false">
         <xAxis>
           <CategoryAxis endMargin="10.0" side="BOTTOM" startMargin="0.0" tickLabelGap="1.0" tickLength="5.0" tickMarkVisible="false" fx:id="xAxis" />
         </xAxis>
