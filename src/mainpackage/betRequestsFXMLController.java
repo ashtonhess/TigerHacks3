@@ -41,6 +41,8 @@ public class betRequestsFXMLController implements Initializable, PropertyChangeL
     @FXML
     private Label userNameLabel;
 
+
+
     @FXML
     void backPressed(ActionEvent event) throws IOException {
         ScreenController.activate("mainPage");
