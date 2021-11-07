@@ -60,11 +60,13 @@ public class loginFXMLController implements Initializable, PropertyChangeListene
     }
     @FXML
     void submitPress(ActionEvent event) throws IOException {
+            ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
             ScreenController.activate("mainPage");
 
     }
     @FXML
     void createAccountPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("createAccountFXML", FXMLLoader.load(getClass().getResource("createAccountFXML.fxml")));
         ScreenController.activate("createAccountFXML");
 
     }

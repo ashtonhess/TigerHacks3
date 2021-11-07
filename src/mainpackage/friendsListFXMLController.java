@@ -53,16 +53,19 @@ public class friendsListFXMLController implements Initializable, PropertyChangeL
 
     @FXML
     void backPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
 
     }
     @FXML
     void requestsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
         ScreenController.activate("betRequestsFXML");
     }
 
     @FXML
     void profilePressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
        ScreenController.activate("userProfileFXML");
     }
 

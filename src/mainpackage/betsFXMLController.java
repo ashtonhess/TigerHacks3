@@ -17,6 +17,7 @@ import java.beans.PropertyChangeListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.ResourceBundle;
 /**
@@ -44,19 +45,26 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
 
     @FXML
     void homePressed(ActionEvent event) throws IOException {
+        //ScreenController.removeScreen("mainPage");
+        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
+
+
+
+
 
     }
 
     @FXML
     void profilePressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
         ScreenController.activate("userProfileFXML");
 
     }
 
     @FXML
     void friendsPressed(ActionEvent event) throws IOException {
-
+        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
         ScreenController.activate("friendsListFXML");
 
     }
@@ -66,6 +74,7 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
     }
     @FXML
     void requestsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
         ScreenController.activate("betRequestsFXML");
     }
 

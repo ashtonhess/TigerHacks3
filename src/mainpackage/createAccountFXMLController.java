@@ -39,9 +39,7 @@ public class createAccountFXMLController implements Initializable, PropertyChang
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-//        daModel = new loginFXMLModel();
-//        daModel.addPropertyChangeListener(this);
+        
     }
 
     @Override
@@ -141,7 +139,8 @@ public class createAccountFXMLController implements Initializable, PropertyChang
     }
 
     @FXML
-    void handleCancelPressed(ActionEvent event) {
+    void handleCancelPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
         ScreenController.activate("loginFXML");
     }
 

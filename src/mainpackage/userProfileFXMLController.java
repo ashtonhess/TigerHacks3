@@ -2,6 +2,7 @@ package mainpackage;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -66,19 +67,21 @@ public class userProfileFXMLController implements Initializable, PropertyChangeL
 
     @FXML
     void backPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
 
     }
 
     @FXML
     void requestsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
         ScreenController.activate("betRequestsFXML");
 
     }
 
     @FXML
     void friendsPressed(ActionEvent event) throws IOException {
-
+        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("friendsListFXML");
 
     }

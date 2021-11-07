@@ -3,6 +3,7 @@ package mainpackage;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -28,6 +29,7 @@ import java.util.ResourceBundle;
 
 
 public class mainPageController  implements Initializable, PropertyChangeListener {
+
     @FXML
     private NumberAxis yAxis;
 
@@ -75,13 +77,14 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     void profilePressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
         ScreenController.activate("userProfileFXML");
 
     }
 
     @FXML
     void friendsPressed(ActionEvent event) throws IOException {
-
+        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
         ScreenController.activate("friendsListFXML");
 
     }
@@ -90,18 +93,21 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     }
     @FXML
-    void myBetsPressed(ActionEvent event) {
+    void myBetsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("betsFXML", FXMLLoader.load(getClass().getResource("betsFXML.fxml")));
         ScreenController.activate("betsFXML");
 
     }
     @FXML
     void requestsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
         ScreenController.activate("betRequestsFXML");
 
     }
 
     @FXML
     void newBetPressed(ActionEvent event) throws IOException {
+            ScreenController.addScreen("newBetFXML", FXMLLoader.load(getClass().getResource("newBetFXML.fxml")));
             ScreenController.activate("newBetFXML");
     }
 
@@ -122,22 +128,18 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     }
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        lineGraph.setCreateSymbols(true);
-
-
-
-
         //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
-
+        update();
+    }
+    public void update(){
+        lineGraph.setCreateSymbols(true);
         for(int i= 0; i<10; i++){
             userBets.add(ranBet());
         }
-
-
-
         setUpChart();
         setUpData();
         setUpListView();
