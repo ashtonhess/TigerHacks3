@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="aaTigerHacks1" uuid="446edf89-c208-4cc2-a9d0-9b437a497eb5">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/aaTigerHacks1</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
   <component name="EntryPointsManager">
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="javafx.fxml.FXML" />
@@ -351,10 +360,27 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
+  <component name="dataSourceStorageLocal" created-in="IU-212.5457.46">
+    <data-source name="aaTigerHacks1" uuid="446edf89-c208-4cc2-a9d0-9b437a497eb5">
+      <database-info product="MariaDB" version="10.4.18-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.18" exact-driver-version="2.7">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
   <component name="libraryTable">
-    <library name="mysql-connector-java-5.1.23-bin">
+    <library name="mysql.connector.java" type="repository">
+      <properties maven-id="mysql:mysql-connector-java:5.1.40" />
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/../driver/mysql-connector-java-5.1.23-bin.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
