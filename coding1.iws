@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="full navigation support and more updated UI">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="none">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,6 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/mainpackage" />
       <recent name="$PROJECT_DIR$/out/production/BetMe/mainpackage" />
       <recent name="$PROJECT_DIR$/src/coding1package" />
     </key>
@@ -88,7 +87,7 @@
       <workItem from="1636159501669" duration="21000" />
       <workItem from="1636160061310" duration="7111000" />
       <workItem from="1636214297763" duration="2819000" />
-      <workItem from="1636230284863" duration="9904000" />
+      <workItem from="1636230284863" duration="1056000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
@@ -209,12 +208,12 @@
       <option name="project" value="LOCAL" />
       <updated>1636227391133</updated>
     </task>
-    <task id="LOCAL-00018" summary="full navigation support and more updated UI">
-      <created>1636231648703</created>
+    <task id="LOCAL-00018" summary="none">
+      <created>1636245149184</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1636231648704</updated>
+      <updated>1636245149184</updated>
     </task>
     <option name="localTasksCounter" value="19" />
     <servers />
@@ -249,8 +248,8 @@
     <MESSAGE value="bug fix" />
     <MESSAGE value="added UI elements for new bet" />
     <MESSAGE value="Updated UI" />
-    <MESSAGE value="full navigation support and more updated UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="full navigation support and more updated UI" />
+    <MESSAGE value="none" />
+    <option name="LAST_COMMIT_MESSAGE" value="none" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

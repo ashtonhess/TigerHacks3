@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ListView fx:id="closedBetsListView" layoutX="16.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" />
+            <ListView fx:id="activeBetsListView" layoutX="489.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" />
+            <Text fx:id="activeBetsText" layoutX="595.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Bets">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="closedBetsText" layoutX="115.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closed Bets">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="betsText" layoutX="427.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bets">
+               <font>
+                  <Font size="57.0" />
+               </font>
+            </Text>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
