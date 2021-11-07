@@ -161,7 +161,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
                 pane.getChildren().addAll(label, line);
                 friendBetsList.getItems().add(pane);
             }
-
         }
 
     public void setUpData(){
@@ -249,7 +248,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
             graphSeries.getNode().setStyle("-fx-stroke: lightgreen");
         }
 
-
     }
 
     public Bet ranBet(){
@@ -262,8 +260,5 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         Bet randBet = new Bet("",ran,"","",false);
         return randBet;
     }
-
-
-
 
 }
