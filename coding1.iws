@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="full navigation support and more updated UI">
-      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXML.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

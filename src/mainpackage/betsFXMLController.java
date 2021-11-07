@@ -70,6 +70,7 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
 
     }
 
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -91,7 +92,7 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
 
         //code
 
-        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
+
         ScreenController.activate("loginFXML");
 
 
