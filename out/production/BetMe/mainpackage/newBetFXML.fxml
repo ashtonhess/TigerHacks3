@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="660.0" prefWidth="960.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.newBetController">
+   <children>
+      <Label layoutX="147.0" layoutY="44.0" prefHeight="59.0" prefWidth="170.0" text="Create New Bet" textAlignment="CENTER" textFill="#398994" AnchorPane.leftAnchor="144.5">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="friendsListView" layoutX="459.0" layoutY="77.0" prefHeight="498.0" prefWidth="447.0" AnchorPane.leftAnchor="459.0" />
+      <TextField fx:id="amountTextField" alignment="CENTER_RIGHT" layoutX="263.0" layoutY="153.0" prefHeight="40.0" prefWidth="177.0" promptText="Enter Amount" style="-fx-background-color: white;" AnchorPane.topAnchor="153.0">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></TextField>
+      <Label layoutX="608.0" layoutY="49.0" text="Select a friend to bet:" textFill="#398994">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></Label>
+      <AnchorPane layoutX="40.0" layoutY="20.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+
+            <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Back" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="47.0" layoutY="1.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Profile" textFill="#eb7908" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="111.0" layoutY="6.0" mnemonicParsing="false" onAction="#friendsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Friends" textFill="#acd62b" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Label fx:id="userNameLabel" alignment="CENTER" layoutX="374.0" layoutY="1.0" prefHeight="27.0" prefWidth="200.0" textFill="#46abc7" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="1.0">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="coinImage" fitHeight="27.0" fitWidth="27.0" layoutX="871.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.5" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="1.5">
+               <image>
+                  <Image url="@btc.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="coinBalLabel" layoutX="838.0" layoutY="2.0" prefHeight="27.0" prefWidth="73.0" text="0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="2.0">
+               <font>
+                  <Font name="System Font" size="12.0" />
+               </font>
+            </Label>
+            <Button contentDisplay="CENTER" layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#addCoinsPressed" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Add Coins" textFill="#21d72d" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="176.0" layoutY="2.0" mnemonicParsing="false" onAction="#requestsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Requests" textFill="#09abeb" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="1.5">
+               <font>
+                  <Font name="Arial Bold" size="8.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Line endX="225.0" layoutX="235.0" layoutY="201.0" startX="-235.0" stroke="#b5afaf" />
+      <Line endX="225.0" layoutX="235.0" layoutY="143.0" startX="-235.0" stroke="#b5afaf" />
+      <Label fx:id="targetName" layoutX="39.0" layoutY="161.0" prefHeight="20.0" prefWidth="133.0" textFill="#398994">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="15.0" layoutY="518.0" mnemonicParsing="false" onAction="#betConfirmPressed" prefHeight="55.0" prefWidth="434.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Bet" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <TextField fx:id="descriptionTextField" alignment="TOP_LEFT" layoutX="54.0" layoutY="216.0" prefHeight="258.0" prefWidth="357.0" promptText="What's it for?" style="-fx-background-color: white;" AnchorPane.leftAnchor="42.0" />
+      <Line endX="225.0" layoutX="235.0" layoutY="514.0" startX="-235.0" stroke="#b5afaf" />
+   </children>
+</AnchorPane>

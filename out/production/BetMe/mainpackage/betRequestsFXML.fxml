@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.betRequestsFXMLController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+         <children>
+            <Text fx:id="betRequestsText" fill="#398994" layoutX="421.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Requests" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Text>
+            <ListView fx:id="friendRequestsListView" layoutX="50.0" layoutY="95.0" prefHeight="500.0" prefWidth="350.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="560.0" />
+            <AnchorPane prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="47.0" layoutY="1.0" mnemonicParsing="false" onAction="#profilePressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Profile" textFill="#eb7908" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Button contentDisplay="CENTER" layoutX="111.0" layoutY="6.0" mnemonicParsing="false" onAction="#friendsPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Friends" textFill="#acd62b" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="userNameLabel" alignment="CENTER" layoutX="374.0" layoutY="1.0" prefHeight="27.0" prefWidth="200.0" textFill="#46abc7" AnchorPane.bottomAnchor="2.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="coinImage" fitHeight="27.0" fitWidth="27.0" layoutX="871.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.5" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="1.5">
+                     <image>
+                        <Image url="@btc.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="coinBalLabel" layoutX="838.0" layoutY="2.0" prefHeight="27.0" prefWidth="73.0" text="0" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="52.0" AnchorPane.topAnchor="2.0">
+                     <font>
+                        <Font name="System Font" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button contentDisplay="CENTER" layoutX="739.0" layoutY="4.0" mnemonicParsing="false" onAction="#addCoinsPressed" prefHeight="27.0" prefWidth="60.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Add Coins" textFill="#21d72d" AnchorPane.bottomAnchor="1.5" AnchorPane.topAnchor="1.5">
+                     <font>
+                        <Font name="Arial Bold" size="8.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ListView fx:id="betRequestsListView1" layoutX="324.0" layoutY="118.0" prefHeight="500.0" prefWidth="350.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="50.0" />
+            <Text fx:id="betRequestsText1" fill="#398994" layoutX="687.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Requests" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="betRequestsText2" fill="#398994" layoutX="165.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friend Requests" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Text>
+            <Button layoutX="62.0" layoutY="598.0" mnemonicParsing="false" onAction="#acceptAllFriends" prefHeight="21.0" prefWidth="120.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Accept All" textFill="LIGHTGREEN" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="55.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="260.0" layoutY="599.0" mnemonicParsing="false" onAction="#declineAllFriends" prefHeight="21.0" prefWidth="120.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Decline All" textFill="#ee2645" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="565.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="567.0" layoutY="599.0" mnemonicParsing="false" onAction="#acceptAllBets" prefHeight="21.0" prefWidth="120.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Accept All" textFill="LIGHTGREEN" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="565.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="790.0" layoutY="599.0" mnemonicParsing="false" onAction="#declineAllBets" prefHeight="21.0" prefWidth="120.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Decline All" textFill="#ee2645" AnchorPane.bottomAnchor="38.0" AnchorPane.rightAnchor="55.0">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
