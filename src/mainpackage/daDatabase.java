@@ -39,6 +39,7 @@ public class daDatabase {
                 executeQueryResult =  stmt.executeQuery(queryString);
                 return new Pair<Boolean, Pair<Integer, ResultSet>>(true, new Pair<Integer, ResultSet>(numRows, executeQueryResult));
             }else{
+                System.out.println("Error in executeQuery. (this.connectionStatus(executeQueryConn)==true) FAILED");
                 return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
             }
         }catch(SQLException sqlExcept){
