@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
