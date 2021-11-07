@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="bets and betme screen method moved to main start page">
-      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="full navigation support and more updated UI">
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="databaseSupport" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -220,14 +217,7 @@
       <option name="project" value="LOCAL" />
       <updated>1636231648704</updated>
     </task>
-    <task id="LOCAL-00019" summary="bets and betme screen method moved to main start page">
-      <created>1636248417847</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1636248417847</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,8 +251,7 @@
     <MESSAGE value="added UI elements for new bet" />
     <MESSAGE value="Updated UI" />
     <MESSAGE value="full navigation support and more updated UI" />
-    <MESSAGE value="bets and betme screen method moved to main start page" />
-    <option name="LAST_COMMIT_MESSAGE" value="bets and betme screen method moved to main start page" />
+    <option name="LAST_COMMIT_MESSAGE" value="full navigation support and more updated UI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
