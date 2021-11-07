@@ -98,6 +98,11 @@ public class createAccountFXMLController implements Initializable, PropertyChang
                             emptyInputAlert.setContentText("New user: "+usernameInput+" has been added to the UserTable.");
                             emptyInputAlert.showAndWait();
                             ScreenController.activate("loginFXML");
+                        }else{
+                            Alert usernameTaken = new Alert(Alert.AlertType.INFORMATION);
+                            usernameTaken.setContentText("Sorry, this username is taken. Please try another.");
+                            usernameTaken.showAndWait();
+
                         }
                     } catch (SQLException e) {
                         System.out.println("DATABASE ERROR. createAccountFXMLController.java @ handleCreateButton");
