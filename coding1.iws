@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +75,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.betmeMain" />
         <item itemvalue="Application.betmeMain" />
         <item itemvalue="Application.betmeMain" />
       </list>
@@ -243,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636256064968</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="newBetController.java">
+      <created>1636256771893</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1636256771893</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
