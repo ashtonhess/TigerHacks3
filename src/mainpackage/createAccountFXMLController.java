@@ -56,9 +56,6 @@ public class createAccountFXMLController implements Initializable, PropertyChang
         String passwordInput = passwordTextField.getText();
         Pair<Boolean, Pair<Integer,ResultSet>> databaseResult = new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null));
 
-
-
-
        // return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
 
         databaseResult = databaseObj.executeQuery("");
@@ -70,7 +67,6 @@ public class createAccountFXMLController implements Initializable, PropertyChang
         databaseBoolResult = databaseResult.getKey();
         databaseRowsResult = databaseResult.getValue().getKey();
         databaseResultSet = databaseResult.getValue().getValue();
-
 
         /*
         * //executeQuery function.
@@ -98,12 +94,9 @@ public class createAccountFXMLController implements Initializable, PropertyChang
             return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
         }
     }
-        *
         * */
 
         //ScreenController.activate("loginFXML");
-
-
 
     }
 

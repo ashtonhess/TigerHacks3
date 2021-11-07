@@ -19,7 +19,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
-
 /**
  * Author: Jacob
  */
@@ -68,7 +67,6 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
     @FXML
     void requestsPressed(ActionEvent event) throws IOException {
         ScreenController.activate("betRequestsFXML");
-
     }
 
     public ArrayList<Bet> userBets = new ArrayList<>();
