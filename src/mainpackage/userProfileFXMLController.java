@@ -173,7 +173,7 @@ public class userProfileFXMLController implements Initializable, PropertyChangeL
 
         //generate random values from 0-24
         int ran = rand.nextInt()/10000000;
-        System.out.println(ran);
+        //System.out.println(ran);
 
         Bet randBet = new Bet("I'm ",ran,"","",false);
         return randBet;
