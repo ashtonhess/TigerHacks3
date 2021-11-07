@@ -52,7 +52,7 @@ public class friendProfileFXMLController implements Initializable, PropertyChang
     public void initialize(URL url, ResourceBundle rb) {
         //use this method to create and array list of random bet objects
         for(int i= 0; i<10; i++){
-            userBets.add(ranBet());
+            //userBets.add(ranBet());
         }
 
         setUpListView();
@@ -139,7 +139,7 @@ public class friendProfileFXMLController implements Initializable, PropertyChang
 
         //generate random values from 0-24
         int ran = rand.nextInt()/10000000;
-        System.out.println(ran);
+        //System.out.println(ran);
 
         Bet randBet = new Bet("",ran,"","",false);
         return randBet;

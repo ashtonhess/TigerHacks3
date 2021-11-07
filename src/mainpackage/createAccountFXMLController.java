@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 /**
  * Author: Jacob
@@ -54,11 +55,12 @@ public class createAccountFXMLController implements Initializable, PropertyChang
     @FXML
     void handleCreateButton(ActionEvent event) throws IOException {
 
-        Pair<Boolean, Pair<Integer,ResultSet>> databaseResult;
+        //databaseObj.doExampleQuery("SELECT * FROM UserTable");
+        Pair<Boolean, Pair<Integer, ArrayList<String>>> databaseResult;
 //= new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null))
         Boolean databaseBoolResult;
         Integer databaseRowsResult;
-        ResultSet databaseResultSet;
+        ArrayList<String> databaseResultSet;
 
         if(holderBool == false){
             String usernameInput = usernameTextField.getText();
@@ -69,28 +71,31 @@ public class createAccountFXMLController implements Initializable, PropertyChang
                 emptyInputAlert.showAndWait();
                 holderBool = false;
             }else{
-                System.out.println("1");
+
                 databaseResult = databaseObj.executeQuery(constructCheckUserIDExistsQuery(usernameInput));
-                System.out.println("2");
+
                 databaseBoolResult = databaseResult.getKey();
                 databaseRowsResult = databaseResult.getValue().getKey();
                 databaseResultSet = databaseResult.getValue().getValue();
+                System.out.println(databaseBoolResult);
+                System.out.println(databaseRowsResult);
+                //System.out.println(databaseResultSet);
                 if (databaseBoolResult == false){
                     Alert boolResultFalseAlert = new Alert(Alert.AlertType.ERROR);
                     boolResultFalseAlert.setContentText("There was an error executing query. Check DB connection.");
                     boolResultFalseAlert.showAndWait();
                 }else{
-                    try {
-                        if (databaseResultSet.next() == false){
+
+                        if (databaseResultSet.isEmpty()){
                             //this means that another user with that username DOES NOT exist.
                             //continue to add new user to database.
 
 
                             //left off
                             //committing these now...
-                            System.out.println("3");
-                            databaseResult = databaseObj.executeQuery(constructNewUserQuery(usernameInput, passwordInput));
-                            System.out.println("4");
+
+                            databaseObj.executeUpdate(constructNewUserQuery(usernameInput, passwordInput));
+
                             System.out.println("New user: "+usernameInput+" has been added to the UserTable.");
                             Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);
                             emptyInputAlert.setContentText("New user: "+usernameInput+" has been added to the UserTable.");
@@ -102,27 +107,18 @@ public class createAccountFXMLController implements Initializable, PropertyChang
                             usernameTaken.showAndWait();
 
                         }
-                    } catch (SQLException e) {
-                        System.out.println("DATABASE ERROR. createAccountFXMLController.java @ handleCreateButton");
-                        e.printStackTrace();
-                    }
+
                 }
 
             }
         }
 
 
-
-
         // return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
 
-        databaseResult = databaseObj.executeQuery("");
+        //databaseResult = databaseObj.executeQuery("");
 
         //This is the code to get information out of the databaseResult that is returned by DB.
-
-
-
-
         //ScreenController.activate("loginFXML");
 
     }
@@ -132,7 +128,7 @@ public class createAccountFXMLController implements Initializable, PropertyChang
         return constructCheckUserIdExistsQueryString;
     }
     public String constructNewUserQuery(String usernameInput, String passwordInput){
-        String constructNewUserQueryString = "INSERT INTO User (userID, userPassword, userDateCreated)\n" +
+        String constructNewUserQueryString = "INSERT INTO UserTable (userID, userPassword, userDateCreated)\n" +
                 "VALUES ('"+usernameInput+"', '"+passwordInput+"', '03/16/2001 08:42:09');";
 
         return constructNewUserQueryString;
