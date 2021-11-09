@@ -67,8 +67,24 @@ public class loginFXMLController extends AbstractDataController implements Initi
     }
     @FXML
     void submitPress(ActionEvent event) throws IOException {
-        submit();
 
+        if(verifyLogin()){
+            submit();
+        }else{
+            Alert failedLoginAlert = new Alert(Alert.AlertType.ERROR);
+            failedLoginAlert.setContentText("Failed to login. Please check connection and credentials and try again.");
+            failedLoginAlert.showAndWait();
+        }
+
+
+
+    }
+
+    public Boolean verifyLogin(){
+
+
+
+        return true;
     }
     public void submit() throws IOException {
         if(userProfile == null){

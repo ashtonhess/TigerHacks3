@@ -47,6 +47,7 @@ SELECT * FROM Bet WHERE betStatus = 3 AND betIsPaidOut AND betSenderUserID = 'yo
 /*query for getting Bet objects that involved a friend.*/
 SELECT * FROM UserFriends JOIN Bet ON UserFriends.friendUserID = Bet.betTargetUserID OR UserFriends.friendUserID = Bet.betSenderUserID WHERE UserFriends.userID = 'bruh' OR UserFriends.userID = 'bruh';
 
+
 /**/
 /*query for getting bet objects for a specific userID*/
 SELECT * FROM Bet WHERE Bet.betTargetUserID = 'bruh' OR Bet.betSenderUserID = 'bruh';
