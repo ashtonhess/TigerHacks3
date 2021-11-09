@@ -8,6 +8,13 @@
       <jdbc-url>jdbc:mariadb://localhost:3306/aaTigerHacks1</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="aaTigerHacks1@localhost" uuid="35c97171-02d6-4b1b-9a1b-e5aa74273331">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/aaTigerHacks1</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
   <component name="EntryPointsManager">
     <list size="1">
@@ -374,6 +381,12 @@
           <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
+    </data-source>
+    <data-source name="aaTigerHacks1@localhost" uuid="35c97171-02d6-4b1b-9a1b-e5aa74273331">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MARIADB" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping />
     </data-source>
   </component>
   <component name="libraryTable">

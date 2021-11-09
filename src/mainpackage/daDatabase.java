@@ -17,9 +17,9 @@ public class daDatabase {
 
 
 
-    static final String DB_URL1 = "jdbc:mysql://localhost:3306/aaTigerHacks1";
-    static final String USER1 = "root";
-    static final String PASS1 = "";
+    static final String DB_URL1 = "jdbc:mysql://betmedb.cxzhslgwgxlk.us-east-2.rds.amazonaws.com:3306/BetMeDB";
+    static final String USER1 = "admin";
+    static final String PASS1 = "password";
 
 
     public void executeUpdate(String queryString){
