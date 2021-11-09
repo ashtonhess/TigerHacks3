@@ -18,7 +18,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 /**
  * Author: Jacob
@@ -128,15 +130,15 @@ public class createAccountFXMLController extends AbstractDataController implemen
                             //this means that another user with that username DOES NOT exist.
                             //continue to add new user to database.
 
-
-                            //left off
-                            //committing these now...
-
+                            //Create a new row in UserTable
                             databaseObj.executeUpdate(constructNewUserQuery(usernameInput, passwordInput));
+                            //Create a new row in Portfolio Table for the new User
+                            databaseObj.executeUpdate(constructNewPortfolioQuery(usernameInput));
 
-                            System.out.println("New user: "+usernameInput+" has been added to the UserTable.");
+                            //Print result and let user know they have been added and a portfolio was created for them.
+                            System.out.println("New user: "+usernameInput+" added to UserTable and Portfolio initialized.");
                             Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);
-                            emptyInputAlert.setContentText("New user: "+usernameInput+" has been added to the UserTable.");
+                            emptyInputAlert.setContentText("New user: "+usernameInput+" added to UserTable and Portfolio initialized.");
                             emptyInputAlert.showAndWait();
                             ScreenController.activate("loginFXML");
                         }else{
@@ -158,7 +160,6 @@ public class createAccountFXMLController extends AbstractDataController implemen
 
         //This is the code to get information out of the databaseResult that is returned by DB.
         //ScreenController.activate("loginFXML");
-
     }
 
     public String constructCheckUserIDExistsQuery(String usernameInput){
@@ -166,10 +167,16 @@ public class createAccountFXMLController extends AbstractDataController implemen
         return constructCheckUserIdExistsQueryString;
     }
     public String constructNewUserQuery(String usernameInput, String passwordInput){
-        String constructNewUserQueryString = "INSERT INTO UserTable (userID, userPassword, userDateCreated)\n" +
-                "VALUES ('"+usernameInput+"', '"+passwordInput+"', '03/16/2001 08:42:09');";
-
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        String dateString = formatter.format(new Date());
+        String constructNewUserQueryString = "INSERT INTO UserTable (userID, userPassword, userDateCreated)\n"
+                +"VALUES ('"+usernameInput+"', '"+passwordInput+"', '"+dateString+"');";
         return constructNewUserQueryString;
+    }
+    public String constructNewPortfolioQuery(String usernameInput){
+        String constructNewPortfolioQuery = "INSERT INTO Portfolio (userID, portfolioBalance, portfolioTotalReturns)\n"
+                +"VALUES ('"+usernameInput+"', 0, 0);";
+        return constructNewPortfolioQuery;
     }
 
     @FXML
