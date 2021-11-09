@@ -11,39 +11,22 @@
 
 <VBox prefHeight="660.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpackage.userProfileFXMLController">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
             <children>
-                <Button fx:id="friendRequestsButton" layoutX="64.0" layoutY="95.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Friend Requests" />
-                <Circle fx:id="userPicBorderCircle" fill="WHITE" layoutX="481.0" layoutY="128.0" radius="75.0" stroke="BLACK" strokeType="INSIDE" />
-                <Button fx:id="betRequestsButton" layoutX="698.0" layoutY="95.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="200.0" text="Bet Requests" />
-                <Text fx:id="usernameText" layoutX="424.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="112.205078125">
-                    <font>
-                        <Font size="24.0" />
-                    </font>
-                </Text>
-            <ImageView fx:id="userPicImageView" fitHeight="150.0" fitWidth="200.0" layoutX="406.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+            <Label alignment="CENTER" layoutX="716.0" layoutY="190.0" prefHeight="59.0" prefWidth="163.0" text="Closed" textAlignment="CENTER" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+                <Circle fx:id="userPicBorderCircle" fill="WHITE" layoutX="481.0" layoutY="122.0" radius="65.0" stroke="#807b7b" strokeType="INSIDE" />
+            <ImageView fx:id="userPicImageView" fitHeight="136.0" fitWidth="143.0" layoutX="413.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@userIcon.png" />
                </image>
             </ImageView>
-            <ListView fx:id="friendsListListView" layoutX="13.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
-            <ListView fx:id="activeBetsListView" layoutX="330.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
-            <ListView fx:id="closedBetsListView" layoutX="647.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" />
-            <Text fx:id="friendsListText" layoutX="92.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends List" wrappingWidth="124.205078125">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <Text fx:id="closedBetsText" layoutX="733.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closed Bets" wrappingWidth="130.205078125">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <Text fx:id="activeBetsText" layoutX="419.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Bets" wrappingWidth="124.205078125">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
+            <ListView fx:id="friendsListListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="13.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" scaleShape="false" style="-fx-background-color: white;" />
+            <ListView fx:id="activeBetsListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="330.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" scaleShape="false" style="-fx-background-color: white;" />
+            <ListView fx:id="closedBetsListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="647.0" layoutY="261.0" prefHeight="388.0" prefWidth="301.0" scaleShape="false" style="-fx-background-color: white;" />
             <AnchorPane layoutX="-177.0" layoutY="11.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
@@ -83,6 +66,16 @@
                   </Button>
                </children>
             </AnchorPane>
+            <Label alignment="CENTER" layoutX="82.0" layoutY="190.0" prefHeight="59.0" prefWidth="163.0" text="Friends" textAlignment="CENTER" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="399.0" layoutY="190.0" prefHeight="59.0" prefWidth="163.0" text="Active" textAlignment="CENTER" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
     </children>
