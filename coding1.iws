@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="When creating an account new users are now added to the UserTable with a correct userDateCreated. Also, a row in the Portfolio table is constructed for the user.">
-      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Starting on verifying login.">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/sql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/sql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/sql.sql" afterDir="false" />
     </list>
     <list id="a5610ad7-a8b1-48e9-8f72-639b878ccdd9" name="Changes by ashtonhess" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -291,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636436690799</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Starting on verifying login.">
+      <created>1636438889966</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636438889966</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +335,8 @@
     <MESSAGE value="updated bets UI" />
     <MESSAGE value="updated profile UI" />
     <MESSAGE value="When creating an account new users are now added to the UserTable with a correct userDateCreated. Also, a row in the Portfolio table is constructed for the user." />
-    <option name="LAST_COMMIT_MESSAGE" value="When creating an account new users are now added to the UserTable with a correct userDateCreated. Also, a row in the Portfolio table is constructed for the user." />
+    <MESSAGE value="Starting on verifying login." />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting on verifying login." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

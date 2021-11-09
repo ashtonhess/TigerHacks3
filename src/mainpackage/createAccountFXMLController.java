@@ -105,7 +105,7 @@ public class createAccountFXMLController extends AbstractDataController implemen
         if(holderBool == false){
             String usernameInput = usernameTextField.getText();
             String passwordInput = passwordTextField.getText();
-            if (usernameInput == "" | passwordInput == ""){
+            if (usernameInput == "" || passwordInput == ""){
                 Alert emptyInputAlert = new Alert(Alert.AlertType.ERROR);
                 emptyInputAlert.setContentText("Please enter a valid username and password.");
                 emptyInputAlert.showAndWait();
