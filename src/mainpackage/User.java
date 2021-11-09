@@ -21,15 +21,14 @@ public class User {
         this.userID = userID;
         this.userPassword = userPassword;
         this.userDateCreated = dateString;
+        //later, instantiate this into an object and fill it with information from the db corresponding to the userid
         this.userPortfolio = new Portfolio(this.userID);
     }
 
-    public User(String userID, String userPassword, String userDateCreated, Portfolio port,ArrayList<String> friends,ArrayList<String> friendRequests){
+    public User(String userID, Portfolio port, ArrayList<String> friends,ArrayList<String> friendRequests){
         this.userID = userID;
         this.userFriends = friends;
-        this.userPassword = userPassword;
         this.userFriendRequests = friendRequests;
-        this.userDateCreated= userDateCreated;
         this.userPortfolio=port;
 
     }

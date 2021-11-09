@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Merge_at_11_9_21,_12_55_AM_[Changes]" date="1636441063788" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Merge_at_11_9_21,_12_55_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Merge at 11/9/21, 12:55 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/loginFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/loginFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Merge_at_11_9_21,_12_55_AM_[Changes]/loginFXMLController.class" />
+  </binary>
+</changelist>

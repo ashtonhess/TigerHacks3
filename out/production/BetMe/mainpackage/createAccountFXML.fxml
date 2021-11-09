@@ -11,7 +11,6 @@
   <children>
     <AnchorPane maxHeight="-1.0" prefWidth="960.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <TextField fx:id="passwordTextField" layoutX="368.0" layoutY="246.0" AnchorPane.rightAnchor="400.0" />
             <TextField fx:id="usernameTextField" layoutX="399.0" layoutY="180.0" AnchorPane.leftAnchor="399.0" AnchorPane.rightAnchor="400.0" />
             <Text fill="#398994" layoutX="368.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="83.205078125" AnchorPane.leftAnchor="402.0">
                <font>
@@ -26,16 +25,17 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Button fx:id="createButton" layoutX="385.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="28.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Create" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="385.0">
+            <Button fx:id="createButton" layoutX="385.0" layoutY="288.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="28.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #90EE90;" text="Create" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="385.0">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="cancelButton" layoutX="362.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleCancelPressed" prefHeight="21.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Cancel" AnchorPane.leftAnchor="385.0">
+            <Button fx:id="cancelButton" layoutX="385.0" layoutY="345.0" mnemonicParsing="false" onAction="#handleCancelPressed" prefHeight="21.0" prefWidth="190.0" style="-fx-background-radius: 10px; -fx-background-color: #a9a9a9;" text="Cancel" AnchorPane.leftAnchor="385.0">
                <font>
                   <Font name="Arial" size="12.0" />
                </font>
             </Button>
+            <PasswordField fx:id="passwordTextField" layoutX="399.0" layoutY="242.0" AnchorPane.leftAnchor="399.0" />
          </children>
     </AnchorPane>
   </children>
