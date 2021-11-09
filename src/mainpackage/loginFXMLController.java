@@ -9,10 +9,10 @@ package mainpackage;
         import javafx.fxml.FXML;
         import javafx.fxml.FXMLLoader;
         import javafx.fxml.Initializable;
-        import javafx.scene.control.Button;
-        import javafx.scene.control.Label;
-        import javafx.scene.control.TextArea;
+        import javafx.scene.control.*;
         import javafx.scene.image.ImageView;
+        import javafx.scene.input.KeyCode;
+        import javafx.scene.input.KeyEvent;
         import javafx.scene.text.Text;
 
 /**
@@ -33,13 +33,22 @@ public class loginFXMLController extends AbstractDataController implements Initi
     private Text passwordText;
 
     @FXML
-    private TextArea usernameTextArea;
+    private TextField usernameTextArea;
+    @FXML
+    private PasswordField passwordTextArea;
+
+    @FXML
+    void enterClicked(KeyEvent event) {
+        if(event.getCode() == KeyCode.ENTER){
+
+        }
+
+    }
+
 
     @FXML
     private Text usernameText;
 
-    @FXML
-    private TextArea passwordTextArea;
 
 
     @Override
@@ -60,41 +69,18 @@ public class loginFXMLController extends AbstractDataController implements Initi
     }
     @FXML
     void submitPress(ActionEvent event) throws IOException {
-        /*
-        if (usernameText.getText().isEmpty() || passwordText.getText().isEmpty() || usernameText.getText().length() >= 16 || passwordText.getText().length() <= 0) {
-            System.out.println("input error");
-        }
-        else if(userProfiles.size() != 0) {
-            boolean connected= false;
+        submit();
 
-
-            for (User x : userProfiles) {
-                if (x.userID.equals(usernameText.getText())) {
-                    if (x.userPassword.equals(passwordText)) {
-                        userProfile = x;
-                        connected=true;
-                    } else {
-                        System.out.println("invalid password");
-                    }
-
-                }
-                else {
-                    System.out.println("invalid username");
-                }
-                if(connected){
-                    ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
-                    ScreenController.activate("mainPage");
-                }
-            }
-
-        }
-
-         */
+    }
+    public void submit() throws IOException {
         if(userProfile == null){
             userProfile = (new User("test", ""));
         }
+
+
         ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
+
     }
     @FXML
     void createAccountPressed(ActionEvent event) throws IOException {

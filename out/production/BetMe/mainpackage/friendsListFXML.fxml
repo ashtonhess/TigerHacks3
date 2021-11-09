@@ -13,8 +13,8 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <ListView fx:id="friendsListListView" layoutX="14.0" layoutY="100.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="498.0" prefWidth="447.0" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="459.0" />
-            <ListView fx:id="searchResultList" layoutX="550.0" layoutY="228.0" prefHeight="258.0" prefWidth="357.0" AnchorPane.bottomAnchor="174.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="228.0" />
+            <ListView fx:id="friendsListListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="14.0" layoutY="100.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="498.0" prefWidth="447.0" scaleShape="false" style="-fx-background-color: white;" AnchorPane.bottomAnchor="85.0" AnchorPane.rightAnchor="459.0" />
+            <ListView fx:id="searchResultList" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="550.0" layoutY="228.0" prefHeight="258.0" prefWidth="357.0" scaleShape="false" style="-fx-background-color: white;" AnchorPane.bottomAnchor="174.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="228.0" />
             <AnchorPane layoutY="7.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">

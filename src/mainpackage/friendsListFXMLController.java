@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 /**
  * Author: Jacob
  */
-public class friendsListFXMLController implements Initializable, PropertyChangeListener {
+public class friendsListFXMLController extends AbstractDataController implements Initializable, PropertyChangeListener {
 
     @FXML
     private ListView<Pane> friendsListListView;
@@ -68,21 +68,31 @@ public class friendsListFXMLController implements Initializable, PropertyChangeL
         ScreenController.addScreen("userProfileFXML", FXMLLoader.load(getClass().getResource("userProfileFXML.fxml")));
        ScreenController.activate("userProfileFXML");
     }
+    @FXML
+    void friendsPressed(ActionEvent event) throws IOException {
+        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
+        ScreenController.activate("friendsListFXML");
+
+    }
 
 
     @FXML
     void addCoinsPressed(ActionEvent event) {
+        if(userProfile == null){
+
+        }
+        else{
+            userProfile.userPortfolio.portfolioBalance=userProfile.userPortfolio.portfolioBalance+10;
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+        }
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //use this method to create and array list of random bet objects
-        for(int i= 0; i<10; i++){
-            userBets.add(ranBet());
+        if(userProfile != null) {
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
         }
-
-        setUpListView();
-        setUpListView2();
     }
 
     @Override

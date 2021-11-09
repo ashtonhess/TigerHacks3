@@ -161,9 +161,8 @@ public class mainPageController extends AbstractDataController  implements Initi
     public int minAccountValue = 0;
     public int overallGains = 0 ;
     final int WINDOW_SIZE = 20;
-    public ArrayList<Bet> userBets;
+    public ArrayList<Bet> userBets = new ArrayList<>();
     public String userId;
-    public User loadedUser;
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
@@ -181,12 +180,18 @@ public class mainPageController extends AbstractDataController  implements Initi
 
 
         //custom data
+        if(userProfile != null) {
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+            userId= userProfile.userID;
+            userBets = userProfile.userPortfolio.userBets;
+            userNameLabel.setText(userProfile.userID);
+            update(userProfile.userPortfolio.userBets);
+        }
+        else{
+            update(userBets);
+        }
 
-        userId= userProfile.userID;
-        userBets = userProfile.userPortfolio.userBets;
-        userNameLabel.setText(userProfile.userID);
-        coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
-        update(userProfile.userPortfolio.userBets);
+
     }
     public void update(ArrayList<Bet> bets){
         setUpChart(graphType,bets);

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.ResourceBundle;
 
-public class newBetController implements Initializable, PropertyChangeListener {
+public class newBetController extends AbstractDataController implements Initializable, PropertyChangeListener {
 
     @FXML
     private Label targetName;
@@ -70,6 +70,14 @@ public class newBetController implements Initializable, PropertyChangeListener {
     }
     @FXML
     void addCoinsPressed(ActionEvent event) {
+        if(userProfile == null){
+
+        }
+        else{
+            userProfile.userPortfolio.portfolioBalance=userProfile.userPortfolio.portfolioBalance+10;
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+        }
+
 
     }
 
@@ -91,11 +99,9 @@ public class newBetController implements Initializable, PropertyChangeListener {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         //use this method to create and array list of random bet objects
-        for(int i= 0; i<10; i++){
-            userBets.add(ranBet());
+        if(userProfile != null) {
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
         }
-
-        setUpListView();
     }
     //Use this to loop through array of bet object, creating a pane for the object and adding it to the list
     public void setUpListView() {

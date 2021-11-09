@@ -23,13 +23,16 @@ import java.util.ResourceBundle;
 /**
  * Author: Jacob
  */
-public class betsFXMLController implements Initializable, PropertyChangeListener {
+public class betsFXMLController extends AbstractDataController implements Initializable, PropertyChangeListener {
 
     @FXML
     private Text activeBetsText;
 
     @FXML
     private Text betsText;
+
+    @FXML
+    private Label coinBalLabel;
 
     @FXML
     private ListView<Pane> activeBetsListView;
@@ -49,10 +52,6 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
         ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
 
-
-
-
-
     }
 
     @FXML
@@ -70,6 +69,13 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
     }
     @FXML
     void addCoinsPressed(ActionEvent event) {
+        if(userProfile == null){
+
+        }
+        else{
+            userProfile.userPortfolio.portfolioBalance=userProfile.userPortfolio.portfolioBalance+10;
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+        }
 
     }
     @FXML
@@ -82,14 +88,11 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
-        //use this method to create and array list of random bet objects
-        for(int i= 0; i<10; i++){
-            userBets.add(ranBet());
+        if(userProfile != null) {
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
         }
 
-        setUpListView();
-        setUpListView2();
+
     }
 
     @Override
@@ -101,14 +104,6 @@ public class betsFXMLController implements Initializable, PropertyChangeListener
         }
     }
 
-    @FXML
-    void donePressed(ActionEvent event) throws IOException {
-
-        //code
-
-        ScreenController.activate("loginFXML");
-
-    }
     //Use this to loop through array of bet object, creating a pane for the object and adding it to the list
     public void setUpListView() {
 

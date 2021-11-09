@@ -17,7 +17,7 @@
                   <Font name="Arial" size="28.0" />
                </font>
             </Text>
-            <ListView fx:id="friendRequestsListView" layoutX="50.0" layoutY="95.0" prefHeight="500.0" prefWidth="350.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="560.0" />
+            <ListView fx:id="friendRequestsListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="50.0" layoutY="95.0" prefHeight="500.0" prefWidth="350.0" scaleShape="false" style="-fx-background-color: white;" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="560.0" />
             <AnchorPane prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
@@ -57,7 +57,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <ListView fx:id="betRequestsListView1" layoutX="324.0" layoutY="118.0" prefHeight="500.0" prefWidth="350.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="50.0" />
+            <ListView fx:id="betRequestsListView1" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="324.0" layoutY="118.0" prefHeight="500.0" prefWidth="350.0" scaleShape="false" style="-fx-background-color: white;" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="560.0" AnchorPane.rightAnchor="50.0" />
             <Text fx:id="betRequestsText1" fill="#398994" layoutX="687.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bet Requests" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="16.0" />
