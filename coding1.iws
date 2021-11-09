@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
-      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Bet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
+    <list id="a5610ad7-a8b1-48e9-8f72-639b878ccdd9" name="Changes by ashtonhess" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,16 +42,8 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/sql.sql" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPage.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPageController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/Portfolio.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/daDatabase.java" root0="FORCE_HIGHLIGHTING" />
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
