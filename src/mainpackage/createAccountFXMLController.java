@@ -23,7 +23,7 @@ import java.util.ResourceBundle;
 /**
  * Author: Jacob
  */
-public class createAccountFXMLController implements Initializable, PropertyChangeListener {
+public class createAccountFXMLController extends AbstractDataController implements Initializable, PropertyChangeListener {
 
     Boolean holderBool = false;
 
@@ -51,9 +51,46 @@ public class createAccountFXMLController implements Initializable, PropertyChang
 //            textToChange.setText((String)evt.getNewValue());
         }
     }
-
     @FXML
     void handleCreateButton(ActionEvent event) throws IOException {
+        /*
+        if(usernameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty() || usernameTextField.getText().length() >= 16 || usernameTextField.getText().length() <= 0) {
+            System.out.println("input error");
+        }
+        else{
+            boolean valid= false;
+
+        for(User x: userProfiles) {
+            if (x.userID.equals(usernameTextField.getText())) {
+                System.out.println("username taken");
+            } else {
+                userProfiles.add(new User(usernameTextField.getText(), passwordTextField.getText()));
+                System.out.println("account created");
+
+            }
+
+
+        }
+        if(valid){
+            //ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
+            ScreenController.activate("loginFXML");
+        }
+
+
+
+        }
+
+         */
+        //userProfiles.add(new User(usernameTextField.getText(), passwordTextField.getText()));
+        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
+        ScreenController.activate("loginFXML");
+
+
+
+
+    }
+
+    void handleCreateButton1(ActionEvent event) throws IOException {
 
         //databaseObj.doExampleQuery("SELECT * FROM UserTable");
         Pair<Boolean, Pair<Integer, ArrayList<String>>> databaseResult;

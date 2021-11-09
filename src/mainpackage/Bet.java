@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Bet {
+public class Bet extends AbstractDataController{
     public int betID;
     //0 = closed
     //1 = open
@@ -31,13 +31,13 @@ public class Bet {
 
 
 //full constructor
-    public Bet(int betID, int betStatus, String betDateTime, String betDescription, String betTitle, int betAmount, String betWinner, String betSenderUserID, String betTargetUserID, int betSenderResult, int betTargetResult, int betSenderStatus, int betTargetStatus, boolean betIsPrivate, boolean betIsPaidOut) throws ParseException {
-        Date date1 =new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").parse(betDateTime);
+    public Bet(int betID, int betStatus, Date betDateTime, String betDescription, String betTitle, int betAmount, String betWinner, String betSenderUserID, String betTargetUserID, int betSenderResult, int betTargetResult, int betSenderStatus, int betTargetStatus, boolean betIsPrivate, boolean betIsPaidOut) throws ParseException {
+        //Date date1 =new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").parse(betDateTime);
         this.betID = betID;
         this.betStatus = betStatus;
         this.betDateTime = new Date();
         this.betIsPrivate = betIsPrivate;
-        this.betDateTime = date1;
+        //this.betDateTime = date1;
         this.betWinner = betWinner;
         this.betSenderResult = betSenderResult;
         this.betTargetResult = betTargetResult;
@@ -63,7 +63,8 @@ public class Bet {
         this.betDateTime = new Date();
         this.betIsPaidOut = false;
         this.betTitle= senderId +" made a $"+betAmount+" bet with "+ targetID;
-        // add this this.BetId =
+        this.betID = betIDs+1;
+        betIDs++;
         this.betDescription = description;
         this.betAmount = betAmount;
         this.betSenderUserID = senderId;

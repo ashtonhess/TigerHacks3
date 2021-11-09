@@ -18,7 +18,7 @@ package mainpackage;
 /**
  * @author ashtonhess
  */
-public class loginFXMLController implements Initializable, PropertyChangeListener {
+public class loginFXMLController extends AbstractDataController implements Initializable, PropertyChangeListener {
 
     @FXML
     private Button createAccountButton;
@@ -60,9 +60,41 @@ public class loginFXMLController implements Initializable, PropertyChangeListene
     }
     @FXML
     void submitPress(ActionEvent event) throws IOException {
-            ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
-            ScreenController.activate("mainPage");
+        /*
+        if (usernameText.getText().isEmpty() || passwordText.getText().isEmpty() || usernameText.getText().length() >= 16 || passwordText.getText().length() <= 0) {
+            System.out.println("input error");
+        }
+        else if(userProfiles.size() != 0) {
+            boolean connected= false;
 
+
+            for (User x : userProfiles) {
+                if (x.userID.equals(usernameText.getText())) {
+                    if (x.userPassword.equals(passwordText)) {
+                        userProfile = x;
+                        connected=true;
+                    } else {
+                        System.out.println("invalid password");
+                    }
+
+                }
+                else {
+                    System.out.println("invalid username");
+                }
+                if(connected){
+                    ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
+                    ScreenController.activate("mainPage");
+                }
+            }
+
+        }
+
+         */
+        if(userProfile == null){
+            userProfile = (new User("test", ""));
+        }
+        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
+        ScreenController.activate("mainPage");
     }
     @FXML
     void createAccountPressed(ActionEvent event) throws IOException {

@@ -18,8 +18,9 @@ public class betmeMain extends Application {
             Scene scene = new Scene(root);
 
             ScreenController.main = scene;
+            ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
 
-
+/*
             ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
             ScreenController.addScreen("newBetFXML", FXMLLoader.load(getClass().getResource("newBetFXML.fxml")));
             ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
@@ -29,6 +30,8 @@ public class betmeMain extends Application {
             ScreenController.addScreen("betRequestsFXML", FXMLLoader.load(getClass().getResource("betRequestsFXML.fxml")));
             ScreenController.addScreen("betsFXML", FXMLLoader.load(getClass().getResource("betsFXML.fxml")));
 
+
+ */
 
 
             // USE THESE METHODS TO ADD MORE SCREENS TO SWITCH TO

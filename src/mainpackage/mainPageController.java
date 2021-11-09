@@ -29,7 +29,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 
-public class mainPageController  implements Initializable, PropertyChangeListener {
+public class mainPageController extends AbstractDataController  implements Initializable, PropertyChangeListener {
 
     @FXML
     private NumberAxis yAxis;
@@ -66,7 +66,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     private Button requestsButton;
     @FXML
     private Button newBetButton;
-
     @FXML
     private Label userNameLabel;
 
@@ -74,6 +73,8 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     @FXML
     void logoutPressed(ActionEvent event) throws IOException {
+        //userProfile = null;
+        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
         ScreenController.activate("loginFXML");
 
     }
@@ -93,6 +94,14 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     }
     @FXML
     void addCoinsPressed(ActionEvent event) {
+        if(userProfile == null){
+
+        }
+        else{
+            userProfile.userPortfolio.portfolioBalance=userProfile.userPortfolio.portfolioBalance+10;
+            coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+        }
+
 
     }
     @FXML
@@ -118,19 +127,15 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     private Button recentGraph;
     @FXML
     private Button totalGraph;
-    @FXML
 
+    @FXML
     void totalGraphPressed(ActionEvent event) {
         recentGraph.setStyle("-fx-background-color: #90EE90");
         totalGraph.setStyle("-fx-background-color: #a9a9a9");
         lineGraph.getData().clear();
         lineGraph.setCreateSymbols(false);
         graphType=1;
-        setUpChart(graphType);
-
-
-
-
+        setUpChart(graphType,userProfile.userPortfolio.userBets);
     }
 
     @FXML
@@ -140,13 +145,12 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         lineGraph.getData().clear();
         lineGraph.setCreateSymbols(true);
         graphType=0;
-        setUpChart(graphType);
+        setUpChart(graphType, userProfile.userPortfolio.userBets);
 
     }
 
-
     private XYChart.Series<String,Number> graphSeries;
-    public ArrayList<Bet> userBets = new ArrayList<>();
+   // public ArrayList<Bet> userBets = new ArrayList<>();
     public daDatabase databaseObj = new daDatabase();
     private Image arrowUp = new Image(getClass().getResourceAsStream("up.png"));
     private Image arrowDown = new Image(getClass().getResourceAsStream("down.png"));
@@ -157,31 +161,44 @@ public class mainPageController  implements Initializable, PropertyChangeListene
     public int minAccountValue = 0;
     public int overallGains = 0 ;
     final int WINDOW_SIZE = 20;
-    public String userId = "chase";
+    public ArrayList<Bet> userBets;
+    public String userId;
+    public User loadedUser;
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
 
     }
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         //System.out.println(Integer.toString(finshedBets.getValue().getKey()));
         lineGraph.setCreateSymbols(true);
-        userBets = ranBet(100);
-        System.out.println(userBets);
 
-        setUpChart(graphType);
-        setUpData();
-        setUpListView();
+        //System.out.println(userBets);
+
+
+
+        //custom data
+
+        userId= userProfile.userID;
+        userBets = userProfile.userPortfolio.userBets;
+        userNameLabel.setText(userProfile.userID);
+        coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+        update(userProfile.userPortfolio.userBets);
+    }
+    public void update(ArrayList<Bet> bets){
+        setUpChart(graphType,bets);
+        setUpData(bets);
+        setUpListView(bets);
+
     }
 
 
-    public void setUpListView() {
-        Lists friendBets = new Lists(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight(),userBets);
+
+    public void setUpListView(ArrayList<Bet> bets) {
+        Lists friendBets = new Lists(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight(),bets);
         for(Pane x: friendBets.panes){
             friendBetsList.getItems().add(x);
         }
@@ -190,9 +207,9 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     }
 
-    public void setUpData(){
+    public void setUpData(ArrayList<Bet> bets){
 
-        totalBets.setText(Integer.toString(userBets.size()));
+        totalBets.setText(Integer.toString(bets.size()));
         if(overallGains>=0){
             arrowImage.setImage(arrowUp);
             totalGains.setText("$"+Integer.toString(overallGains));
@@ -222,7 +239,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     }
 
-    public void setUpChart(int type)
+    public void setUpChart(int type,ArrayList<Bet> bets )
     {
         maxAccountValue=0;
         minAccountValue=0;
@@ -234,7 +251,7 @@ public class mainPageController  implements Initializable, PropertyChangeListene
         int i=1;
 
 
-        for(Bet x: userBets) {
+        for(Bet x: bets) {
 
             if(x.betWinner.equals(userId)){
                 overallGains += x.betAmount;
@@ -317,39 +334,6 @@ public class mainPageController  implements Initializable, PropertyChangeListene
 
     }
 
-    public ArrayList<Bet> ranBet(int n){
-        ArrayList<Bet> betList = new ArrayList<>();
-        ArrayList<String> nameList = new ArrayList<>();
 
-        for(int i=0; i<n; i++) {
-            Random ranBet = new Random(); //instance of random class
-            Random ranOutcome = new Random();
-
-
-            //generate random values from 0-24
-            int ranb = ranBet.nextInt(50);
-            int rano = ranOutcome.nextInt(10);
-            //System.out.println(rano);
-
-
-            // add 5 element in ArrayList
-            nameList.add("Ashton");
-            nameList.add("Jacob");
-            nameList.add("java jon");
-            nameList.add("java joe");
-            nameList.add("joe mama");
-
-            Bet randBet = new Bet("", ranb, "chase", nameList.get(ranBet.nextInt(nameList.size())), false);
-            if(rano >= 4){
-                randBet.betWinner=randBet.betSenderUserID;
-            }
-            else{
-                randBet.betWinner=randBet.betTargetUserID;
-            }
-            betList.add(randBet);
-        }
-
-        return betList;
-    }
 
 }
