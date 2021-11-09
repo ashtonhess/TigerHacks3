@@ -364,6 +364,9 @@
       </set>
     </option>
   </component>
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/mainpackage/sql.sql" dialect="GenericSQL" />
+  </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
