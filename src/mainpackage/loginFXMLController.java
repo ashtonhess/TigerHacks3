@@ -44,8 +44,6 @@ public class loginFXMLController extends AbstractDataController implements Initi
         }
 
     }
-
-
     @FXML
     private Text usernameText;
 
