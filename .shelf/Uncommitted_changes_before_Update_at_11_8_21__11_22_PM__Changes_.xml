@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_8_21,_11_22_PM_[Changes]" date="1636435435789" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_8_21,_11_22_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/8/21, 11:22 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/User.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/User.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_8_21,_11_22_PM_[Changes]/User.class" />
+  </binary>
+</changelist>
