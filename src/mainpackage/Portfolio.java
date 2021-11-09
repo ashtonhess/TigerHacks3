@@ -35,6 +35,7 @@ public class Portfolio {
             //generate random values from 0-24
             int ranb = ranBet.nextInt(50);
             int rano = ranOutcome.nextInt(10);
+            int ranStat = ranOutcome.nextInt(2);
             //System.out.println(rano);
 
 
@@ -46,12 +47,25 @@ public class Portfolio {
             nameList.add("joe mama");
 
             Bet randBet = new Bet("", ranb, userId, nameList.get(ranBet.nextInt(nameList.size())), false);
-            if(rano >= 4){
-                randBet.betWinner=randBet.betSenderUserID;
+
+            if(ranStat <1 ){
+                randBet.betSenderStatus = 1;
+                randBet.betTargetStatus = 1;
+
             }
             else{
-                randBet.betWinner=randBet.betTargetUserID;
+                randBet.betSenderStatus = 2;
+                randBet.betTargetStatus = 2;
             }
+            if(randBet.betSenderStatus==2){
+                if(rano >= 4){
+                    randBet.betWinner=randBet.betSenderUserID;
+                }
+                else{
+                    randBet.betWinner=randBet.betTargetUserID;
+                }
+            }
+
             betList.add(randBet);
         }
 

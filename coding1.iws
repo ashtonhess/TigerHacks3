@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Starting on verifying login.">
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="change to how lists work">
       <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/ListElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/ListElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/ListElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/ListElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
     </list>
     <list id="a5610ad7-a8b1-48e9-8f72-639b878ccdd9" name="Changes by ashtonhess" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,15 +37,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/sql.sql" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPage.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPageController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/Portfolio.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/daDatabase.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/sql.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPage.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/Portfolio.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -111,7 +118,7 @@
       <workItem from="1636214297763" duration="2819000" />
       <workItem from="1636230284863" duration="9904000" />
       <workItem from="1636254253907" duration="1511000" />
-      <workItem from="1636426341898" duration="8002000" />
+      <workItem from="1636426341898" duration="16145000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed to BetMe">
       <created>1636160236049</created>
@@ -281,21 +288,56 @@
       <option name="project" value="LOCAL" />
       <updated>1636432607619</updated>
     </task>
-    <task id="LOCAL-00025" summary="When creating an account new users are now added to the UserTable with a correct userDateCreated. Also, a row in the Portfolio table is constructed for the user.">
-      <created>1636436690799</created>
+    <task id="LOCAL-00025" summary="more updated UIs">
+      <created>1636435323882</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1636436690799</updated>
+      <updated>1636435323882</updated>
     </task>
-    <task id="LOCAL-00026" summary="Starting on verifying login.">
-      <created>1636438889966</created>
+    <task id="LOCAL-00026" summary="more updated UIs">
+      <created>1636435346931</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1636438889966</updated>
+      <updated>1636435346931</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="more updated UIs">
+      <created>1636435877155</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636435877155</updated>
+    </task>
+    <task id="LOCAL-00028" summary="create account tweaks">
+      <created>1636438979070</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1636438979070</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change to how lists work">
+      <created>1636442041627</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1636442041627</updated>
+    </task>
+    <task id="LOCAL-00030" summary="change to how lists work">
+      <created>1636442059855</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1636442059855</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change to how lists work">
+      <created>1636442088503</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1636442088503</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,9 +377,10 @@
     <MESSAGE value="Create account is working. Gets UserID, password, and date created. Date created is incorrect, needs to be fixed." />
     <MESSAGE value="updated bets UI" />
     <MESSAGE value="updated profile UI" />
-    <MESSAGE value="When creating an account new users are now added to the UserTable with a correct userDateCreated. Also, a row in the Portfolio table is constructed for the user." />
-    <MESSAGE value="Starting on verifying login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting on verifying login." />
+    <MESSAGE value="more updated UIs" />
+    <MESSAGE value="create account tweaks" />
+    <MESSAGE value="change to how lists work" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to how lists work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
