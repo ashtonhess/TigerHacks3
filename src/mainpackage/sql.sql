@@ -62,7 +62,6 @@ INSERT INTO User (userID, userPassword, userDateCreated)
 VALUES ('ashton', 'ashtonpassword', '03/16/2001 08:42:09');
 /*This inserts a new Portfolio for the new user.*/
 INSERT INTO Portfolio (userID, portfolioBalance, portfolioTotalReturns)
-VALUES ('chase', 0, 0);
 
 
 /*WORKING SQL TO POPULATE TABLES START*/
