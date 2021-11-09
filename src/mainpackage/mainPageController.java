@@ -203,9 +203,9 @@ public class mainPageController extends AbstractDataController  implements Initi
 
 
     public void setUpListView(ArrayList<Bet> bets) {
-        Lists friendBets = new Lists(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight(),bets);
-        for(Pane x: friendBets.panes){
-            friendBetsList.getItems().add(x);
+        for(Bet x: bets){
+            friendBetsList.getItems().add(new ListElement(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight()).setTypePublicBet(x));
+
         }
 
 
