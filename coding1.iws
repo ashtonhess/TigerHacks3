@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="more updated UIs">
-      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXML.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXML.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
     </list>
     <list id="a5610ad7-a8b1-48e9-8f72-639b878ccdd9" name="Changes by ashtonhess" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,21 +22,21 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="LoginBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPageController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/daDatabase.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/sql.sql" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPage.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/loginFXML.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/mainPageController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/mainpackage/Portfolio.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainpackage/daDatabase.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
