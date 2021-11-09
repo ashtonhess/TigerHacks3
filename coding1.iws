@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
-      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Bet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/Portfolio.class" afterDir="false" />
+    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="start of internal functions bug fix">
       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betmeMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/loginFXMLController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Bet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Portfolio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betmeMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/loginFXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
     </list>
     <list id="a5610ad7-a8b1-48e9-8f72-639b878ccdd9" name="Changes by ashtonhess" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -267,7 +253,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636256771893</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="start of internal functions">
+      <created>1636424659834</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1636424659834</updated>
+    </task>
+    <task id="LOCAL-00024" summary="start of internal functions bug fix">
+      <created>1636424754316</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636424754316</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +304,9 @@
     <MESSAGE value="bets and betme screen method moved to main start page" />
     <MESSAGE value="betRequestsFXMLController.java" />
     <MESSAGE value="newBetController.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="newBetController.java" />
+    <MESSAGE value="start of internal functions" />
+    <MESSAGE value="start of internal functions bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="start of internal functions bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
