@@ -4,10 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.util.Pair;
@@ -32,7 +29,7 @@ public class createAccountFXMLController extends AbstractDataController implemen
     public daDatabase databaseObj = new daDatabase();
 
     @FXML
-    private TextField passwordTextField;
+    private PasswordField passwordTextField;
 
     @FXML
     private Button createButton;
@@ -53,44 +50,8 @@ public class createAccountFXMLController extends AbstractDataController implemen
 //            textToChange.setText((String)evt.getNewValue());
         }
     }
-//    @FXML
-//    void handleCreateButton1(ActionEvent event) throws IOException {
-//        /*
-//        if(usernameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty() || usernameTextField.getText().length() >= 16 || usernameTextField.getText().length() <= 0) {
-//            System.out.println("input error");
-//        }
-//        else{
-//            boolean valid= false;
-//
-//        for(User x: userProfiles) {
-//            if (x.userID.equals(usernameTextField.getText())) {
-//                System.out.println("username taken");
-//            } else {
-//                userProfiles.add(new User(usernameTextField.getText(), passwordTextField.getText()));
-//                System.out.println("account created");
-//
-//            }
-//
-//
-//        }
-//        if(valid){
-//            //ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
-//            ScreenController.activate("loginFXML");
-//        }
-//
-//
-//
-//        }
-//
-//         */
-//        //userProfiles.add(new User(usernameTextField.getText(), passwordTextField.getText()));
-//        ScreenController.addScreen("loginFXML", FXMLLoader.load(getClass().getResource("loginFXML.fxml")));
-//        ScreenController.activate("loginFXML");
-//
-//
-//
-//
-//    }
+
+
 
     @FXML
     void handleCreateButton(ActionEvent event) throws IOException {
@@ -105,7 +66,7 @@ public class createAccountFXMLController extends AbstractDataController implemen
         if(holderBool == false){
             String usernameInput = usernameTextField.getText();
             String passwordInput = passwordTextField.getText();
-            if (usernameInput == "" | passwordInput == ""){
+            if (usernameInput.isEmpty() || passwordInput.isEmpty() || usernameInput.length()> 15 || usernameInput.length() <= 3 || passwordInput.length()> 15 || passwordInput.length() <=3 ){
                 Alert emptyInputAlert = new Alert(Alert.AlertType.ERROR);
                 emptyInputAlert.setContentText("Please enter a valid username and password.");
                 emptyInputAlert.showAndWait();
@@ -139,7 +100,7 @@ public class createAccountFXMLController extends AbstractDataController implemen
                             System.out.println("New user: "+usernameInput+" added to UserTable and Portfolio initialized.");
                             Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);
                             emptyInputAlert.setContentText("New user: "+usernameInput+" added to UserTable and Portfolio initialized.");
-                            emptyInputAlert.showAndWait();
+                           // emptyInputAlert.showAndWait();
                             ScreenController.activate("loginFXML");
                         }else{
                             Alert usernameTaken = new Alert(Alert.AlertType.INFORMATION);
