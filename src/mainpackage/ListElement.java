@@ -29,8 +29,8 @@ public class ListElement{
         this.pane.getChildren().add(this.line);
     }
 
-    public Pane setTypePublicBet(Bet x){
-        if(!x.betIsPrivate) {
+    public Pane setTypeBet(Bet x){
+
 
             Label l = new Label();
             Label d = new Label();
@@ -45,8 +45,6 @@ public class ListElement{
             l.setTextFill(Paint.valueOf("#398994"));
             d.setTextFill(Paint.valueOf("#b5afaf"));
             this.pane.getChildren().addAll(l, d);
-
-        }
         return this.pane;
 
     }

@@ -143,13 +143,14 @@ public class loginFXMLController extends AbstractDataController implements Initi
     }
 
     public void loginSuccess() throws IOException {
+        if(userProfile == null){
+            userProfile = (new User("test", ""));
+        }
         ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
         ScreenController.activate("mainPage");
     }
     public void submit() throws IOException {
-        if(userProfile == null){
-            userProfile = (new User("test", ""));
-        }
+
 
 
         ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));

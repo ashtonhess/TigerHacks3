@@ -51,6 +51,9 @@ public class mainPageController extends AbstractDataController  implements Initi
     private Label totalBets;
 
     @FXML
+    private Label activeBetsLabel;
+
+    @FXML
     private Label totalGains;
 
     @FXML
@@ -160,6 +163,7 @@ public class mainPageController extends AbstractDataController  implements Initi
     public int graphType= 0;
     public int minAccountValue = 0;
     public int overallGains = 0 ;
+    public int activeBets = 0;
     final int WINDOW_SIZE = 20;
     public ArrayList<Bet> userBets = new ArrayList<>();
     public String userId;
@@ -204,12 +208,11 @@ public class mainPageController extends AbstractDataController  implements Initi
 
     public void setUpListView(ArrayList<Bet> bets) {
         for(Bet x: bets){
-            friendBetsList.getItems().add(new ListElement(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight()).setTypePublicBet(x));
+            if(x.betTargetStatus>0 && x.betSenderStatus>0 && !x.betIsPrivate){
+                friendBetsList.getItems().add(new ListElement(friendBetsList.getPrefWidth(),friendBetsList.getPrefHeight()).setTypeBet(x));
+            }
 
         }
-
-
-
     }
 
     public void setUpData(ArrayList<Bet> bets){
@@ -249,6 +252,7 @@ public class mainPageController extends AbstractDataController  implements Initi
         maxAccountValue=0;
         minAccountValue=0;
         overallGains=0;
+        activeBets = 0;
         yAxis = new NumberAxis();
         xAxis = new CategoryAxis();
         graphSeries = new XYChart.Series();
@@ -257,33 +261,48 @@ public class mainPageController extends AbstractDataController  implements Initi
 
 
         for(Bet x: bets) {
+            if(x.betSenderStatus==2 && x.betTargetStatus==2)
+            {
+                if(x.betWinner.equals(userId)){
+                    overallGains += x.betAmount;
 
-            if(x.betWinner.equals(userId)){
-                overallGains += x.betAmount;
+                }
+                else if(!x.betWinner.equals("") && !x.betWinner.equals(userId)){
+                    overallGains -= x.betAmount;
 
-            }
-            else if(!x.betWinner.equals("") && !x.betWinner.equals(userId)){
-                overallGains -= x.betAmount;
-
-            }
+                }
 
 
-            if (maxAccountValue < overallGains) {
-                maxAccountValue = overallGains;
-            }
-            if (minAccountValue > overallGains) {
-                minAccountValue = overallGains;
+                if (maxAccountValue < overallGains) {
+                    maxAccountValue = overallGains;
+                }
+                if (minAccountValue > overallGains) {
+                    minAccountValue = overallGains;
 
-            }
-            if(type ==0){
-                graphData(i);
+                }
+                if(type == 0){
+                    graphData(i);
+                }
+                else{
+                    graphTotal(i);
+                }
+
+                i++;
             }
             else{
-                graphTotal(i);
+                activeBets++;
+
+
             }
 
-            i++;
+
+
         }
+        if(activeBets!=0){
+            activeBetsLabel.setVisible(true);
+            activeBetsLabel.setText("Active: "+activeBets);
+        }
+
         yAxis.setLowerBound(minAccountValue-(minAccountValue *0.1));
         yAxis.setUpperBound((maxAccountValue+(maxAccountValue *0.1)));
 
