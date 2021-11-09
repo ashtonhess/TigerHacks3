@@ -13,23 +13,8 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
          <children>
-            <ListView fx:id="closedBetsListView" layoutX="16.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" />
-            <ListView fx:id="activeBetsListView" layoutX="489.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" />
-            <Text fx:id="activeBetsText" layoutX="595.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Bets">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Text>
-            <Text fx:id="closedBetsText" layoutX="115.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Closed Bets">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Text>
-            <Text fx:id="betsText" layoutX="427.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bets">
-               <font>
-                  <Font size="57.0" />
-               </font>
-            </Text>
+            <ListView fx:id="closedBetsListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="16.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" scaleShape="false" style="-fx-background-color: white;" />
+            <ListView fx:id="activeBetsListView" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="489.0" layoutY="193.0" prefHeight="453.0" prefWidth="453.0" scaleShape="false" style="-fx-background-color: white;" />
             <AnchorPane layoutX="226.0" layoutY="23.0" prefHeight="30.0" prefWidth="960.0" style="-fx-background-color: #F5F5F5; -fx-background-radius: 10px;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <Button contentDisplay="CENTER" layoutX="3.0" layoutY="2.0" mnemonicParsing="false" onAction="#homePressed" prefHeight="27.0" prefWidth="50.0" style="-fx-background-radius: 20px; -fx-background-color: #F5F5F5;" text="Home" textFill="#da1f1f" AnchorPane.bottomAnchor="1.5" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="1.5">
@@ -74,6 +59,21 @@
                   </Button>
                </children>
             </AnchorPane>
+            <Label alignment="CENTER" layoutX="414.0" layoutY="55.0" prefHeight="59.0" prefWidth="132.0" text="Your Bets" textAlignment="CENTER" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="177.0" layoutY="134.0" prefHeight="59.0" prefWidth="132.0" text="Closed" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="650.0" layoutY="134.0" prefHeight="59.0" prefWidth="132.0" text="Active" textFill="#398994">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
          </children>
     </AnchorPane>
   </children>
