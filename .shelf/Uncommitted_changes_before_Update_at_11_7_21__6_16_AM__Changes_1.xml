@@ -1,0 +1,49 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1" date="1636287412386" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/7/21, 6:16 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/userProfileFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/userProfileFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/userProfileFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/createAccountFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/createAccountFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/createAccountFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/mainPageController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/mainPageController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/mainPageController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/betRequestsFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/betRequestsFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/betRequestsFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/friendsListFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/friendsListFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/friendsListFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/newBetController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/newBetController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/newBetController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/betsFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/betsFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/betsFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/friendProfileFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/friendProfileFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/friendProfileFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/daDatabase.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/daDatabase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_7_21,_6_16_AM_[Changes]1/daDatabase.class" />
+  </binary>
+</changelist>

@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_8_21,_8_24_PM_[Changes]" date="1636424690349" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_8_21,_8_24_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/8/21, 8:24 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/userProfileFXMLController.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/userProfileFXMLController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_8_21,_8_24_PM_[Changes]/userProfileFXMLController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/BetMe/mainpackage/daDatabase.class" />
+    <option name="AFTER_PATH" value="out/production/BetMe/mainpackage/daDatabase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.shelf/Uncommitted_changes_before_Update_at_11_8_21,_8_24_PM_[Changes]/daDatabase.class" />
+  </binary>
+</changelist>

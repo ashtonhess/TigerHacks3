@@ -1,0 +1,765 @@
+Index: coding1.ipr
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"EntryPointsManager\">\n    <list size=\"1\">\n      <item index=\"0\" class=\"java.lang.String\" itemvalue=\"javafx.fxml.FXML\" />\n    </list>\n  </component>\n  <component name=\"InspectionProjectProfileManager\">\n    <profile version=\"1.0\">\n      <option name=\"myName\" value=\"Project Default\" />\n    </profile>\n    <version value=\"1.0\" />\n  </component>\n  <component name=\"JavaDocConfiguration\">\n    <GENERAL>\n      <MODE>UPDATE</MODE>\n      <OVERRIDDEN_METHODS>false</OVERRIDDEN_METHODS>\n      <SPLITTED_CLASS_NAME>true</SPLITTED_CLASS_NAME>\n      <LEVELS>\n        <LEVEL>FIELD</LEVEL>\n        <LEVEL>METHOD</LEVEL>\n        <LEVEL>TYPE</LEVEL>\n      </LEVELS>\n      <VISIBILITIES>\n        <VISIBILITY>DEFAULT</VISIBILITY>\n        <VISIBILITY>PUBLIC</VISIBILITY>\n        <VISIBILITY>PROTECTED</VISIBILITY>\n      </VISIBILITIES>\n    </GENERAL>\n    <TEMPLATES>\n      <CLASSES>\n        <CLASS>\n          <KEY>^.*(public|protected|private)*.+interface\\s+\\w+.*</KEY>\n          <VALUE>/**\\n\n * The interface ${name}.\\n\n&lt;#if element.typeParameters?has_content&gt;        * \\n\n&lt;/#if&gt;\n&lt;#list element.typeParameters as typeParameter&gt;\n        * @param &lt;${typeParameter.name}&gt; the type parameter\\n\n&lt;/#list&gt;\n */</VALUE>\n        </CLASS>\n        <CLASS>\n          <KEY>^.*(public|protected|private)*.+enum\\s+\\w+.*</KEY>\n          <VALUE>/**\\n\n * The enum ${name}.\\n\n */</VALUE>\n        </CLASS>\n        <CLASS>\n          <KEY>^.*(public|protected|private)*.+class\\s+\\w+.*</KEY>\n          <VALUE>/**\\n\n * The type ${name}.\\n\n&lt;#if element.typeParameters?has_content&gt;        * \\n\n&lt;/#if&gt;\n&lt;#list element.typeParameters as typeParameter&gt;\n        * @param &lt;${typeParameter.name}&gt; the type parameter\\n\n&lt;/#list&gt;\n */</VALUE>\n        </CLASS>\n        <CLASS>\n          <KEY>.+</KEY>\n          <VALUE>/**\\n\n * The type ${name}.\\n\n */</VALUE>\n        </CLASS>\n      </CLASSES>\n      <CONSTRUCTORS>\n        <CONSTRUCTOR>\n          <KEY>.+</KEY>\n          <VALUE>/**\\n\n * Instantiates a new ${name}.\\n\n&lt;#if element.parameterList.parameters?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.parameterList.parameters as parameter&gt;\n         * @param ${parameter.name} the ${paramNames[parameter.name]}\\n\n&lt;/#list&gt;\n&lt;#if element.throwsList.referenceElements?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.throwsList.referenceElements as exception&gt;\n         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\\n\n&lt;/#list&gt;\n */</VALUE>\n        </CONSTRUCTOR>\n      </CONSTRUCTORS>\n      <METHODS>\n        <METHOD>\n          <KEY>^.*(public|protected|private)*\\s*.*(\\w(\\s*&lt;.+&gt;)*)+\\s+get\\w+\\s*\\(.*\\).+</KEY>\n          <VALUE>/**\\n\n * Gets ${partName}.\\n\n&lt;#if element.typeParameters?has_content&gt;         * \\n\n&lt;/#if&gt;\n&lt;#list element.typeParameters as typeParameter&gt;\n         * @param &lt;${typeParameter.name}&gt; the type parameter\\n\n&lt;/#list&gt;\n&lt;#if element.parameterList.parameters?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.parameterList.parameters as parameter&gt;\n         * @param ${parameter.name} the ${paramNames[parameter.name]}\\n\n&lt;/#list&gt;\n&lt;#if isNotVoid&gt;\n         *\\n\n         * @return the ${partName}\\n\n&lt;/#if&gt;\n&lt;#if element.throwsList.referenceElements?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.throwsList.referenceElements as exception&gt;\n         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\\n\n&lt;/#list&gt;\n */</VALUE>\n        </METHOD>\n        <METHOD>\n          <KEY>^.*(public|protected|private)*\\s*.*(void|\\w(\\s*&lt;.+&gt;)*)+\\s+set\\w+\\s*\\(.*\\).+</KEY>\n          <VALUE>/**\\n\n * Sets ${partName}.\\n\n&lt;#if element.typeParameters?has_content&gt;         * \\n\n&lt;/#if&gt;\n&lt;#list element.typeParameters as typeParameter&gt;\n         * @param &lt;${typeParameter.name}&gt; the type parameter\\n\n&lt;/#list&gt;\n&lt;#if element.parameterList.parameters?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.parameterList.parameters as parameter&gt;\n         * @param ${parameter.name} the ${paramNames[parameter.name]}\\n\n&lt;/#list&gt;\n&lt;#if isNotVoid&gt;\n         *\\n\n         * @return the ${partName}\\n\n&lt;/#if&gt;\n&lt;#if element.throwsList.referenceElements?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.throwsList.referenceElements as exception&gt;\n         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\\n\n&lt;/#list&gt;\n */</VALUE>\n        </METHOD>\n        <METHOD>\n          <KEY>^.*((public\\s+static)|(static\\s+public))\\s+void\\s+main\\s*\\(\\s*String\\s*(\\[\\s*\\]|\\.\\.\\.)\\s+\\w+\\s*\\).+</KEY>\n          <VALUE>/**\\n\n * The entry point of application.\\n\n\n     &lt;#if element.parameterList.parameters?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n     * @param ${element.parameterList.parameters[0].name} the input arguments\\n\n&lt;#if element.throwsList.referenceElements?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.throwsList.referenceElements as exception&gt;\n         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\\n\n&lt;/#list&gt;\n */</VALUE>\n        </METHOD>\n        <METHOD>\n          <KEY>.+</KEY>\n          <VALUE>/**\\n\n * ${name}&lt;#if isNotVoid&gt; ${return}&lt;/#if&gt;.\\n\n&lt;#if element.typeParameters?has_content&gt;         * \\n\n&lt;/#if&gt;\n&lt;#list element.typeParameters as typeParameter&gt;\n         * @param &lt;${typeParameter.name}&gt; the type parameter\\n\n&lt;/#list&gt;\n&lt;#if element.parameterList.parameters?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.parameterList.parameters as parameter&gt;\n         * @param ${parameter.name} the ${paramNames[parameter.name]}\\n\n&lt;/#list&gt;\n&lt;#if isNotVoid&gt;\n         *\\n\n         * @return the ${return}\\n\n&lt;/#if&gt;\n&lt;#if element.throwsList.referenceElements?has_content&gt;\n         *\\n\n&lt;/#if&gt;\n&lt;#list element.throwsList.referenceElements as exception&gt;\n         * @throws ${exception.referenceName} the ${exceptionNames[exception.referenceName]}\\n\n&lt;/#list&gt;\n */</VALUE>\n        </METHOD>\n      </METHODS>\n      <FIELDS>\n        <FIELD>\n          <KEY>^.*(public|protected|private)*.+static.*(\\w\\s\\w)+.+</KEY>\n          <VALUE>/**\\n\n * The constant ${element.getName()}.\\n\n */</VALUE>\n        </FIELD>\n        <FIELD>\n          <KEY>^.*(public|protected|private)*.*(\\w\\s\\w)+.+</KEY>\n          <VALUE>/**\\n\n    &lt;#if element.parent.isInterface()&gt;\n        * The constant ${element.getName()}.\\n\n&lt;#else&gt;\n        * The ${name}.\\n\n&lt;/#if&gt; */</VALUE>\n        </FIELD>\n        <FIELD>\n          <KEY>.+</KEY>\n          <VALUE>/**\\n\n    &lt;#if element.parent.isEnum()&gt;\n        *${name} ${typeName}.\\n\n&lt;#else&gt;\n        * The ${name}.\\n\n&lt;/#if&gt;*/</VALUE>\n        </FIELD>\n      </FIELDS>\n    </TEMPLATES>\n  </component>\n  <component name=\"Palette2\">\n    <group name=\"Swing\">\n      <item class=\"com.intellij.uiDesigner.HSpacer\" tooltip-text=\"Horizontal Spacer\" icon=\"/com/intellij/uiDesigner/icons/hspacer.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"1\" hsize-policy=\"6\" anchor=\"0\" fill=\"1\" />\n      </item>\n      <item class=\"com.intellij.uiDesigner.VSpacer\" tooltip-text=\"Vertical Spacer\" icon=\"/com/intellij/uiDesigner/icons/vspacer.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"1\" anchor=\"0\" fill=\"2\" />\n      </item>\n      <item class=\"javax.swing.JPanel\" icon=\"/com/intellij/uiDesigner/icons/panel.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"3\" hsize-policy=\"3\" anchor=\"0\" fill=\"3\" />\n      </item>\n      <item class=\"javax.swing.JScrollPane\" icon=\"/com/intellij/uiDesigner/icons/scrollPane.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"7\" hsize-policy=\"7\" anchor=\"0\" fill=\"3\" />\n      </item>\n      <item class=\"javax.swing.JButton\" icon=\"/com/intellij/uiDesigner/icons/button.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"0\" fill=\"1\" />\n        <initial-values>\n          <property name=\"text\" value=\"Button\" />\n        </initial-values>\n      </item>\n      <item class=\"javax.swing.JRadioButton\" icon=\"/com/intellij/uiDesigner/icons/radioButton.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"8\" fill=\"0\" />\n        <initial-values>\n          <property name=\"text\" value=\"RadioButton\" />\n        </initial-values>\n      </item>\n      <item class=\"javax.swing.JCheckBox\" icon=\"/com/intellij/uiDesigner/icons/checkBox.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"3\" anchor=\"8\" fill=\"0\" />\n        <initial-values>\n          <property name=\"text\" value=\"CheckBox\" />\n        </initial-values>\n      </item>\n      <item class=\"javax.swing.JLabel\" icon=\"/com/intellij/uiDesigner/icons/label.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"0\" anchor=\"8\" fill=\"0\" />\n        <initial-values>\n          <property name=\"text\" value=\"Label\" />\n        </initial-values>\n      </item>\n      <item class=\"javax.swing.JTextField\" icon=\"/com/intellij/uiDesigner/icons/textField.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\">\n          <preferred-size width=\"150\" height=\"-1\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JPasswordField\" icon=\"/com/intellij/uiDesigner/icons/passwordField.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\">\n          <preferred-size width=\"150\" height=\"-1\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JFormattedTextField\" icon=\"/com/intellij/uiDesigner/icons/formattedTextField.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\">\n          <preferred-size width=\"150\" height=\"-1\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JTextArea\" icon=\"/com/intellij/uiDesigner/icons/textArea.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JTextPane\" icon=\"/com/intellij/uiDesigner/icons/textPane.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JEditorPane\" icon=\"/com/intellij/uiDesigner/icons/editorPane.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JComboBox\" icon=\"/com/intellij/uiDesigner/icons/comboBox.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"2\" anchor=\"8\" fill=\"1\" />\n      </item>\n      <item class=\"javax.swing.JTable\" icon=\"/com/intellij/uiDesigner/icons/table.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JList\" icon=\"/com/intellij/uiDesigner/icons/list.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"2\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JTree\" icon=\"/com/intellij/uiDesigner/icons/tree.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"150\" height=\"50\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JTabbedPane\" icon=\"/com/intellij/uiDesigner/icons/tabbedPane.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"3\" hsize-policy=\"3\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"200\" height=\"200\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JSplitPane\" icon=\"/com/intellij/uiDesigner/icons/splitPane.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"3\" hsize-policy=\"3\" anchor=\"0\" fill=\"3\">\n          <preferred-size width=\"200\" height=\"200\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JSpinner\" icon=\"/com/intellij/uiDesigner/icons/spinner.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"true\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\" />\n      </item>\n      <item class=\"javax.swing.JSlider\" icon=\"/com/intellij/uiDesigner/icons/slider.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"8\" fill=\"1\" />\n      </item>\n      <item class=\"javax.swing.JSeparator\" icon=\"/com/intellij/uiDesigner/icons/separator.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"6\" anchor=\"0\" fill=\"3\" />\n      </item>\n      <item class=\"javax.swing.JProgressBar\" icon=\"/com/intellij/uiDesigner/icons/progressbar.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"0\" fill=\"1\" />\n      </item>\n      <item class=\"javax.swing.JToolBar\" icon=\"/com/intellij/uiDesigner/icons/toolbar.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"6\" anchor=\"0\" fill=\"1\">\n          <preferred-size width=\"-1\" height=\"20\" />\n        </default-constraints>\n      </item>\n      <item class=\"javax.swing.JToolBar$Separator\" icon=\"/com/intellij/uiDesigner/icons/toolbarSeparator.png\" removable=\"false\" auto-create-binding=\"false\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"0\" hsize-policy=\"0\" anchor=\"0\" fill=\"1\" />\n      </item>\n      <item class=\"javax.swing.JScrollBar\" icon=\"/com/intellij/uiDesigner/icons/scrollbar.png\" removable=\"false\" auto-create-binding=\"true\" can-attach-label=\"false\">\n        <default-constraints vsize-policy=\"6\" hsize-policy=\"0\" anchor=\"0\" fill=\"2\" />\n      </item>\n    </group>\n  </component>\n  <component name=\"ProjectModuleManager\">\n    <modules>\n      <module fileurl=\"file://$PROJECT_DIR$/BetMe.iml\" filepath=\"$PROJECT_DIR$/BetMe.iml\" />\n    </modules>\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/out\" />\n  </component>\n  <component name=\"RunConfigurationProducerService\">\n    <option name=\"ignoredProducers\">\n      <set>\n        <option value=\"com.android.tools.idea.compose.preview.runconfiguration.ComposePreviewRunConfigurationProducer\" />\n      </set>\n    </option>\n  </component>\n  <component name=\"VcsDirectoryMappings\">\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\n  </component>\n  <component name=\"libraryTable\">\n    <library name=\"mysql-connector-java-5.1.23-bin\">\n      <CLASSES>\n        <root url=\"jar://$PROJECT_DIR$/../driver/mysql-connector-java-5.1.23-bin.jar!/\" />\n      </CLASSES>\n      <JAVADOC />\n      <SOURCES />\n    </library>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coding1.ipr b/coding1.ipr
+--- a/coding1.ipr	
++++ b/coding1.ipr	
+@@ -1,5 +1,14 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
++    <data-source source="LOCAL" name="aaTigerHacks1" uuid="446edf89-c208-4cc2-a9d0-9b437a497eb5">
++      <driver-ref>mariadb</driver-ref>
++      <synchronize>true</synchronize>
++      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
++      <jdbc-url>jdbc:mariadb://localhost:3306/aaTigerHacks1</jdbc-url>
++      <working-dir>$ProjectFileDir$</working-dir>
++    </data-source>
++  </component>
+   <component name="EntryPointsManager">
+     <list size="1">
+       <item index="0" class="java.lang.String" itemvalue="javafx.fxml.FXML" />
+@@ -351,10 +360,27 @@
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
++  <component name="dataSourceStorageLocal" created-in="IU-212.5457.46">
++    <data-source name="aaTigerHacks1" uuid="446edf89-c208-4cc2-a9d0-9b437a497eb5">
++      <database-info product="MariaDB" version="10.4.18-MariaDB" jdbc-version="4.2" driver-name="MariaDB Connector/J" driver-version="2.7.3" dbms="MARIADB" exact-version="10.4.18" exact-driver-version="2.7">
++        <extra-name-characters>#@</extra-name-characters>
++        <identifier-quote-string>`</identifier-quote-string>
++      </database-info>
++      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
++      <secret-storage>master_key</secret-storage>
++      <user-name>root</user-name>
++      <schema-mapping>
++        <introspection-scope>
++          <node kind="schema" qname="@" />
++        </introspection-scope>
++      </schema-mapping>
++    </data-source>
++  </component>
+   <component name="libraryTable">
+-    <library name="mysql-connector-java-5.1.23-bin">
++    <library name="mysql.connector.java" type="repository">
++      <properties maven-id="mysql:mysql-connector-java:5.1.40" />
+       <CLASSES>
+-        <root url="jar://$PROJECT_DIR$/../driver/mysql-connector-java-5.1.23-bin.jar!/" />
++        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar!/" />
+       </CLASSES>
+       <JAVADOC />
+       <SOURCES />
+Index: BetMe.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\n    <exclude-output />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"inheritedJdk\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"library\" name=\"mysql-connector-java-5.1.23-bin\" level=\"project\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/BetMe.iml b/BetMe.iml
+--- a/BetMe.iml	
++++ b/BetMe.iml	
+@@ -7,6 +7,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="mysql-connector-java-5.1.23-bin" level="project" />
++    <orderEntry type="library" name="mysql.connector.java" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: src/mainpackage/betsFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.Label;\nimport javafx.scene.control.ListView;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Line;\nimport javafx.scene.text.Text;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class betsFXMLController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private Text activeBetsText;\n\n    @FXML\n    private Text betsText;\n\n    @FXML\n    private ListView<Pane> activeBetsListView;\n\n    @FXML\n    private ListView<Pane> closedBetsListView;\n\n    @FXML\n    private Text closedBetsText;\n\n    @FXML\n    private Label userNameLabel;\n\n    @FXML\n    void homePressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"mainPage\");\n\n    }\n\n    @FXML\n    void profilePressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"userProfileFXML\");\n\n    }\n\n    @FXML\n    void friendsPressed(ActionEvent event) throws IOException {\n\n        ScreenController.activate(\"friendsListFXML\");\n\n    }\n    @FXML\n    void addCoinsPressed(ActionEvent event) {\n\n    }\n    @FXML\n    void requestsPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"betRequestsFXML\");\n    }\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n        setUpListView2();\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n\n    @FXML\n    void donePressed(ActionEvent event) throws IOException {\n\n        //code\n\n        ScreenController.activate(\"loginFXML\");\n\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(activeBetsListView.getPrefWidth() * (0.85), (activeBetsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            activeBetsListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView2() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(closedBetsListView.getPrefWidth() * (0.85), (closedBetsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            closedBetsListView.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"\",ran,\"\",\"\",false);\n        return randBet;\n    }\n//    @FXML\n//    private void handleDaButton(ActionEvent event) {\n//        daModel.changeDaText();\n//    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/betsFXMLController.java b/src/mainpackage/betsFXMLController.java
+--- a/src/mainpackage/betsFXMLController.java	
++++ b/src/mainpackage/betsFXMLController.java	
+@@ -143,7 +143,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/betRequestsFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.*;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Line;\nimport javafx.scene.text.Text;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class betRequestsFXMLController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private Text betRequestsText;\n\n    @FXML\n    private ListView<Pane> betRequestsListView1;\n\n    @FXML\n    private ListView<Pane> friendRequestsListView;\n\n    @FXML\n    private Label coinBalLabel;\n\n    @FXML\n    private Label userNameLabel;\n\n    @FXML\n    void backPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"mainPage\");\n\n    }\n\n    @FXML\n    void profilePressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"userProfileFXML\");\n\n    }\n\n    @FXML\n    void friendsPressed(ActionEvent event) throws IOException {\n\n        ScreenController.activate(\"friendsListFXML\");\n\n    }\n    @FXML\n    void addCoinsPressed(ActionEvent event) {\n\n    }\n\n\n    @FXML\n    void acceptAllFriends(ActionEvent event) {\n\n    }\n\n    @FXML\n    void declineAllFriends(ActionEvent event) {\n\n    }\n\n\n    @FXML\n    void acceptAllBets(ActionEvent event) {\n\n    }\n\n    @FXML\n    void declineAllBets(ActionEvent event) {\n\n    }\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n        setUpListView2();\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(betRequestsListView1.getPrefWidth() * (0.85), (betRequestsListView1.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            betRequestsListView1.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView2() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(friendRequestsListView.getPrefWidth() * (0.85), (friendRequestsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            friendRequestsListView.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"\",ran,\"\",\"\",false);\n        return randBet;\n    }\n//    @FXML\n//    private void handleDaButton(ActionEvent event) {\n//        daModel.changeDaText();\n//    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/betRequestsFXMLController.java b/src/mainpackage/betRequestsFXMLController.java
+--- a/src/mainpackage/betRequestsFXMLController.java	
++++ b/src/mainpackage/betRequestsFXMLController.java	
+@@ -145,7 +145,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/userProfileFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.*;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Circle;\nimport javafx.scene.shape.Line;\nimport javafx.scene.text.Text;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class userProfileFXMLController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private Button friendRequestsButton;\n\n    @FXML\n    private ListView<Pane> friendsListListView;\n\n    @FXML\n    private ImageView userPicImageView;\n\n    @FXML\n    private Text friendsListText;\n\n    @FXML\n    private Label coinBalLabel;\n\n    @FXML\n    private Text closedBetsText;\n\n    @FXML\n    private Circle userPicBorderCircle;\n\n    @FXML\n    private Text usernameText;\n\n    @FXML\n    private Button betRequestsButton;\n\n    @FXML\n    private Text activeBetsText;\n\n    @FXML\n    private Label userNameLabel;\n\n    @FXML\n    private ListView<Pane> activeBetsListView;\n\n    @FXML\n    private ListView<Pane> closedBetsListView;\n\n    @FXML\n    private ImageView coinImage;\n\n    @FXML\n    void backPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"mainPage\");\n\n    }\n\n    @FXML\n    void requestsPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"betRequestsFXML\");\n\n    }\n\n    @FXML\n    void friendsPressed(ActionEvent event) throws IOException {\n\n        ScreenController.activate(\"friendsListFXML\");\n\n    }\n    @FXML\n    void addCoinsPressed(ActionEvent event) {\n\n    }\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n        setUpListView1();\n        setUpListView2();\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(friendsListListView.getPrefWidth() * (0.85), (friendsListListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            friendsListListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView1() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(activeBetsListView.getPrefWidth() * (0.85), (activeBetsListView.getPrefHeight() / 4));\n            Label label = new Label(x.betSenderUserID + \" bet \" + x.betTargetUserID + \" $\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            activeBetsListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView2() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(closedBetsListView.getPrefWidth() * (0.85), (closedBetsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            closedBetsListView.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"I'm \",ran,\"\",\"\",false);\n        return randBet;\n    }\n//    @FXML\n//    private void handleDaButton(ActionEvent event) {\n//        daModel.changeDaText();\n//    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/userProfileFXMLController.java b/src/mainpackage/userProfileFXMLController.java
+--- a/src/mainpackage/userProfileFXMLController.java	
++++ b/src/mainpackage/userProfileFXMLController.java	
+@@ -170,7 +170,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("I'm ",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/friendProfileFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.Label;\nimport javafx.scene.control.ListView;\nimport javafx.scene.control.TextField;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Line;\nimport javafx.scene.text.Text;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class friendProfileFXMLController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private Text friendNameText;\n\n    @FXML\n    private ImageView userPicImageView;\n\n    @FXML\n    private Text activeBetsText;\n\n    @FXML\n    private ListView<Pane> activeBetsListView;\n\n    @FXML\n    private ListView<Pane> closedBetsListView;\n\n    @FXML\n    private ListView<Pane> friendListListView;\n\n    @FXML\n    private Text closedBetsText;\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n        setUpListView1();\n        setUpListView2();\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n\n    @FXML\n    void donePressed(ActionEvent event) throws IOException {\n\n        //code\n\n        ScreenController.addScreen(\"loginFXML\", FXMLLoader.load(getClass().getResource(\"loginFXML.fxml\")));\n        ScreenController.activate(\"loginFXML\");\n\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(activeBetsListView.getPrefWidth() * (0.85), (activeBetsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            activeBetsListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView1() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(closedBetsListView.getPrefWidth() * (0.85), (closedBetsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            closedBetsListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView2() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(friendListListView.getPrefWidth() * (0.85), (friendListListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            friendListListView.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"\",ran,\"\",\"\",false);\n        return randBet;\n    }\n//    @FXML\n//    private void handleDaButton(ActionEvent event) {\n//        daModel.changeDaText();\n//    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/friendProfileFXMLController.java b/src/mainpackage/friendProfileFXMLController.java
+--- a/src/mainpackage/friendProfileFXMLController.java	
++++ b/src/mainpackage/friendProfileFXMLController.java	
+@@ -52,7 +52,7 @@
+     public void initialize(URL url, ResourceBundle rb) {
+         //use this method to create and array list of random bet objects
+         for(int i= 0; i<10; i++){
+-            userBets.add(ranBet());
++            //userBets.add(ranBet());
+         }
+ 
+         setUpListView();
+@@ -139,7 +139,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/createAccountFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.Alert;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.TextArea;\nimport javafx.scene.control.TextField;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.text.Text;\nimport javafx.util.Pair;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class createAccountFXMLController implements Initializable, PropertyChangeListener {\n\n    Boolean holderBool = false;\n\n    public daDatabase databaseObj = new daDatabase();\n\n    @FXML\n    private TextField passwordTextField;\n\n    @FXML\n    private Button createButton;\n\n    @FXML\n    private TextField usernameTextField;\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n        // TODO\n//        daModel = new loginFXMLModel();\n//        daModel.addPropertyChangeListener(this);\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n\n    @FXML\n    void handleCreateButton(ActionEvent event) throws IOException {\n\n        Pair<Boolean, Pair<Integer,ResultSet>> databaseResult;\n//= new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null))\n        Boolean databaseBoolResult;\n        Integer databaseRowsResult;\n        ResultSet databaseResultSet;\n\n        if(holderBool == false){\n            String usernameInput = usernameTextField.getText();\n            String passwordInput = passwordTextField.getText();\n            if (usernameInput == \"\" | passwordInput == \"\"){\n                Alert emptyInputAlert = new Alert(Alert.AlertType.ERROR);\n                emptyInputAlert.setContentText(\"Please enter a valid username and password.\");\n                emptyInputAlert.showAndWait();\n                holderBool = false;\n            }else{\n                System.out.println(\"1\");\n                databaseResult = databaseObj.executeQuery(constructCheckUserIDExistsQuery(usernameInput));\n                System.out.println(\"2\");\n                databaseBoolResult = databaseResult.getKey();\n                databaseRowsResult = databaseResult.getValue().getKey();\n                databaseResultSet = databaseResult.getValue().getValue();\n                if (databaseBoolResult == false){\n                    Alert boolResultFalseAlert = new Alert(Alert.AlertType.ERROR);\n                    boolResultFalseAlert.setContentText(\"There was an error executing query. Check DB connection.\");\n                    boolResultFalseAlert.showAndWait();\n                }else{\n                    try {\n                        if (databaseResultSet.next() == false){\n                            //this means that another user with that username DOES NOT exist.\n                            //continue to add new user to database.\n\n\n                            //left off\n                            //committing these now...\n                            System.out.println(\"3\");\n                            databaseResult = databaseObj.executeQuery(constructNewUserQuery(usernameInput, passwordInput));\n                            System.out.println(\"4\");\n                            System.out.println(\"New user: \"+usernameInput+\" has been added to the UserTable.\");\n                            Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);\n                            emptyInputAlert.setContentText(\"New user: \"+usernameInput+\" has been added to the UserTable.\");\n                            emptyInputAlert.showAndWait();\n                            ScreenController.activate(\"loginFXML\");\n                        }else{\n                            Alert usernameTaken = new Alert(Alert.AlertType.INFORMATION);\n                            usernameTaken.setContentText(\"Sorry, this username is taken. Please try another.\");\n                            usernameTaken.showAndWait();\n\n                        }\n                    } catch (SQLException e) {\n                        System.out.println(\"DATABASE ERROR. createAccountFXMLController.java @ handleCreateButton\");\n                        e.printStackTrace();\n                    }\n                }\n\n            }\n        }\n\n\n\n\n        // return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));\n\n        databaseResult = databaseObj.executeQuery(\"\");\n\n        //This is the code to get information out of the databaseResult that is returned by DB.\n\n\n\n\n        //ScreenController.activate(\"loginFXML\");\n\n    }\n\n    public String constructCheckUserIDExistsQuery(String usernameInput){\n        String constructCheckUserIdExistsQueryString = \"SELECT * FROM UserTable WHERE userID = '\"+usernameInput+\"';\";\n        return constructCheckUserIdExistsQueryString;\n    }\n    public String constructNewUserQuery(String usernameInput, String passwordInput){\n        String constructNewUserQueryString = \"INSERT INTO User (userID, userPassword, userDateCreated)\\n\" +\n                \"VALUES ('\"+usernameInput+\"', '\"+passwordInput+\"', '03/16/2001 08:42:09');\";\n\n        return constructNewUserQueryString;\n    }\n\n    @FXML\n    void handleCancelPressed(ActionEvent event) {\n        ScreenController.activate(\"loginFXML\");\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/createAccountFXMLController.java b/src/mainpackage/createAccountFXMLController.java
+--- a/src/mainpackage/createAccountFXMLController.java	
++++ b/src/mainpackage/createAccountFXMLController.java	
+@@ -18,6 +18,7 @@
+ import java.net.URL;
+ import java.sql.ResultSet;
+ import java.sql.SQLException;
++import java.util.ArrayList;
+ import java.util.ResourceBundle;
+ /**
+  * Author: Jacob
+@@ -56,11 +57,12 @@
+     @FXML
+     void handleCreateButton(ActionEvent event) throws IOException {
+ 
+-        Pair<Boolean, Pair<Integer,ResultSet>> databaseResult;
++        //databaseObj.doExampleQuery("SELECT * FROM UserTable");
++        Pair<Boolean, Pair<Integer, ArrayList<String>>> databaseResult;
+ //= new Pair<Boolean, Pair<Integer,ResultSet>>(false, new Pair<Integer, ResultSet>(0,null))
+         Boolean databaseBoolResult;
+         Integer databaseRowsResult;
+-        ResultSet databaseResultSet;
++        ArrayList<String> databaseResultSet;
+ 
+         if(holderBool == false){
+             String usernameInput = usernameTextField.getText();
+@@ -71,28 +73,31 @@
+                 emptyInputAlert.showAndWait();
+                 holderBool = false;
+             }else{
+-                System.out.println("1");
++
+                 databaseResult = databaseObj.executeQuery(constructCheckUserIDExistsQuery(usernameInput));
+-                System.out.println("2");
++
+                 databaseBoolResult = databaseResult.getKey();
+                 databaseRowsResult = databaseResult.getValue().getKey();
+                 databaseResultSet = databaseResult.getValue().getValue();
++                System.out.println(databaseBoolResult);
++                System.out.println(databaseRowsResult);
++                //System.out.println(databaseResultSet);
+                 if (databaseBoolResult == false){
+                     Alert boolResultFalseAlert = new Alert(Alert.AlertType.ERROR);
+                     boolResultFalseAlert.setContentText("There was an error executing query. Check DB connection.");
+                     boolResultFalseAlert.showAndWait();
+                 }else{
+-                    try {
+-                        if (databaseResultSet.next() == false){
++
++                        if (databaseResultSet.isEmpty()){
+                             //this means that another user with that username DOES NOT exist.
+                             //continue to add new user to database.
+ 
+ 
+                             //left off
+                             //committing these now...
+-                            System.out.println("3");
+-                            databaseResult = databaseObj.executeQuery(constructNewUserQuery(usernameInput, passwordInput));
+-                            System.out.println("4");
++
++                            databaseObj.executeUpdate(constructNewUserQuery(usernameInput, passwordInput));
++
+                             System.out.println("New user: "+usernameInput+" has been added to the UserTable.");
+                             Alert emptyInputAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                             emptyInputAlert.setContentText("New user: "+usernameInput+" has been added to the UserTable.");
+@@ -104,27 +109,18 @@
+                             usernameTaken.showAndWait();
+ 
+                         }
+-                    } catch (SQLException e) {
+-                        System.out.println("DATABASE ERROR. createAccountFXMLController.java @ handleCreateButton");
+-                        e.printStackTrace();
+-                    }
++
+                 }
+ 
+             }
+         }
+-
+-
+ 
+ 
+         // return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
+ 
+-        databaseResult = databaseObj.executeQuery("");
++        //databaseResult = databaseObj.executeQuery("");
+ 
+         //This is the code to get information out of the databaseResult that is returned by DB.
+-
+-
+-
+-
+         //ScreenController.activate("loginFXML");
+ 
+     }
+@@ -134,7 +130,7 @@
+         return constructCheckUserIdExistsQueryString;
+     }
+     public String constructNewUserQuery(String usernameInput, String passwordInput){
+-        String constructNewUserQueryString = "INSERT INTO User (userID, userPassword, userDateCreated)\n" +
++        String constructNewUserQueryString = "INSERT INTO UserTable (userID, userPassword, userDateCreated)\n" +
+                 "VALUES ('"+usernameInput+"', '"+passwordInput+"', '03/16/2001 08:42:09');";
+ 
+         return constructNewUserQueryString;
+Index: src/mainpackage/friendsListFXMLController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.FXMLLoader;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.*;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Line;\nimport javafx.scene.text.Text;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Objects;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n/**\n * Author: Jacob\n */\npublic class friendsListFXMLController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private ListView<Pane> friendsListListView;\n\n    @FXML\n    private Label userNameLabel;\n\n    @FXML\n    private Label resultNumberLabel;\n\n    @FXML\n    private Label coinBalLabel;\n\n    @FXML\n    private ListView<Pane> searchResultList;\n\n    @FXML\n    private ImageView coinImage;\n\n    @FXML\n    private TextField usernameTextField;\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @FXML\n    void searchPressed(ActionEvent event) {\n\n    }\n\n    @FXML\n    void backPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"mainPage\");\n\n    }\n    @FXML\n    void requestsPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"betRequestsFXML\");\n    }\n\n    @FXML\n    void profilePressed(ActionEvent event) throws IOException {\n       ScreenController.activate(\"userProfileFXML\");\n    }\n\n\n    @FXML\n    void addCoinsPressed(ActionEvent event) {\n    }\n\n    @Override\n    public void initialize(URL url, ResourceBundle rb) {\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n        setUpListView2();\n    }\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n        if (evt.getPropertyName().equals(\"textToChangePropertyChangeID\")) {\n            //System.out.println(\"Some shit\");\n//            textToChange.setText((String)evt.getNewValue());\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(friendsListListView.getPrefWidth() * (0.85), (friendsListListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            friendsListListView.getItems().add(pane);\n        }\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView2() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(searchResultList.getPrefWidth() * (0.85), (searchResultList.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            searchResultList.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"\",ran,\"\",\"\",false);\n        return randBet;\n    }\n//    @FXML\n//    private void handleDaButton(ActionEvent event) {\n//        daModel.changeDaText();\n//    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/friendsListFXMLController.java b/src/mainpackage/friendsListFXMLController.java
+--- a/src/mainpackage/friendsListFXMLController.java	
++++ b/src/mainpackage/friendsListFXMLController.java	
+@@ -133,7 +133,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/ScreenController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport java.util.HashMap;\nimport javafx.scene.Scene;\nimport javafx.scene.layout.Pane;\n\npublic abstract class ScreenController {\n\n    public static HashMap<String, Pane> screenMap = new HashMap<>();\n    public static Scene main;\n\n    public static void addScreen(String name, Pane pane){\n        screenMap.put(name, pane);\n    }\n    public static void removeScreen(String name){\n        screenMap.remove(name);\n\n    }\n    public static void activate(String name){\n        main.setRoot(screenMap.get(name));\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/ScreenController.java b/src/mainpackage/ScreenController.java
+--- a/src/mainpackage/ScreenController.java	
++++ b/src/mainpackage/ScreenController.java	
+@@ -18,5 +18,6 @@
+     }
+     public static void activate(String name){
+         main.setRoot(screenMap.get(name));
++
+     }
+ }
+Index: src/mainpackage/newBetController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\nimport javafx.event.ActionEvent;\nimport javafx.fxml.FXML;\nimport javafx.fxml.Initializable;\nimport javafx.scene.control.Label;\nimport javafx.scene.control.ListView;\nimport javafx.scene.control.TextField;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.Pane;\nimport javafx.scene.shape.Line;\n\nimport java.beans.PropertyChangeEvent;\nimport java.beans.PropertyChangeListener;\nimport java.io.IOException;\nimport java.net.URL;\nimport java.util.ArrayList;\nimport java.util.Random;\nimport java.util.ResourceBundle;\n\npublic class newBetController implements Initializable, PropertyChangeListener {\n\n    @FXML\n    private Label targetName;\n\n    @FXML\n    private TextField amountTextField;\n\n    @FXML\n    private Label userNameLabel;\n\n    @FXML\n    private TextField descriptionTextField;\n\n    @FXML\n    private Label coinBalLabel;\n\n    @FXML\n    private ImageView coinImage;\n\n    @FXML\n    private ListView<Pane> friendsListView;\n\n    @FXML\n    void backPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"mainPage\");\n\n    }\n    @FXML\n    void requestsPressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"betRequestsFXML\");\n\n    }\n\n    @FXML\n    void profilePressed(ActionEvent event) throws IOException {\n        ScreenController.activate(\"userProfileFXML\");\n\n    }\n\n    @FXML\n    void friendsPressed(ActionEvent event) throws IOException {\n\n        ScreenController.activate(\"friendsListFXML\");\n\n    }\n    @FXML\n    void addCoinsPressed(ActionEvent event) {\n\n    }\n\n    @FXML\n    void betConfirmPressed(ActionEvent event) throws IOException{\n        ScreenController.activate(\"mainPage\");\n\n    }\n\n\n    @Override\n    public void propertyChange(PropertyChangeEvent evt) {\n\n    }\n\n    public ArrayList<Bet> userBets = new ArrayList<>();\n\n    @Override\n    public void initialize(URL location, ResourceBundle resources) {\n        //use this method to create and array list of random bet objects\n        for(int i= 0; i<10; i++){\n            userBets.add(ranBet());\n        }\n\n        setUpListView();\n    }\n    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list\n    public void setUpListView() {\n\n        for (Bet x : userBets) {\n            Pane pane = new Pane();\n            pane.setPrefSize(friendsListView.getPrefWidth() * (0.85), (friendsListView.getPrefHeight() / 4));\n            Label label = new Label(\"test\" + x.betAmount);\n            Line line = new Line();\n            line.setStartX(0);\n            line.setStartY(0);\n            line.setEndX(pane.getPrefWidth() * 1.15);\n            line.setEndY(0);\n            line.setStyle(\"-fx-stroke: lightgray\");\n\n            pane.getChildren().addAll(label, line);\n            friendsListView.getItems().add(pane);\n        }\n    }\n    //Ran bet function to generate random bet objects for testing\n    public Bet ranBet(){\n        Random rand = new Random(); //instance of random class\n\n        //generate random values from 0-24\n        int ran = rand.nextInt()/10000000;\n        System.out.println(ran);\n\n        Bet randBet = new Bet(\"\",ran,\"\",\"\",false);\n        return randBet;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/newBetController.java b/src/mainpackage/newBetController.java
+--- a/src/mainpackage/newBetController.java	
++++ b/src/mainpackage/newBetController.java	
+@@ -116,7 +116,7 @@
+ 
+         //generate random values from 0-24
+         int ran = rand.nextInt()/10000000;
+-        System.out.println(ran);
++        //System.out.println(ran);
+ 
+         Bet randBet = new Bet("",ran,"","",false);
+         return randBet;
+Index: src/mainpackage/daDatabase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package mainpackage;\n\n\nimport javafx.util.Pair;\n\nimport java.sql.Connection;\nimport java.sql.DriverManager;\nimport java.sql.ResultSet;\nimport java.sql.SQLException;\nimport java.sql.Statement;\nimport java.util.Properties;\nimport java.util.logging.Level;\nimport java.util.logging.Logger;\n\n\npublic class daDatabase {\n\n    private String databaseURL = \"jdbc:mysql://localhost:3306/aaTigerHacks1\";\n    private String databaseUser = \"root\";\n    private String databasePass = \"\";\n\n    private Connection conn;\n\n    Connection executeQueryConn;\n    //executeQuery function.\n    //INPUTS: String: a query written exactly as it should be.\n    //OUTPUTS: Boolean: if the query was successfully executed or not.\n    //         Integer: the number of rows in the resulting set.\n    //         ResultSet: the set that the query returned.\n    public Pair<Boolean,Pair<Integer,ResultSet>> executeQuery(String queryString){\n\n\n        try{\n            Class.forName(\"com.mysql.jdbc.Driver\").newInstance();\n        } catch (ClassNotFoundException e) {\n            e.printStackTrace();\n            System.out.println(\"Error loading the driver.\");\n        } catch (InstantiationException e) {\n            e.printStackTrace();\n            System.out.println(\"Error loading the driver.\");\n        } catch (IllegalAccessException e) {\n            e.printStackTrace();\n            System.out.println(\"Error loading the driver.\");\n        }\n//        Pair<Boolean,ResultSet> resultPair = new Pair(false,null);\n        ResultSet executeQueryResult;\n        Integer numRows;\n        try{\n            executeQueryConn = getConnection();\n\n            if (this.connectionStatus(executeQueryConn) == true) {\n                Statement stmt = executeQueryConn.createStatement();\n                numRows= stmt.executeUpdate(queryString);\n                executeQueryResult =  stmt.executeQuery(queryString);\n                return new Pair<Boolean, Pair<Integer, ResultSet>>(true, new Pair<Integer, ResultSet>(numRows, executeQueryResult));\n            }else{\n                System.out.println(\"Error in executeQuery. (this.connectionStatus(executeQueryConn)==true) FAILED\");\n                return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));\n            }\n        }catch(SQLException sqlExcept){\n            System.out.println(\"getConnection() failed. Database error.\");\n            return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));\n        }\n    }\n\n\n\n\n\n\n\n\n\n\n\n    public Connection getConnection() throws SQLException {\n        Properties connProperties = new Properties();\n        connProperties.put(\"user\", this.databaseUser);\n        connProperties.put(\"pass\", this.databasePass);\n\n        try(Connection connTry = DriverManager.getConnection(databaseURL, connProperties);){\n            conn = connTry;\n            System.out.println(\"Connected to database successfully.\");\n\n        } catch (SQLException e){\n            System.out.println(\"Error connecting to database.\");\n            e.printStackTrace();\n        }\n        return conn;\n    }\n\n    public Boolean connectionStatus(Connection conn){\n        try {\n            if (conn.isClosed()==true) {\n                System.out.println(\"The connection is closed.\");\n                return false;\n            }else{\n                System.out.println(\"The connection is open.\");\n                return true;\n            }\n        } catch (SQLException ex) {\n            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);\n            return false;\n        }\n    }\n\n    public void closeConnection(Connection conn){\n        try {\n            conn.close();\n        } catch (SQLException ex) {\n            System.out.println(\"Error closing database connection.\");\n            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);\n        }\n    }\n\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/mainpackage/daDatabase.java b/src/mainpackage/daDatabase.java
+--- a/src/mainpackage/daDatabase.java	
++++ b/src/mainpackage/daDatabase.java	
+@@ -11,107 +11,232 @@
+ import java.util.Properties;
+ import java.util.logging.Level;
+ import java.util.logging.Logger;
+-
++import java.util.ArrayList;
+ 
+ public class daDatabase {
+ 
+-    private String databaseURL = "jdbc:mysql://localhost:3306/aaTigerHacks1";
+-    private String databaseUser = "root";
+-    private String databasePass = "";
++
+ 
+-    private Connection conn;
++    static final String DB_URL1 = "jdbc:mysql://localhost:3306/aaTigerHacks1";
++    static final String USER1 = "root";
++    static final String PASS1 = "";
+ 
+-    Connection executeQueryConn;
+-    //executeQuery function.
+-    //INPUTS: String: a query written exactly as it should be.
+-    //OUTPUTS: Boolean: if the query was successfully executed or not.
+-    //         Integer: the number of rows in the resulting set.
+-    //         ResultSet: the set that the query returned.
+-    public Pair<Boolean,Pair<Integer,ResultSet>> executeQuery(String queryString){
+ 
++    public void executeUpdate(String queryString){
++        try(Connection conn = DriverManager.getConnection(DB_URL1, USER1, PASS1);
++            Statement stmt = conn.createStatement();) {
+ 
+-        try{
+-            Class.forName("com.mysql.jdbc.Driver").newInstance();
+-        } catch (ClassNotFoundException e) {
+-            e.printStackTrace();
+-            System.out.println("Error loading the driver.");
+-        } catch (InstantiationException e) {
++            int resultCount = stmt.executeUpdate(queryString);
++//             Extract data from result set
++//            int x = 0;
++
++//            ArrayList<String> rsArray = new ArrayList<String>();
++//            while (rs.next()) {
++//                rsArray.add(rs.toString());
++//
++//                // Retrieve by column name
++////                x++;
++////                System.out.println(x);
++////                System.out.print("ID: " + rs.getInt("id"));
++////                System.out.print(", Age: " + rs.getInt("age"));
++////                System.out.print(", First: " + rs.getString("first"));
++////                System.out.println(", Last: " + rs.getString("last"));
++//            }
++
++
++        } catch (SQLException e) {
++
+             e.printStackTrace();
+-            System.out.println("Error loading the driver.");
+-        } catch (IllegalAccessException e) {
+-            e.printStackTrace();
+-            System.out.println("Error loading the driver.");
+-        }
+-//        Pair<Boolean,ResultSet> resultPair = new Pair(false,null);
+-        ResultSet executeQueryResult;
+-        Integer numRows;
+-        try{
+-            executeQueryConn = getConnection();
+ 
+-            if (this.connectionStatus(executeQueryConn) == true) {
+-                Statement stmt = executeQueryConn.createStatement();
+-                numRows= stmt.executeUpdate(queryString);
+-                executeQueryResult =  stmt.executeQuery(queryString);
+-                return new Pair<Boolean, Pair<Integer, ResultSet>>(true, new Pair<Integer, ResultSet>(numRows, executeQueryResult));
+-            }else{
+-                System.out.println("Error in executeQuery. (this.connectionStatus(executeQueryConn)==true) FAILED");
+-                return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
+-            }
+-        }catch(SQLException sqlExcept){
+-            System.out.println("getConnection() failed. Database error.");
+-            return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
+         }
+     }
+-
+-
+-
+-
+ 
++    public Pair<Boolean,Pair<Integer,ArrayList<String>>> executeQuery(String queryString) {
+ 
++        try(Connection conn = DriverManager.getConnection(DB_URL1, USER1, PASS1);
++            Statement stmt = conn.createStatement();
++            ResultSet rs = stmt.executeQuery(queryString);) {
+ 
++//             Extract data from result set
++//            int x = 0;
+ 
++//            ArrayList<String> rsArray = new ArrayList<String>();
++//            while (rs.next()) {
++//                rsArray.add(rs.toString());
++//
++//                // Retrieve by column name
++////                x++;
++////                System.out.println(x);
++////                System.out.print("ID: " + rs.getInt("id"));
++////                System.out.print(", Age: " + rs.getInt("age"));
++////                System.out.print(", First: " + rs.getString("first"));
++////                System.out.println(", Last: " + rs.getString("last"));
++//            }
++            ArrayList<String> array = new ArrayList<String>();
++            array = resultSetToSomething(rs);
+ 
++            for (String i : array){
++                System.out.println(i);
++            }
+ 
+-
+-    public Connection getConnection() throws SQLException {
+-        Properties connProperties = new Properties();
+-        connProperties.put("user", this.databaseUser);
+-        connProperties.put("pass", this.databasePass);
+-
+-        try(Connection connTry = DriverManager.getConnection(databaseURL, connProperties);){
+-            conn = connTry;
+-            System.out.println("Connected to database successfully.");
+-
+-        } catch (SQLException e){
+-            System.out.println("Error connecting to database.");
++            return new Pair<Boolean, Pair<Integer, ArrayList<String>>>(true, new Pair<Integer, ArrayList<String>>(1,array));
++        } catch (SQLException e) {
++
+             e.printStackTrace();
++            return new Pair<Boolean, Pair<Integer, ArrayList<String>>>(false, new Pair<Integer, ArrayList<String>>(0, null));
++
+         }
+-        return conn;
+     }
+ 
+-    public Boolean connectionStatus(Connection conn){
+-        try {
+-            if (conn.isClosed()==true) {
+-                System.out.println("The connection is closed.");
+-                return false;
+-            }else{
+-                System.out.println("The connection is open.");
+-                return true;
+-            }
+-        } catch (SQLException ex) {
+-            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);
+-            return false;
++    public ArrayList<String> resultSetToSomething(ResultSet rs) throws SQLException{
++        ArrayList<String> a = new ArrayList<String>();
++        int i = 1;
++        while(rs.next()){
++
++            a.add(rs.getString(i));
++            i++;
+         }
++        return a;
+     }
+ 
+-    public void closeConnection(Connection conn){
+-        try {
+-            conn.close();
+-        } catch (SQLException ex) {
+-            System.out.println("Error closing database connection.");
+-            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);
+-        }
+-    }
++
++
++
++
++
++//    static final String DB_URL1 = "jdbc:mysql://localhost:3306/aaTigerHacks1";
++//    static final String USER1 = "root";
++//    static final String PASS1 = "";
++//    static final String QUERY1 = "SELECT * FROM UserTable";
++//
++//    public static void doExampleQuery(String inputQuery) {
++//        // Open a connection
++//        try(Connection conn = DriverManager.getConnection(DB_URL1, USER1, PASS1);
++//            Statement stmt = conn.createStatement();
++//            ResultSet rs = stmt.executeQuery(inputQuery);) {
++//            // Extract data from result set
++//            int x =0;
++//            while (rs.next()) {
++//                // Retrieve by column name
++//                x++;
++//                System.out.println(x);
++////                System.out.print("ID: " + rs.getInt("id"));
++////                System.out.print(", Age: " + rs.getInt("age"));
++////                System.out.print(", First: " + rs.getString("first"));
++////                System.out.println(", Last: " + rs.getString("last"));
++//            }
++//        } catch (SQLException e) {
++//            e.printStackTrace();
++//        }
++//    }
++
++
++
++
++
++
++
++
++
++
++//    private String databaseURL = "jdbc:mysql://localhost:3306/aaTigerHacks1";
++//    private String databaseUser = "root";
++//    private String databasePass = "";
++//
++//    private Connection conn;
++//
++//    Connection executeQueryConn;
++//    //executeQuery function.
++//    //INPUTS: String: a query written exactly as it should be.
++//    //OUTPUTS: Boolean: if the query was successfully executed or not.
++//    //         Integer: the number of rows in the resulting set.
++//    //         ResultSet: the set that the query returned.
++//    public Pair<Boolean,Pair<Integer,ResultSet>> executeQuery(String queryString){
++//
++//
++//
++//        try{
++//            Class.forName("com.mysql.jdbc.Driver").newInstance();
++//        } catch (ClassNotFoundException e) {
++//            e.printStackTrace();
++//            System.out.println("Error loading the driver.");
++//        } catch (InstantiationException e) {
++//            e.printStackTrace();
++//            System.out.println("Error loading the driver.");
++//        } catch (IllegalAccessException e) {
++//            e.printStackTrace();
++//            System.out.println("Error loading the driver.");
++//        }
++////        Pair<Boolean,ResultSet> resultPair = new Pair(false,null);
++//        ResultSet executeQueryResult;
++//        Integer numRows;
++//        try{
++//            executeQueryConn = getConnection();
++//
++//            if (this.connectionStatus(executeQueryConn) == true) {
++//                Statement stmt = executeQueryConn.createStatement();
++//                numRows= stmt.executeUpdate(queryString);
++//                executeQueryResult =  stmt.executeQuery(queryString);
++//                return new Pair<Boolean, Pair<Integer, ResultSet>>(true, new Pair<Integer, ResultSet>(numRows, executeQueryResult));
++//            }else{
++//                System.out.println("Error in executeQuery. (this.connectionStatus(executeQueryConn)==true) FAILED");
++//                return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
++//            }
++//        }catch(SQLException sqlExcept){
++//            System.out.println("getConnection() failed. Database error.");
++//            return new Pair<Boolean, Pair<Integer, ResultSet>>(false, new Pair<Integer, ResultSet>(0, null));
++//        }
++//    }
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//
++//    public Connection getConnection() throws SQLException {
++//        Properties connProperties = new Properties();
++//        connProperties.put("user", this.databaseUser);
++//        connProperties.put("pass", this.databasePass);
++//
++//        try(Connection connTry = DriverManager.getConnection(databaseURL, connProperties);){
++//            conn = connTry;
++//            System.out.println("Connected to database successfully.");
++//
++//        } catch (SQLException e){
++//            System.out.println("Error connecting to database.");
++//            e.printStackTrace();
++//        }
++//        return conn;
++//    }
++//
++//    public Boolean connectionStatus(Connection conn){
++//        try {
++//            if (conn.isClosed()==true) {
++//                System.out.println("The connection is closed.");
++//                return false;
++//            }else{
++//                System.out.println("The connection is open.");
++//                return true;
++//            }
++//        } catch (SQLException ex) {
++//            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);
++//            return false;
++//        }
++//    }
++//
++//    public void closeConnection(Connection conn){
++//        try {
++//            conn.close();
++//        } catch (SQLException ex) {
++//            System.out.println("Error closing database connection.");
++//            Logger.getLogger(daDatabase.class.getName()).log(Level.SEVERE, null, ex);
++//        }
++//    }
+ 
+ 
+ }
+Index: coding1.iws
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"5e38a692-c334-4f11-8497-252d5a375734\" name=\"Changes\" comment=\"newBetController.java\">\n      <change beforePath=\"$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/mainpackage/Bet.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainpackage/Bet.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaFXApplication\" />\n        <option value=\"FxmlFile\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedIndex\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"209W9N4L6XZt2WyxJVRMTEM6Ifj\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <OptionsSetting value=\"false\" id=\"Update\" />\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"DatabaseDriversLRU\" value=\"mysql\" />\n    <property name=\"Git.Branch.Popup.ShowAllRemotes\" value=\"true\" />\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"codeWithMe.voiceChat.enabledByDefault\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"settings.space\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/mainpackage\" />\n      <recent name=\"$PROJECT_DIR$/out/production/BetMe/mainpackage\" />\n      <recent name=\"$PROJECT_DIR$/src/coding1package\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"betmeMain\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"mainpackage.betmeMain\" />\n      <module name=\"BetMe\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"mainpackage.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.betmeMain\" />\n        <item itemvalue=\"Application.betmeMain\" />\n        <item itemvalue=\"Application.betmeMain\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"5e38a692-c334-4f11-8497-252d5a375734\" name=\"Changes\" comment=\"\" />\n      <created>1635457134277</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1635457134277</updated>\n      <workItem from=\"1635457136569\" duration=\"5438000\" />\n      <workItem from=\"1635885464086\" duration=\"1576000\" />\n      <workItem from=\"1636158020097\" duration=\"888000\" />\n      <workItem from=\"1636159501669\" duration=\"21000\" />\n      <workItem from=\"1636160061310\" duration=\"7111000\" />\n      <workItem from=\"1636214297763\" duration=\"2819000\" />\n      <workItem from=\"1636230284863\" duration=\"9904000\" />\n      <workItem from=\"1636254253907\" duration=\"1511000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Renamed to BetMe\">\n      <created>1636160236049</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636160236049</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Renamed all files.\">\n      <created>1636160622180</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636160622180</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Added screen controller to switch screens.\">\n      <created>1636169160598</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636169160598</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Fixing screens to work. Also adding screens to the ScreenController so it can switch between them.\">\n      <created>1636192190455</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636192190455</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"Adding in database support in the form of daDatabase.java object.\">\n      <created>1636193184370</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636193184370</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"Adding sql.sql file. Right now, this has the sql for creating the database.\">\n      <created>1636193975116</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636193975116</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"Adding examples and such to help make test values.\">\n      <created>1636194959306</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636194959306</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Adding examples and such to help make test values.\">\n      <created>1636195042552</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636195042552</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Adding more sql examples\">\n      <created>1636195725125</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636195725125</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Adding more sql examples\">\n      <created>1636199131325</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636199131325</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Adding more sql examples\">\n      <created>1636201617049</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636201617049</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Database connecting. There is a test happening on mainPageController.\">\n      <created>1636209791856</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636209791856</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"added menu bar with navigation support\">\n      <created>1636212005563</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636212005563</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"Cleaned up a lot. Moved all adding screens to screen controller to main where it should be.\">\n      <created>1636220436064</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636220436064</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"bug fix\">\n      <created>1636221026047</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636221026047</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"added UI elements for new bet\">\n      <created>1636224011331</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636224011331</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"Updated UI\">\n      <created>1636227391133</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636227391133</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"full navigation support and more updated UI\">\n      <created>1636231648703</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636231648704</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"bets and betme screen method moved to main start page\">\n      <created>1636248417847</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636248417847</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"betRequestsFXMLController.java\">\n      <created>1636255468027</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636255468027</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"newBetController.java\">\n      <created>1636256064968</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636256064968</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"newBetController.java\">\n      <created>1636256771893</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1636256771893</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"23\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Renamed to BetMe\" />\n    <MESSAGE value=\"Renamed all files.\" />\n    <MESSAGE value=\"Added screen controller to switch screens.\" />\n    <MESSAGE value=\"Fixing screens to work. Also adding screens to the ScreenController so it can switch between them.\" />\n    <MESSAGE value=\"Adding in database support in the form of daDatabase.java object.\" />\n    <MESSAGE value=\"Adding sql.sql file. Right now, this has the sql for creating the database.\" />\n    <MESSAGE value=\"Adding examples and such to help make test values.\" />\n    <MESSAGE value=\"Adding more sql examples\" />\n    <MESSAGE value=\"Database connecting. There is a test happening on mainPageController.\" />\n    <MESSAGE value=\"added menu bar with navigation support\" />\n    <MESSAGE value=\"Cleaned up a lot. Moved all adding screens to screen controller to main where it should be.\" />\n    <MESSAGE value=\"bug fix\" />\n    <MESSAGE value=\"added UI elements for new bet\" />\n    <MESSAGE value=\"Updated UI\" />\n    <MESSAGE value=\"full navigation support and more updated UI\" />\n    <MESSAGE value=\"bets and betme screen method moved to main start page\" />\n    <MESSAGE value=\"betRequestsFXMLController.java\" />\n    <MESSAGE value=\"newBetController.java\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"newBetController.java\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\n          <url>file://$PROJECT_DIR$/src/mainpackage/Bet.java</url>\n          <line>34</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/coding1.iws b/coding1.iws
+--- a/coding1.iws	
++++ b/coding1.iws	
+@@ -1,9 +1,28 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="newBetController.java">
++    <list default="true" id="5e38a692-c334-4f11-8497-252d5a375734" name="Changes" comment="Database work">
++      <change beforePath="$PROJECT_DIR$/BetMe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BetMe.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/coding1.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.ipr" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/coding1.iws" beforeDir="false" afterPath="$PROJECT_DIR$/coding1.iws" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betRequestsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betRequestsFXMLController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/betsFXMLController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/createAccountFXMLController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/daDatabase.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendProfileFXMLController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendsListFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/friendsListFXMLController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/mainPageController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/newBetController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/newBetController.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BetMe/mainpackage/userProfileFXMLController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/mainpackage/Bet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/Bet.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/ScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/ScreenController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betRequestsFXMLController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/betsFXMLController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/createAccountFXMLController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/daDatabase.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendProfileFXMLController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/friendsListFXMLController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/mainPageController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/mainpackage/newBetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/newBetController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainpackage/userProfileFXMLController.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -27,9 +46,6 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedIndex" value="1" />
+   </component>
+   <component name="ProjectId" id="209W9N4L6XZt2WyxJVRMTEM6Ifj" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+@@ -253,7 +269,42 @@
+       <option name="project" value="LOCAL" />
+       <updated>1636256771893</updated>
+     </task>
+-    <option name="localTasksCounter" value="23" />
++    <task id="LOCAL-00023" summary="adding mysql database connection driver.">
++      <created>1636267135071</created>
++      <option name="number" value="00023" />
++      <option name="presentableId" value="LOCAL-00023" />
++      <option name="project" value="LOCAL" />
++      <updated>1636267135071</updated>
++    </task>
++    <task id="LOCAL-00024" summary="Adding Portfolio and User classes. Fields and full constructors are done.">
++      <created>1636269266827</created>
++      <option name="number" value="00024" />
++      <option name="presentableId" value="LOCAL-00024" />
++      <option name="project" value="LOCAL" />
++      <updated>1636269266827</updated>
++    </task>
++    <task id="LOCAL-00025" summary="user class">
++      <created>1636270784762</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1636270784763</updated>
++    </task>
++    <task id="LOCAL-00026" summary="Portfolio class">
++      <created>1636270817564</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1636270817565</updated>
++    </task>
++    <task id="LOCAL-00027" summary="Database work">
++      <created>1636274527567</created>
++      <option name="number" value="00027" />
++      <option name="presentableId" value="LOCAL-00027" />
++      <option name="project" value="LOCAL" />
++      <updated>1636274527567</updated>
++    </task>
++    <option name="localTasksCounter" value="28" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -290,18 +341,12 @@
+     <MESSAGE value="bets and betme screen method moved to main start page" />
+     <MESSAGE value="betRequestsFXMLController.java" />
+     <MESSAGE value="newBetController.java" />
+-    <option name="LAST_COMMIT_MESSAGE" value="newBetController.java" />
+-  </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/src/mainpackage/Bet.java</url>
+-          <line>34</line>
+-          <option name="timeStamp" value="1" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
++    <MESSAGE value="adding mysql database connection driver." />
++    <MESSAGE value="Adding Portfolio and User classes. Fields and full constructors are done." />
++    <MESSAGE value="user class" />
++    <MESSAGE value="Portfolio class" />
++    <MESSAGE value="Database work" />
++    <option name="LAST_COMMIT_MESSAGE" value="Database work" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />
