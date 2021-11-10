@@ -81,7 +81,7 @@ public class userProfileFXMLController extends AbstractDataController implements
 
     @FXML
     void friendsPressed(ActionEvent event) throws IOException {
-        ScreenController.addScreen("mainPage", FXMLLoader.load(getClass().getResource("mainPage.fxml")));
+        ScreenController.addScreen("friendsListFXML", FXMLLoader.load(getClass().getResource("friendsListFXML.fxml")));
         ScreenController.activate("friendsListFXML");
 
     }

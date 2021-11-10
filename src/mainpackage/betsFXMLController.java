@@ -9,12 +9,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,6 +48,7 @@ public class betsFXMLController extends AbstractDataController implements Initia
 
     @FXML
     private Label userNameLabel;
+    private ArrayList<Bet> userBets;
 
     @FXML
     void homePressed(ActionEvent event) throws IOException {
@@ -84,16 +88,47 @@ public class betsFXMLController extends AbstractDataController implements Initia
         ScreenController.activate("betRequestsFXML");
     }
 
-    public ArrayList<Bet> userBets = new ArrayList<>();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if(userProfile != null) {
             coinBalLabel.setText(Integer.toString(userProfile.userPortfolio.portfolioBalance));
+            userBets = userProfile.userPortfolio.userBets;
+            setUpLists();
+
         }
 
 
     }
+
+    public void setUpLists(){
+        for(Bet x: userBets){
+            if(x.betTargetStatus==2 && x.betSenderStatus ==2){
+                ListElement el = new ListElement(closedBetsListView.getPrefWidth(),closedBetsListView.getPrefHeight());
+                Label profit = new Label();
+                profit.setLayoutX(el.length - el.length/6);
+                profit.setLayoutY(el.height / 6);
+                profit.setFont(new Font("Arial", el.height / 8));
+                if(x.betWinner.equals(userProfile.userID)){
+                    profit.setText("+$"+x.betAmount);
+                    profit.setTextFill(Paint.valueOf("#90EE90"));
+                }
+                else{
+                    profit.setText("-$"+x.betAmount);
+                    profit.setTextFill(Paint.valueOf("red"));
+                }
+                el.pane.getChildren().add(profit);
+
+
+                closedBetsListView.getItems().add(el.setTypeBet(x));
+            }
+            else if(x.betTargetStatus==1 || x.betSenderStatus==1){
+                activeBetsListView.getItems().add(new ListElement(activeBetsListView.getPrefWidth(),activeBetsListView.getPrefHeight()).setTypeBet(x));
+            }
+
+        }
+    }
+
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
@@ -104,56 +139,7 @@ public class betsFXMLController extends AbstractDataController implements Initia
         }
     }
 
-    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list
-    public void setUpListView() {
 
 
-        for (Bet x : userBets) {
-            Pane pane = new Pane();
-            pane.setPrefSize(activeBetsListView.getPrefWidth() * (0.85), (activeBetsListView.getPrefHeight() / 4));
-            Label label = new Label("test" + x.betAmount);
-            Line line = new Line();
-            line.setStartX(0);
-            line.setStartY(0);
-            line.setEndX(pane.getPrefWidth() * 1.15);
-            line.setEndY(0);
-            line.setStyle("-fx-stroke: lightgray");
 
-            pane.getChildren().addAll(label, line);
-            activeBetsListView.getItems().add(pane);
-        }
-    }
-    //Use this to loop through array of bet object, creating a pane for the object and adding it to the list
-    public void setUpListView2() {
-
-        for (Bet x : userBets) {
-            Pane pane = new Pane();
-            pane.setPrefSize(closedBetsListView.getPrefWidth() * (0.85), (closedBetsListView.getPrefHeight() / 4));
-            Label label = new Label("test" + x.betAmount);
-            Line line = new Line();
-            line.setStartX(0);
-            line.setStartY(0);
-            line.setEndX(pane.getPrefWidth() * 1.15);
-            line.setEndY(0);
-            line.setStyle("-fx-stroke: lightgray");
-
-            pane.getChildren().addAll(label, line);
-            closedBetsListView.getItems().add(pane);
-        }
-    }
-    //Ran bet function to generate random bet objects for testing
-    public Bet ranBet(){
-        Random rand = new Random(); //instance of random class
-
-        //generate random values from 0-24
-        int ran = rand.nextInt()/10000000;
-        //System.out.println(ran);
-
-        Bet randBet = new Bet("",ran,"","",false);
-        return randBet;
-    }
-//    @FXML
-//    private void handleDaButton(ActionEvent event) {
-//        daModel.changeDaText();
-//    }
 }
